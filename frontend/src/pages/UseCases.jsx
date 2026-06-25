@@ -21,28 +21,28 @@ const successStories = [
     title: "Real-time monitoring for the LA Purple Line Extension (Section 2)",
     description:
       "Supported the Purple Line 2 project in Los Angeles by providing digital monitoring and data management solutions that improved project visibility, reporting, and decision-making.",
-    image: "/bridge.jpeg",
+    image: "/purpleline.jpeg",
     link: "/use-cases/purplelinesection2",
   },
   {
     title: "Purple Line 3 Stations, Los Angeles",
     description:
       "Provided digital monitoring and reporting solutions that enhanced project visibility, data accessibility, and decision-making throughout the construction of the Purple Line 3 Stations project.",
-    image: "/cit.jpeg",
+    image: "/purpleline3statio.jpeg",
     link: "/use-cases/purpleline3station",
   },
   {
     title: "VTA's BART Phase II – CP2 EWP 3C",
     description:
       "Delivered digital monitoring and reporting solutions for the VTA BART Phase II CP2 EWP 3C project, improving project visibility and operational efficiency.",
-    image: "/tunnel.jpeg",
+    image: "/VT.jpeg",
     link: "/use-cases/vtaBartPhase2",
   },
   {
     title: "Purple Line 3 Tunnels",
     description:
       "Provided digital monitoring and reporting solutions for the Purple Line 3 Tunnels project, improving project visibility and efficiency.",
-    image: "/pipelin.jpeg",
+    image: "/purpleline3tunnel.jpeg",
     link: "/use-cases/purpleline3tunnels",
   },
 ];
@@ -150,7 +150,7 @@ const CTAsection = () => {
         {/* Right Dashboard/Map Graphic Column – natural image, no filters */}
         <div className="relative w-full md:w-[55%] h-[300px] sm:h-[400px] rounded-2xl overflow-hidden shadow-2xl border border-white/20 self-end">
           <img
-            src="/test1.webp"
+            src="/VT.jpeg"
             alt="TeraStamp 3D Map Interface"
             className="w-full h-full object-cover"
           />

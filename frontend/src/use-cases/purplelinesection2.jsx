@@ -20,7 +20,7 @@ const successStories = [
     location: "Los Angeles, California, USA",
     description:
       "Supported the Purple Line 2 project in Los Angeles by providing digital monitoring and data management solutions that improved project visibility, reporting, and decision-making.",
-    image: "/bridge.jpeg",
+    image: "/purpleline.jpeg",
     link: "/use-cases/purplelinesection2",
   },
   {
@@ -29,7 +29,7 @@ const successStories = [
     location: "Los Angeles, California, USA",
     description:
       "Enhanced the Purple Line 3 Stations project with real-time monitoring, centralized data management, and streamlined reporting solutions.",
-    image: "/building.jpeg",
+    image: "/purpleline3statio.jpeg",
     link: "/use-cases/purpleline3station",
   },
   {
@@ -38,7 +38,7 @@ const successStories = [
     location: "San Jose, California, USA",
     description:
       "Delivered digital monitoring and reporting solutions for the VTA BART Phase II CP2 EWP 3C project, improving project visibility and operational efficiency.",
-    image: "/tunnel.jpeg",
+    image: "/VT.jpeg",
     link: "/use-cases/vtaBartPhase2",
   },
   {
@@ -47,7 +47,7 @@ const successStories = [
     location: "Los Angeles, California, USA",
     description:
       "This case study looks at how TeraStamp supports one of the world's most ambitious infrastructure programs through integrated monitoring.",
-    image: "/building.jpeg",
+    image: "/purpleline3tunnel.jpeg",
     link: "/use-cases/purpleline3tunnels",
   },
 ];
@@ -226,7 +226,7 @@ const CtaBanner = () => (
     {/* Right dashboard mock */}
     <div className="relative h-[260px] w-full self-end overflow-hidden rounded-2xl border border-white/20 shadow-2xl sm:h-[340px] md:w-[55%]">
       <img
-        src="/test1.webp"
+        src="/purpleline.jpeg"
         alt="TeraStamp dashboard interface"
         className="h-full w-full object-cover"
         onError={(e) => (e.currentTarget.style.opacity = "0")}
@@ -316,7 +316,7 @@ const PurpleLineSection2 = () => {
           className="mt-9 aspect-[16/9] overflow-hidden rounded-2xl bg-gradient-to-br from-[#F5F6F7] to-[#E2E5E9]"
         >
           <img
-            src="/road.jpeg"
+            src="/purpleline.jpeg"
             alt="LA Metro Purple Line Extension construction"
             className="h-full w-full object-cover"
             onError={(e) => (e.currentTarget.style.display = "none")}
@@ -393,7 +393,7 @@ const PurpleLineSection2 = () => {
 
         <div className="mt-9">
           <PlatformFrame
-            src="/test2.jpg"
+            src="/purpleline2challenge.jpeg"
             alt="Project map with construction zones and monitoring locations"
           />
         </div>
@@ -475,7 +475,7 @@ const PurpleLineSection2 = () => {
 
         <div className="mt-9">
           <PlatformFrame
-            src="/test3.avif"
+            src="/purpleline2impac.jpeg"
             alt="Dashboard with project metrics and reporting"
           />
         </div>
