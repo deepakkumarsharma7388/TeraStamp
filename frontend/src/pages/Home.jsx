@@ -109,104 +109,112 @@ const DataPlatformSection = () => {
   ];
 
   return (
-    <section className="overflow-hidden bg-white">
-      {/* Standard Site Padding */}
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          {/* Left Content */}
+    <section className="relative overflow-hidden bg-white">
+      <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24 lg:px-8">
+        <div className="grid items-center gap-14 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
+          {/* Left Grid — Cards */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: "easeOut" }}
+            className="order-2 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:order-1"
           >
-            <h2 className="font-body text-3xl leading-tight text-[#32353A] sm:text-4xl md:text-5xl">
+            {features.map(({ name, icon: Icon }, index) => (
+              <motion.div
+                key={name}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: index * 0.08 }}
+                whileHover={{ y: -6, rotate: -0.5 }}
+                className="group relative overflow-hidden rounded-2xl border border-[#F26418] bg-white px-6 pb-1.5 pt-6 transition-all duration-300"
+              >
+                {/* Top accent line — permanent */}
+                <span className="absolute left-0 top-0 h-[3px] w-full bg-gradient-to-r from-[#F26418] to-[#FFA366]" />
+
+                {/* Hover: shine sweep */}
+                <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/60 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full" />
+
+                {/* Index number — permanent orange tint */}
+                <span className="pointer-events-none absolute -bottom-3 right-3 select-none font-mono text-6xl font-bold text-[#F26418]/10 transition-all duration-300 group-hover:scale-110 group-hover:text-[#F26418]/20">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+
+                {/* Icon tile — permanent solid orange */}
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#F26418] transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
+                  <Icon className="h-6 w-6 text-white" strokeWidth={1.8} />
+                </div>
+
+                <h3 className="mt-4 font-body text-base font-semibold text-[#32353A] transition-colors duration-300 group-hover:text-[#F26418] md:text-[17px]">
+                  {name}
+                </h3>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Right Content — Text */}
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
+            className="order-1 lg:order-2"
+          >
+            {/* Eyebrow */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#F26418]/25 bg-[#FFF4EC] px-4 py-1.5">
+              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#F26418]" />
+              <span className="text-xs font-semibold uppercase tracking-[0.15em] text-[#C2410C]">
+                Unified Data Platform
+              </span>
+            </div>
+
+            <h2 className="mt-5 font-body text-3xl leading-[1.15] text-[#32353A] sm:text-4xl md:text-5xl">
               Every project dataset.
               <br />
-              <span className="font-bold text-[#32353A]">
-                Connected in a single workspace-<span className="text-[#F26418]">TeraStamp</span>
+              <span className="font-bold">
+                Connected in a single workspace —{" "}
+                <span className="relative inline-block text-[#F26418]">
+                  TeraStamp
+                  <svg
+                    aria-hidden
+                    viewBox="0 0 220 12"
+                    className="absolute -bottom-1.5 left-0 w-full"
+                    preserveAspectRatio="none"
+                  >
+                    <path
+                      d="M3 9 C60 3, 160 3, 217 8"
+                      fill="none"
+                      stroke="#F26418"
+                      strokeWidth="3.5"
+                      strokeLinecap="round"
+                      opacity="0.45"
+                    />
+                  </svg>
+                </span>
               </span>
             </h2>
-            <p className="mt-4 max-w-lg font-body text-base leading-relaxed text-[#5C636E] sm:text-lg">
-              TeraStamp integrates project information, monitoring records, and engineering insights into a single digital platform, facilitating seamless collobration and informed decision making.
+
+            <p className="mt-6 max-w-lg border-l-[3px] border-[#F26418] pl-5 font-body text-base leading-relaxed text-[#5C636E] sm:text-lg">
+              TeraStamp integrates project information, monitoring records, and
+              engineering insights into a single digital platform, facilitating
+              seamless collaboration and informed decision making.
             </p>
 
             <motion.a
               href="/contact"
               whileHover={{ x: 4 }}
               whileTap={{ scale: 0.95 }}
-              className="
-                mt-8
-                inline-flex
-                items-center
-                gap-2
-                rounded-[5px]
-                bg-[#F26418]
-                px-7
-                py-3.5
-                text-sm
-                font-semibold
-                text-white
-                shadow-lg
-                shadow-[#F26418]/30
-                transition-all
-                duration-300
-                hover:scale-105
-                hover:bg-[#D9550F]
-                hover:shadow-[#F26418]/40
-              "
+              className="group mt-9 inline-flex items-center gap-2.5 rounded-xl bg-[#F26418] px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#F26418]/30 transition-all duration-300 hover:scale-105 hover:bg-[#D9550F] hover:shadow-xl hover:shadow-[#F26418]/40"
             >
-              Claim a Demo →
-            </motion.a>
-          </motion.div>
-
-          {/* Right Grid */}
-          <motion.div
-            initial={{ opacity: 0, x: 60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.7,
-              ease: "easeOut",
-              delay: 0.15,
-            }}
-            className="grid grid-cols-1 gap-4 sm:grid-cols-2"
-          >
-            {features.map(({ name, icon: Icon }, index) => (
-              <motion.div
-                key={name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.4,
-                  delay: index * 0.08,
-                }}
-                className="
-                  flex
-                  items-center
-                  gap-4
-                  rounded-[14px]
-                  border-2
-                  border-[#F26418]
-                  bg-white
-                  p-6
-                  transition-all
-                  duration-300
-                  hover:bg-[#FFF4EC]
-                  hover:shadow-lg
-                  hover:shadow-[#F26418]/10
-                "
+              Claim a Demo
+              <span
+                aria-hidden
+                className="transition-transform duration-300 group-hover:translate-x-1"
               >
-                <Icon
-                  className="h-7 w-7 flex-shrink-0 text-[#F26418]"
-                  strokeWidth={1.8}
-                />
-                <span className="font-body text-base font-medium text-[#32353A] md:text-lg">
-                  {name}
-                </span>
-              </motion.div>
-            ))}
+                →
+              </span>
+            </motion.a>
           </motion.div>
         </div>
       </div>
@@ -1376,7 +1384,7 @@ const HeatmapSection = () => {
                 playsInline
                 className="h-full w-full object-cover"
               >
-                <source src="/terastamp-heatmap-map.mp4" type="video/mp4" />
+                <source src="/heatmap2.mp4" type="video/mp4" />
               </video>
             </div>
           </motion.div>
@@ -1642,9 +1650,26 @@ const DashboardSection = () => {
     <section className="overflow-hidden bg-[#F5F6F7]">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          {/* Left Content */}
+
+          {/* Left Side - Image */}
           <motion.div
             initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="overflow-hidden rounded-2xl border border-[#E2E5E9] bg-white shadow-lg">
+              <img
+                src="/terastamp-convergence-dashboard.png"
+                alt="Interactive dashboard showing project visibility and metrics"
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </motion.div>
+
+          {/* Right Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 80 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -1691,26 +1716,13 @@ const DashboardSection = () => {
             </motion.p>
           </motion.div>
 
-          {/* Right side - Image (replaced video) */}
-          <motion.div
-            initial={{ opacity: 0, x: 80 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="overflow-hidden rounded-2xl border border-[#E2E5E9] bg-white shadow-lg">
-              <img
-                src="/terastamp-convergence-dashboard.png"
-                alt="Interactive dashboard showing project visibility and metrics"
-                className="h-full w-full object-cover"
-              />
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>
   );
 };
+
+
 
 
 
@@ -1892,6 +1904,117 @@ const CTASection = () => (
     </div>
   </section>
 );
+
+
+
+
+
+
+
+
+const GisMonitoringSection = () => {
+  const gisFeatures = [
+    "View all monitoring devices and assets on one interactive map",
+    "Track device health with Green, Yellow & Red status indicators",
+    "Toggle layers — stations, tunnels, buildings, zones & utilities",
+    "Run spatial analysis to uncover patterns and relationships",
+  ];
+
+  return (
+    <section className="overflow-hidden bg-[#F5F6F7]">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
+        {/* Content */}
+        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+          {/* Left side text */}
+          <motion.div
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h3
+              style={{
+                fontFamily: '"IBM Plex Sans", sans-serif',
+                fontStyle: "normal",
+                fontWeight: 700,
+                color: "rgb(50, 53, 58)",
+                fontSize: "48px",
+                lineHeight: "48px",
+              }}
+            >
+              Live Asset Tracking with{" "}
+              <span className="text-[#F26418]">GIS Intelligence</span>
+            </h3>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="mt-5 text-[18px] leading-[1.6] text-[#5C636E]"
+            >
+              TeraStamp brings your entire project site onto a single
+              interactive map. Every sensor and asset is plotted with precise
+              positioning and live, color-coded health status — so teams can
+              spot risks instantly, act faster, and keep critical
+              infrastructure safe.
+            </motion.p>
+
+            <div className="mt-6 space-y-4">
+              {gisFeatures.map((item, index) => (
+                <motion.div
+                  key={item}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 + index * 0.15, duration: 0.4 }}
+                  className="flex items-start gap-3"
+                >
+                  <Check
+                    size={20}
+                    className="mt-0.5 flex-shrink-0 rounded-full bg-[#F26418] p-1 text-white"
+                  />
+                  <span className="text-[18px] leading-[1.5] text-[#5C636E]">
+                    {item}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Right side video */}
+          <motion.div
+            initial={{ opacity: 0, x: 80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden rounded-2xl border border-[#E2E5E9] bg-white shadow-lg"
+            >
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="h-full w-full object-cover"
+              >
+                <source src="/gismonitoring.mp4" type="video/mp4" />
+              </video>
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+
+
+
+
 
 
 
@@ -2379,7 +2502,6 @@ const TeraStampJourney = () => {
         </div>
 
         {/* Timeline */}
-        {/* Timeline */}
         <div className="relative mt-20">
           {/* Vertical Line */}
           <div className="absolute left-1/2 top-0 hidden h-full w-1 -translate-x-1/2 rounded-full bg-[#F26418] md:block" />
@@ -2393,19 +2515,20 @@ const TeraStampJourney = () => {
               return (
                 <div
                   key={project.year}
-                  className={`relative flex flex-col items-center w-full md:gap-10 ${isLeft ? "md:flex-row" : "md:flex-row-reverse"
-                    }`}
+                  className={`relative flex flex-col items-center w-full md:gap-10 ${
+                    isLeft ? "md:flex-row" : "md:flex-row-reverse"
+                  }`}
                 >
                   {/* Timeline Dot */}
                   <div className="absolute left-1/2 top-10 z-20 hidden h-6 w-6 -translate-x-1/2 rounded-full border-4 border-white bg-[#F26418] shadow-lg md:block" />
 
-                  {/* Card */}
+                  {/* Card Container */}
                   <div
                     className={`w-full md:w-5/12 ${isLeft ? "md:pr-4" : "md:pl-4"}`}
                   >
                     <button
                       onClick={() => setSelectedProject(project)}
-                      className="group relative w-full overflow-hidden rounded-3xl border border-[#F26418]/30 bg-white p-6 text-left shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#F26418] hover:shadow-2xl"
+                      className="group relative w-full overflow-hidden rounded-3xl border border-[#F26418]/30 border-r-4 border-r-[#F26418] bg-white p-6 text-left shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#F26418] hover:shadow-2xl"
                     >
                       {/* Clean content structure without the embedded pattern */}
                       <div className="relative z-10">
@@ -2415,10 +2538,11 @@ const TeraStampJourney = () => {
                           </span>
 
                           <span
-                            className={`rounded-full px-3 py-1 text-xs font-semibold ${isCompleted
+                            className={`rounded-full px-3 py-1 text-xs font-semibold ${
+                              isCompleted
                                 ? "bg-green-100 text-green-700"
                                 : "bg-yellow-100 text-yellow-700"
-                              }`}
+                            }`}
                           >
                             {project.status}
                           </span>
@@ -2486,11 +2610,15 @@ export default function Home() {
       <BenefitsSection />
       <TestimonialsSection />
       <SupportSection />
+      
       <FeatureSection />
-      <HeatmapSection />
-      <ReportingSection />
       <ThreeDSection />
-      <DashboardSection />
+      <GisMonitoringSection/>
+     
+      <HeatmapSection />
+      
+       <ReportingSection />
+       <DashboardSection />
       <CounterSection />
       <TeraStampJourney />
       <CTASection />

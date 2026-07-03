@@ -48,6 +48,7 @@ import TermsOfUsePage from './pages/Termsofuses.jsx'
 import CookiePolicyPage from './pages/Cookies.jsx'
 import CopyrightPolicyPage from './pages/Copyright.jsx'
 import AccessibilityPage from './pages/Accessibility.jsx'
+import SearchPage from './pages/SearchPage.jsx'
 
 
 
@@ -105,6 +106,7 @@ export default function App() {
               <Route path="/cookies" element={<CookiePolicyPage/>}/>
               <Route path="/copyright" element={<CopyrightPolicyPage/>}/>
               <Route path="/accessibility" element={<AccessibilityPage/>}/>
+              <Route path="/search" element={<SearchPage />} />
           </Routes>
         </main>
         <Footer />

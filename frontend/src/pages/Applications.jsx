@@ -21,6 +21,14 @@ import React from 'react';
 
 const Applicards = () => {
   const cards = [
+     {
+      title: 'Tunnels',
+      icon: Mountain,
+      link: '/applications/tunnels',
+      span: 1,
+      description:
+        'Improve TBM and Drill & Blast tunnel construction with real-time monitoring and analytics.',
+    },
     {
       title: 'Dams',
       icon: Landmark,
@@ -37,14 +45,7 @@ const Applicards = () => {
       description:
         'Fine-tune mine and tailings dam operations with smart data insights.',
     },
-    {
-      title: 'Tunnels',
-      icon: Mountain,
-      link: '/applications/tunnels',
-      span: 1,
-      description:
-        'Improve TBM and Drill & Blast tunnel construction with real-time monitoring and analytics.',
-    },
+   
     {
       title: 'Transportation',
       icon: Train,
@@ -61,6 +62,14 @@ const Applicards = () => {
       description:
         'Reshape civil projects with data-driven insights for airports, ports, construction sites, and more.',
     },
+     {
+      title: 'Energy Infrastructure',
+      icon: Zap,
+      link: '/applications/energy',
+      span: 1,
+      description:
+        'Strengthen energy projects with focused data analysis for wind, nuclear, and solar sectors.',
+    },
     {
       title: 'Bridges',
       icon: Waypoints,
@@ -69,14 +78,7 @@ const Applicards = () => {
       description:
         'Add structural intelligence to bridges with real-time data analysis for safety and longevity.',
     },
-    {
-      title: 'Energy Infrastructure',
-      icon: Zap,
-      link: '/applications/energy',
-      span: 1,
-      description:
-        'Strengthen energy projects with focused data analysis for wind, nuclear, and solar sectors.',
-    },
+   
     {
       title: 'Environmental Monitoring',
       icon: Leaf,

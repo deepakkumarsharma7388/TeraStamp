@@ -1,26 +1,28 @@
 import { useState, useRef } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 
 const PRODUCT_LINKS = [
   { to: '/applications', label: 'Applications' },
-  { to: '/modules', label: 'Modules' },
   { to: '/features', label: 'Features' },
+  { to: '/modules', label: 'Modules' },
   { to: '/how-it-works', label: 'How It Works' },
   { to: '/faq', label: 'FAQ' },
 ]
 
 const COMPANY_LINKS = [
   { to: '/about', label: 'About us' },
-  { to: '/roadmap', label: 'Roadmap' },
   { to: '/contact', label: 'Contact' },
+  { to: '/roadmap', label: 'Roadmap' },
 ]
 
 export default function Header() {
   const [productOpen, setProductOpen] = useState(false)
   const [companyOpen, setCompanyOpen] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [searchQuery, setSearchQuery] = useState('')
   const productTimer = useRef(null)
   const companyTimer = useRef(null)
+  const navigate = useNavigate()
 
   const navLinkClass = ({ isActive }) =>
     `text-[15px] font-semibold transition-colors hover:text-[#F26418] ${
@@ -42,16 +44,28 @@ export default function Header() {
     companyTimer.current = setTimeout(() => setCompanyOpen(false), 120)
   }
 
+  const handleSearch = () => {
+    const q = searchQuery.trim()
+    if (!q) return
+    navigate(`/search?q=${encodeURIComponent(q)}`)
+    setSearchQuery('')
+    setMobileOpen(false)
+  }
+
+  const handleSearchKeyDown = (e) => {
+    if (e.key === 'Enter') handleSearch()
+  }
+
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#26282C]">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:h-[72px] sm:px-6">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-       <img
-  src="/logo5.png"
-  alt="TeraStamp"
-  className="h-14 w-auto sm:h-16 lg:h-[72px]"
-/>
+          <img
+            src="/logo5.png"
+            alt="TeraStamp"
+            className="h-16 w-auto sm:h-[72px] lg:h-20"
+          />
         </Link>
 
         {/* Desktop nav */}
@@ -118,8 +132,30 @@ export default function Header() {
           <NavLink to="/Blog" className={navLinkClass}>Blog</NavLink>
         </nav>
 
-        {/* Desktop CTA */}
-        <div className="hidden md:block">
+        {/* Desktop: Search + CTA */}
+        <div className="hidden items-center gap-4 md:flex">
+          {/* Search */}
+          <div className="relative">
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={handleSearchKeyDown}
+              placeholder="Search..."
+              className="w-40 rounded-lg border border-white/15 bg-white/5 py-2 pl-9 pr-3 text-sm text-white placeholder-white/40 outline-none transition-all focus:w-56 focus:border-[#F26418] focus:bg-white/10 lg:w-48"
+            />
+            <button
+              onClick={handleSearch}
+              aria-label="Search"
+              className="absolute left-2.5 top-1/2 -translate-y-1/2 text-white/50 transition-colors hover:text-[#F26418]"
+            >
+              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.35-4.35" />
+              </svg>
+            </button>
+          </div>
+
           <Link
             to="/contact"
             className="rounded-lg bg-[#F26418] px-5 py-2.5 text-[15px] font-bold text-white shadow-lg shadow-[#F26418]/25 transition-all hover:scale-105 hover:bg-[#D9550F] lg:px-6 lg:py-3"
@@ -144,10 +180,32 @@ export default function Header() {
       {/* Mobile nav */}
       <div
         className={`overflow-hidden border-t border-white/10 bg-[#26282C] transition-[max-height] duration-300 md:hidden ${
-          mobileOpen ? 'max-h-[520px]' : 'max-h-0 border-t-0'
+          mobileOpen ? 'max-h-[600px]' : 'max-h-0 border-t-0'
         }`}
       >
         <div className="px-4 py-4 sm:px-6">
+          {/* Mobile search */}
+          <div className="relative mb-3">
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={handleSearchKeyDown}
+              placeholder="Search..."
+              className="w-full rounded-lg border border-white/15 bg-white/5 py-2.5 pl-9 pr-3 text-sm text-white placeholder-white/40 outline-none focus:border-[#F26418] focus:bg-white/10"
+            />
+            <button
+              onClick={handleSearch}
+              aria-label="Search"
+              className="absolute left-2.5 top-1/2 -translate-y-1/2 text-white/50"
+            >
+              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.35-4.35" />
+              </svg>
+            </button>
+          </div>
+
           <p className="px-1 pb-1 pt-2 text-xs uppercase tracking-wider text-[#7C8595]">Product</p>
           {PRODUCT_LINKS.map((item) => (
             <Link

@@ -124,6 +124,8 @@ const AboutHero = () => {
 /* ================================================================
    OUR STORY – paraphrased
    ================================================================ */
+
+
 const OurStorySection = () => {
   return (
     <section className="overflow-hidden bg-white py-12 md:py-20">
@@ -141,13 +143,11 @@ const OurStorySection = () => {
                 Our Journey
               </span>
             </div>
-
             <h2 className="mt-5 text-3xl font-bold leading-tight text-[#32353A] sm:text-4xl md:text-5xl">
               Building Tomorrow's
               <br />
               <span className="text-[#F26418]">Infrastructure</span>
             </h2>
-
             <div className="mt-6 space-y-5 text-sm leading-relaxed text-[#5C636E] sm:text-base md:text-lg">
               <p>
                 Born from a vision to revolutionise infrastructure intelligence,
@@ -155,13 +155,11 @@ const OurStorySection = () => {
                 and real‑time monitoring to empower organisations with smarter
                 decision‑making.
               </p>
-
               <p>
                 Our platform delivers actionable insights, advanced visualisation,
                 and seamless data integration, helping infrastructure projects
                 become safer, more sustainable, and more efficient.
               </p>
-
               <p>
                 We are more than a technology provider – we are a trusted ally
                 for engineers, governments, and enterprises striving to unlock
@@ -170,62 +168,66 @@ const OurStorySection = () => {
             </div>
           </motion.div>
 
-          {/* Right Visual – unchanged (TeraStamp name remains) */}
+          {/* Right Visual — Image with continuous shine */}
           <motion.div
             initial={{ opacity: 0, x: 80 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative mt-8 flex items-center justify-center lg:mt-0"
+            className="mt-8 lg:mt-0"
           >
-            <div className="relative flex w-full flex-col items-center">
-              <div className="mb-6 flex flex-col items-center">
-                <div className="h-8 w-20 border-x-4 border-t-4 border-[#F26418]/40 sm:h-10 sm:w-28 md:h-12 md:w-32" />
-                <p className="mt-2 text-sm text-[#5C636E] sm:text-base">
-                  Intelligence
-                </p>
-              </div>
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+              className="shine-card relative overflow-hidden rounded-2xl border border-[#E2E5E9] bg-[#26282C] shadow-lg"
+            >
+              <img
+                src="/Vertical_Logo_Black_Backgrounds_TeraStamp.png"
+                alt="TeraStamp team building infrastructure intelligence"
+                className="mt-[-15px] mb-[-35px] h-full w-full object-cover"
+              />
 
-              <motion.h1
-                initial={{ scale: 0.8 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="
-                  text-center
-                  font-bold
-                  tracking-tight
-                  text-[#32353A]
-                  leading-none
-                  text-5xl
-                  sm:text-6xl
-                  md:text-7xl
-                  lg:text-[110px]
-                "
-              >
-                TeraStamp
-              </motion.h1>
-
-              <div className="mt-6 flex w-full justify-between gap-4 sm:gap-8">
-                <div className="flex flex-1 flex-col items-center">
-                  <div className="h-8 w-full max-w-[140px] border-b-4 border-l-4 border-[#F26418]/40" />
-                  <p className="mt-2 text-center text-xs text-[#5C636E] sm:text-sm md:text-base">
-                    Engineering
-                  </p>
-                </div>
-                <div className="flex flex-1 flex-col items-center">
-                  <div className="h-8 w-full max-w-[140px] border-b-4 border-r-4 border-[#F26418]/40" />
-                  <p className="mt-2 text-center text-xs text-[#5C636E] sm:text-sm md:text-base">
-                    Technology
-                  </p>
-                </div>
-              </div>
-
-              <div className="absolute inset-0 -z-10 rounded-full bg-[#F26418]/15 blur-3xl" />
-            </div>
+              {/* Shine overlay — top-left → bottom-right, continuous */}
+              <span aria-hidden className="shine-overlay" />
+            </motion.div>
           </motion.div>
         </div>
       </div>
+
+      <style>{`
+        .shine-overlay {
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          background: linear-gradient(
+            135deg,
+            transparent 30%,
+            rgba(255, 255, 255, 0.06) 42%,
+            rgba(255, 255, 255, 0.28) 50%,
+            rgba(255, 255, 255, 0.06) 58%,
+            transparent 70%
+          );
+          background-size: 250% 250%;
+          background-repeat: no-repeat;
+          animation: shineSweep 3.2s linear infinite;
+        }
+
+        @keyframes shineSweep {
+          0% {
+            background-position: 130% 130%;
+          }
+          100% {
+            background-position: -130% -130%;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .shine-overlay {
+            animation: none;
+            display: none;
+          }
+        }
+      `}</style>
     </section>
   );
 };

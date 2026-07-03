@@ -3,19 +3,19 @@ import { NavLink, Link } from "react-router-dom";
 const Footer = () => {
   const productLinks = [
     { name: "Applications", path: "/applications" },
-    { name: "Modules", path: "/modules" },
     { name: "Projects", path: "/use-cases" },
+    { name: "Modules", path: "/modules" },
     { name: "Features", path: "/features" },
-    { name: "FAQ", path: "/faq" },
     { name: "Roadmap", path: "/roadmap" },
+    { name: "FAQ", path: "/faq" },
     { name: "Help Center", path: "/helpcenter" },
   ];
 
   const companyLinks = [
     { name: "About us", path: "/about" },
     { name: "Blog", path: "/blog" },
-    { name: "Join us", path: "/joinus" },
     { name: "Contact Us", path: "/contact" },
+    { name: "Join us", path: "/joinus" },
     { name: "Newsletter", path: "/newsletter" },
   ];
 
@@ -24,8 +24,8 @@ const Footer = () => {
     { name: "Privacy Policy", path: "/privacy-policy" },
     { name: "Terms Of Use", path: "/terms" },
     { name: "Cookies Policy", path: "/cookies" },
-    { name: "Copyright Policy", path: "/copyright" },
     { name: "Accessibility", path: "/accessibility" },
+    { name: "Copyright Policy", path: "/copyright" },
   ];
 
   return (
