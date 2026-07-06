@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Check, Mail, User, Building, MessageSquare } from "lucide-react";
+import { Check, Mail, User, Building, MessageSquare, Factory } from "lucide-react";
 import toast from "react-hot-toast";
 
 const videoSrc = "/terastamp-promo.mp4";
@@ -25,6 +25,7 @@ const LetsTalk = () => {
     name: "",
     email: "",
     company: "",
+    industry: "",
     message: "",
   });
   const [agree, setAgree] = useState(false);
@@ -52,6 +53,7 @@ const LetsTalk = () => {
           name: form.name,
           email: form.email,
           company: form.company,
+          industry: form.industry,
           message: form.message,
           consent,
         }),
@@ -78,7 +80,7 @@ const LetsTalk = () => {
         },
       });
 
-      setForm({ name: "", email: "", company: "", message: "" });
+      setForm({ name: "", email: "", company: "", industry: "", message: "" });
       setAgree(false);
       setConsent(false);
     } catch (error) {
@@ -171,6 +173,42 @@ const LetsTalk = () => {
                       placeholder="Your company"
                       className={`${inputClass} pl-10`}
                     />
+                  </div>
+                </div>
+
+                {/* Industry */}
+                <div className="mb-4">
+                  <label htmlFor="industry" className="mb-1.5 block text-sm font-semibold text-[#32353A]">
+                    Industry
+                  </label>
+                  <div className="relative">
+                    <Factory className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#7C8595]" />
+                    <select
+                      id="industry"
+                      value={form.industry}
+                      onChange={update("industry")}
+                      className={`${inputClass} appearance-none pl-10 ${form.industry ? "text-[#32353A]" : "text-[#7C8595]"}`}
+                    >
+                      <option value="" disabled>
+                        Select your industry
+                      </option>
+                      <option value="Metro & Rail">Metro & Rail</option>
+                      <option value="Tunnels">Tunnels</option>
+                      <option value="Mining">Mining</option>
+                      <option value="Construction">Construction</option>
+                      <option value="Bridges & Highways">Bridges & Highways</option>
+                      <option value="Dams & Water Infrastructure">Dams & Water Infrastructure</option>
+                      <option value="Energy & Utilities">Energy & Utilities</option>
+                      <option value="Other">Other</option>
+                    </select>
+                    <svg
+                      className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#7C8595]"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
                   </div>
                 </div>
 
