@@ -1260,29 +1260,44 @@ const FeatureSection = () => {
   return (
     <section className="overflow-hidden bg-[#F5F6F7]">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center rounded-lg bg-[#FFF4EC] px-4 py-2"
-        >
-          <span className="text-sm font-semibold uppercase tracking-wider text-[#C2410C]">
-            Core Capabilities
-          </span>
-        </motion.div>
+        {/* Badge + Heading + Description (Centered) */}
+        <div className="text-center">
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center rounded-lg bg-[#FFF4EC] px-4 py-2"
+          >
+            <span className="text-sm font-semibold uppercase tracking-wider text-[#C2410C]">
+              Core Capabilities
+            </span>
+          </motion.div>
 
-        {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="mt-4 text-3xl font-bold text-[#32353A] sm:text-4xl md:text-5xl"
-        >
-          Platform <span className="text-[#F26418]">Capabilities</span>
-        </motion.h2>
+          {/* Heading */}
+          <motion.h2
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="mt-4 text-3xl font-bold text-[#32353A] sm:text-4xl md:text-5xl"
+          >
+            Platform <span className="text-[#F26418]">Capabilities</span>
+          </motion.h2>
+
+          {/* Description */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="mx-auto mt-4 max-w-2xl text-[18px] leading-[1.6] text-[#5C636E]"
+          >
+            Explore the powerful tools that help infrastructure teams monitor,
+            analyze, and act on project data — all from one unified platform.
+          </motion.p>
+        </div>
 
         {/* Content */}
         <div className="mt-10 grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
@@ -1293,7 +1308,7 @@ const FeatureSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-2xl font-bold leading-tight text-[#32353A] sm:text-3xl md:text-4xl">
+            <h3 className="text-2xl font-bold leading-tight text-[#32353A] sm:text-3xl lg:text-[38px]">
               Visualize Critical Project Data in{" "}
               <span className="text-[#F26418]">Real Time</span>
             </h3>
@@ -1363,6 +1378,8 @@ const FeatureSection = () => {
 };
 
 
+
+
 const HeatmapSection = () => {
   return (
     <section className="overflow-hidden bg-white">
@@ -1402,7 +1419,7 @@ const HeatmapSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-3xl font-bold leading-tight text-[#32353A] sm:text-2xl md:text-5xl"
+              className="text-2xl font-bold leading-tight text-[#32353A] sm:text-3xl lg:text-[38px]"
             >
               Gain monitoring insights
               <br />
@@ -1451,9 +1468,10 @@ const HeatmapSection = () => {
 };
 
 
+
 const ReportingSection = () => {
   return (
-    <section className="overflow-hidden bg-[#F5F6F7]">
+    <section className="overflow-hidden bg-[#ffffff]">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           {/* Left Content */}
@@ -1464,7 +1482,7 @@ const ReportingSection = () => {
             transition={{ duration: 0.8 }}
             className="order-1"
           >
-            <h2 className="text-3xl font-bold leading-tight text-[#32353A] sm:text-4xl md:text-5xl">
+            <h2 className="text-2xl font-bold leading-tight text-[#32353A] sm:text-3xl lg:text-[38px]">
               Advanced Reporting for
               <br />
               <span className="text-[#F26418]">Smarter Decisions</span>
@@ -1515,7 +1533,6 @@ const ReportingSection = () => {
                   }}
                   className="flex items-center gap-3"
                 >
-                  {/* ✅ यहाँ बदलाव किया गया – ऑरेंज बैकग्राउंड और सफेद टिक */}
                   <Check
                     size={20}
                     className="flex-shrink-0 rounded-full bg-[#F26418] p-0.5 text-white"
@@ -1546,13 +1563,14 @@ const ReportingSection = () => {
                 alt="Advanced reporting dashboard showing project insights and KPIs"
                 className="h-full w-full object-cover"
               />
-            </motion.div>
+             </motion.div>
           </motion.div>
         </div>
       </div>
     </section>
   );
 };
+
 
 
 
@@ -1601,7 +1619,7 @@ const ThreeDSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-3xl font-bold leading-tight text-[#32353A] sm:text-4xl md:text-5xl"
+              className="text-2xl font-bold leading-tight text-[#32353A] sm:text-3xl lg:text-[38px]"
             >
               Explore projects through
               immersive <span className="text-[#F26418]">3D insights</span>
@@ -1645,6 +1663,7 @@ const ThreeDSection = () => {
 
 
 
+
 const DashboardSection = () => {
   return (
     <section className="overflow-hidden bg-[#F5F6F7]">
@@ -1657,6 +1676,7 @@ const DashboardSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            className="order-2 lg:order-1"
           >
             <div className="overflow-hidden rounded-2xl border border-[#E2E5E9] bg-white shadow-lg">
               <img
@@ -1673,16 +1693,17 @@ const DashboardSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            className="order-1 lg:order-2"
           >
             <motion.h2
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-3xl font-bold leading-tight text-[#32353A] sm:text-4xl md:text-5xl"
+              className="text-2xl font-bold leading-tight text-[#32353A] sm:text-3xl lg:text-[38px]"
             >
               Project Intelligence Through Live
-              <br />
+               {" "}
               <span className="text-[#F26418]">
                 Project Visibility
               </span>
@@ -1721,6 +1742,8 @@ const DashboardSection = () => {
     </section>
   );
 };
+
+
 
 
 
@@ -1905,13 +1928,6 @@ const CTASection = () => (
   </section>
 );
 
-
-
-
-
-
-
-
 const GisMonitoringSection = () => {
   const gisFeatures = [
     "View all monitoring devices and assets on one interactive map",
@@ -1932,16 +1948,7 @@ const GisMonitoringSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h3
-              style={{
-                fontFamily: '"IBM Plex Sans", sans-serif',
-                fontStyle: "normal",
-                fontWeight: 700,
-                color: "rgb(50, 53, 58)",
-                fontSize: "48px",
-                lineHeight: "48px",
-              }}
-            >
+            <h3 className="text-2xl font-bold leading-tight text-[#32353A] sm:text-3xl lg:text-[38px]">
               Live Asset Tracking with{" "}
               <span className="text-[#F26418]">GIS Intelligence</span>
             </h3>
@@ -2001,7 +2008,7 @@ const GisMonitoringSection = () => {
                 playsInline
                 className="h-full w-full object-cover"
               >
-                <source src="/gismonitoring.mp4" type="video/mp4" />
+                <source src="/gisnew.mp4" type="video/mp4" />
               </video>
             </motion.div>
           </motion.div>
@@ -2010,6 +2017,107 @@ const GisMonitoringSection = () => {
     </section>
   );
 };
+
+
+
+const DataAcquisitionSection = () => {
+  const acquisitionFeatures = [
+    "Automatic & manual data acquisition",
+    "CSV, Excel & API integration",
+    "Satellite & remote sensing data",
+    "Automated data validation & cleaning",
+  ];
+
+  return (
+    <section className="overflow-hidden bg-[#F5F6F7]">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
+        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+          {/* Left Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h3 className="text-2xl font-bold leading-tight text-[#32353A] sm:text-3xl lg:text-[38px]">
+              Powerful{" "}
+              <span className="text-[#F26418]">
+                Data Acquisition & Integration
+              </span>
+            </h3>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="mt-5 text-[18px] leading-[1.6] text-[#5C636E]"
+            >
+              TeraStamp centralizes data collection from every monitoring
+              source into one intelligent platform. Whether data comes from
+              IoT sensors, manual inspections, spreadsheets, APIs, or satellite
+              imagery, every reading is automatically validated and prepared
+              for accurate real-time monitoring and analytics.
+            </motion.p>
+
+            <div className="mt-6 space-y-4">
+              {acquisitionFeatures.map((item, index) => (
+                <motion.div
+                  key={item}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    delay: 0.3 + index * 0.12,
+                    duration: 0.4,
+                  }}
+                  className="flex items-start gap-3"
+                >
+                  <Check
+                    size={20}
+                    className="mt-0.5 flex-shrink-0 rounded-full bg-[#F26418] p-1 text-white"
+                  />
+
+                  <span className="text-[18px] leading-[1.5] text-[#5C636E]">
+                    {item}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Right Video */}
+          <motion.div
+            initial={{ opacity: 0, x: 80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden rounded-2xl border border-[#E2E5E9] bg-white shadow-lg"
+            >
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="h-full w-full object-cover"
+              >
+                <source
+                  src="/dataaquization.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 
 
 
@@ -2616,7 +2724,7 @@ export default function Home() {
       <GisMonitoringSection/>
      
       <HeatmapSection />
-      
+      <DataAcquisitionSection/>
        <ReportingSection />
        <DashboardSection />
       <CounterSection />
