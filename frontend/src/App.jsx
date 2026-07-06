@@ -49,6 +49,13 @@ import CookiePolicyPage from './pages/Cookies.jsx'
 import CopyrightPolicyPage from './pages/Copyright.jsx'
 import AccessibilityPage from './pages/Accessibility.jsx'
 import SearchPage from './pages/SearchPage.jsx'
+import RealTimeMonitoring from './pages/allinone/RealTimeMonitoring.jsx'
+import GISMonitoringCard from './pages/allinone/GISMonitoringCard.jsx'
+import LightningFastQueries from './pages/allinone/lightfastquries.jsx'
+import AdvancedVisualization from './pages/allinone/AdvancedVisualization.jsx'
+import CustomInstrumentDisplay from './pages/allinone/CustomInstrumentDisplay.jsx'
+import AlertsRiskManagement from './pages/allinone/AlertsRiskManagement.jsx'
+import GISMonitoringMap from './pages/allinone/GISMonitoringCard.jsx'
 
 
 
@@ -107,6 +114,13 @@ export default function App() {
               <Route path="/copyright" element={<CopyrightPolicyPage/>}/>
               <Route path="/accessibility" element={<AccessibilityPage/>}/>
               <Route path="/search" element={<SearchPage />} />
+              <Route path="/allinone/real-time-monitoring" element={<RealTimeMonitoring/>} />
+              <Route path="/allinone/GISMonitoringMap" element={<GISMonitoringMap/>} />
+              <Route path="/allinone/LightningFastQueries" element={<LightningFastQueries/>} />
+              <Route path="/allinone/AdvancedVisualization" element={<AdvancedVisualization/>} />
+              <Route path="/allinone/CustomInstrumentDisplay" element={<CustomInstrumentDisplay/>} />
+              <Route path="/allinone/AlertsRiskManagement" element={<AlertsRiskManagement/>} />
+              
           </Routes>
         </main>
         <Footer />

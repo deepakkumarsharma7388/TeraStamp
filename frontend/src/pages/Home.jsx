@@ -729,6 +729,8 @@ const ProjectSlider = () => {
 };
 
 
+
+
 const features = [
   {
     icon: Activity,
@@ -739,6 +741,7 @@ const features = [
       "Action & alert levels overlaid",
       "Automatic data validation",
     ],
+    path: "/allinone/real-time-monitoring",
   },
   {
     icon: Map,
@@ -749,6 +752,7 @@ const features = [
       "Geo-referenced analytics",
       "Tunnel alignment & zones",
     ],
+    path: "/allinone/GISMonitoringMap",
   },
   {
     icon: Zap,
@@ -759,6 +763,7 @@ const features = [
       "Instant historical lookups",
       "Smooth, responsive dashboards",
     ],
+    path: "/allinone/LightningFastQueries",
   },
   {
     icon: BarChart3,
@@ -769,6 +774,7 @@ const features = [
       "Shape array & settlement charts",
       "Location-referenced plots",
     ],
+    path: "/allinone/AdvancedVisualization",
   },
   {
     icon: Layers,
@@ -779,6 +785,7 @@ const features = [
       "Seamless per-instrument notes",
       "Drawings, images & map services",
     ],
+    path: "/allinone/CustomInstrumentDisplay",
   },
   {
     icon: Bell,
@@ -789,8 +796,11 @@ const features = [
       "Automatic notifications",
       "Escalation workflows",
     ],
+    path: "/allinone/AlertsRiskManagement",
   },
 ];
+
+
 
 const FeaturesGrid = () => (
   <section className="relative overflow-hidden bg-[#F26418] py-[58px] md:py-20 font-body">
@@ -858,22 +868,22 @@ const FeaturesGrid = () => (
 
                 {/* Bottom row: Learn more + arrow button */}
                 <div className="mt-6 flex items-center justify-between">
-                  {/* Fixed anchor for "Learn more" */}
-                  <a
-                    href="#"
+                  {/* Learn more link */}
+                  <Link
+                    to={feature.path}
                     className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#F26418] transition-all hover:gap-2.5"
                   >
                     Learn more <ArrowRight className="h-4 w-4" />
-                  </a>
+                  </Link>
 
-                  {/* Fixed anchor for circular arrow button */}
-                  <a
-                    href="#"
+                  {/* Circular arrow button */}
+                  <Link
+                    to={feature.path}
                     aria-label={`Explore ${feature.title}`}
                     className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F26418] text-white shadow-lg shadow-[#F26418]/30 transition-all duration-300 hover:bg-[#D9550F] group-hover:scale-110"
                   >
                     <ArrowRight className="h-5 w-5" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -883,6 +893,8 @@ const FeaturesGrid = () => (
     </div>
   </section>
 );
+
+
 
 
 const benefits = [
