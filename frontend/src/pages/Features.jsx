@@ -46,14 +46,6 @@ const carouselImages = [
  
 ];
 
-
-
-
-
-
-
-
-
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(1);
@@ -205,13 +197,6 @@ const Hero = () => {
 };
 
 
-
-
-
-
-/* ================================================================
-   FEATURE SHOWCASE – Accordion with image/video
-   ================================================================ */
 const features = [
   {
     icon: Radar,
@@ -378,9 +363,6 @@ const FeatureShowcase = () => {
   );
 };
 
-/* ================================================================
-   IMMERSIVE EXPERIENCE – Second accordion set (with badge)
-   ================================================================ */
 const features1 = [
   {
     icon: Activity,
@@ -551,10 +533,6 @@ const ImmersiveExperience = () => {
   );
 };
 
-
-/* ================================================================
-   PLATFORM CAPABILITIES – Updated with your data from screenshots
-   ================================================================ */
 const platformFeatures = [
   {
     icon: BarChart3,
@@ -708,9 +686,6 @@ const PlatformCapabilities = () => {
   );
 };
 
-/* ================================================================
-   CTA BANNER
-   ================================================================ */
 const CtaBanner = () => {
   return (
     <section>
@@ -746,9 +721,9 @@ const Features = () => {
   return (
     <div className="bg-white overflow-hidden">
       <Hero />
-      <FeatureShowcase />
-      <ImmersiveExperience />
       <PlatformCapabilities />
+      <ImmersiveExperience />
+      <FeatureShowcase />
       <CtaBanner />
 
     </div>
