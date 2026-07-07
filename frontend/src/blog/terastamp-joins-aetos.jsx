@@ -30,7 +30,7 @@ const BLOG_POSTS = [
     title: "Digital Monitoring in Metro Construction: Lessons from Large Infrastructure Projects",
     tags: "Infrastructure",
     date: "8 Oct 2025",
-    image: "/blogimage/digitalmonotoring.jpg",
+    image: "/blogimage/digitalmonitoring.jpeg",
     accent: "from-[#F26418] to-[#D9550F]",
     categories: ["Infrastructure"],
     link: "/blog/digitalmonitoring",
@@ -177,7 +177,7 @@ const CtaBanner = () => (
 
     <div className="relative h-[260px] w-full self-end overflow-hidden rounded-2xl border border-white/20 shadow-2xl sm:h-[340px] md:w-[55%]">
       <img
-        src="/blogimage/digitalmonotoring.jpg"
+        src="/blogimage/digitalmonitoring.jpeg"
         alt="TeraStamp dashboard interface"
         className="h-full w-full object-cover"
       />
@@ -265,7 +265,7 @@ const MetroMonitoringBlog = () => {
           className="mt-8 w-full overflow-hidden rounded-2xl bg-[#F9FAFB] h-[450px]"
         >
           <img
-            src="/blogimage/digitalmonotoring.jpg"
+            src="/blogimage/digitalmonitoring.jpeg"
             alt="Metro construction"
             className="h-full w-full object-fill"
           />
@@ -301,7 +301,7 @@ const MetroMonitoringBlog = () => {
       {/* Unsplash image 1 – tall (h-[450px]) */}
       <motion.div {...rise(0)} className="mx-auto mt-12 max-w-5xl px-4 sm:px-6">
         <img
-          src="/blogimage/digitalmonitoring2.jpg"
+          src="/blogimage/digitalmonitoring2.jpeg"
           alt="Construction site"
           className="rounded-3xl shadow-lg w-full h-[450px] object-fill"
         />

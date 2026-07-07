@@ -32,7 +32,7 @@ const BLOG_POSTS = [
     title: "Digital Monitoring in Metro Construction: Lessons from Large Infrastructure Projects",
     tags: "Infrastructure",
     date: "8 Oct 2025",
-    image: "/blogimage/digitalmonotoring.jpg",
+    image: "/blogimage/digitalmonitoring.jpeg",
     accent: "from-[#F26418] to-[#D9550F]",
     categories: ["Infrastructure"],
     link: "/blog/digitalmonitoring",

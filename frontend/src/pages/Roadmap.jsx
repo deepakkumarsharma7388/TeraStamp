@@ -1,17 +1,9 @@
-
 import React, { useState, useMemo } from "react";
 import {
   Search,
-  Plus,
-  User,
   X,
   ChevronRight,
   Rocket,
-  Mail,
-  CheckCircle2,
-  Share2,
-  Check,
-  ArrowRight,
 } from "lucide-react";
 
 /* ================================================================== *
@@ -225,6 +217,7 @@ const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|
 /* ------------------------------------------------------------------ *
  *  DATA — one project per launch year (2020 → 2026)
  *  Each card can optionally have an `image` field for a real screenshot.
+ *  (Votes field kept for future use but not displayed)
  * ------------------------------------------------------------------ */
 const roadmap = [
   {
@@ -393,89 +386,7 @@ const roadmap = [
   },
 ];
 
-// Ratings and feedback components (unchanged)
-const RATINGS = ["I'VE NEVER USED IT", "NOT BAD", "IT'S GOOD", "I LOVE IT"];
-
-const RatingRow = ({ value, onChange }) => (
-  <div className="flex flex-wrap gap-2">
-    {RATINGS.map((r) => {
-      const active = value === r;
-      return (
-        <button
-          key={r}
-          type="button"
-          onClick={() => onChange(r)}
-          className="rounded-md px-3 py-2 text-[11px] font-semibold tracking-wide transition-colors"
-          style={{ background: active ? c.accent : c.field, color: active ? "#fff" : c.muted, border: `1px solid ${active ? c.accent : c.border}` }}
-        >
-          {r}
-        </button>
-      );
-    })}
-  </div>
-);
-
-const FeedbackForm = ({ onDone, reasonPlaceholder }) => {
-  const [rating, setRating] = useState(null);
-  const [reason, setReason] = useState("");
-  const [email, setEmail] = useState("");
-  const [error, setError] = useState("");
-
-  const submit = () => {
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.trim())) {
-      setError("Please enter a valid email address.");
-      return;
-    }
-    setError("");
-    onDone({ rating, reason, email });
-  };
-
-  return (
-    <div>
-      <div className="space-y-2 border-t pt-5" style={{ borderColor: c.borderSoft }}>
-        <p className="text-sm font-medium" style={{ color: c.text }}>
-          How do you feel about this feature?
-        </p>
-        <RatingRow value={rating} onChange={setRating} />
-      </div>
-
-      <textarea
-        rows={3}
-        value={reason}
-        onChange={(e) => setReason(e.target.value)}
-        placeholder={reasonPlaceholder}
-        className="mt-4 w-full resize-none rounded-lg px-3 py-2.5 text-sm outline-none"
-        style={{ background: c.field, color: c.text, border: `1px solid ${c.accent}` }}
-      />
-
-      <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-center">
-        <div className="flex flex-1 items-center gap-2 rounded-lg px-3" style={{ background: c.field, border: `1px solid ${error ? "#e0556e" : c.border}` }}>
-          <Mail size={16} style={{ color: c.faint }} />
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email address"
-            className="w-full bg-transparent py-2.5 text-sm outline-none"
-            style={{ color: c.text }}
-          />
-        </div>
-        <button onClick={submit} className="rounded-lg px-6 py-2.5 text-sm font-semibold text-white" style={{ background: c.accent }}>
-          Submit
-        </button>
-      </div>
-      {error && <p className="mt-2 text-xs" style={{ color: "#e0809a" }}>{error}</p>}
-
-      <div className="mt-5 flex flex-col gap-2 border-t pt-4 text-[11px] sm:flex-row sm:items-center sm:justify-between" style={{ borderColor: c.borderSoft, color: c.faint }}>
-        <span className="flex items-center gap-1.5">
-          Powered by <ChevronRight size={11} /> <span className="font-semibold">TeraStamp</span>
-        </span>
-        <span>Do Not Sell or Share My Personal Information</span>
-      </div>
-    </div>
-  );
-};
-
+// Modal component – close button red
 const Modal = ({ children, onClose, wide }) => (
   <div
     className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto p-3 sm:p-8"
@@ -491,7 +402,7 @@ const Modal = ({ children, onClose, wide }) => (
         onClick={onClose}
         aria-label="Close"
         className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full"
-        style={{ background: "rgba(0,0,0,0.1)", color: c.text }}
+        style={{ background: "transparent", color: "red" }}
       >
         <X size={18} />
       </button>
@@ -500,70 +411,8 @@ const Modal = ({ children, onClose, wide }) => (
   </div>
 );
 
-const Submitted = ({ onClose }) => (
-  <div className="flex flex-col items-center gap-3 px-6 py-14 text-center">
-    <CheckCircle2 size={44} style={{ color: c.accent }} />
-    <h3 className="text-lg font-semibold" style={{ color: c.heading }}>
-      Thank you for sharing
-    </h3>
-    <p className="max-w-xs text-sm" style={{ color: c.text }}>
-      Every response is matched back to the roadmap and helps steer what we work on next.
-    </p>
-    <button onClick={onClose} className="mt-2 rounded-lg px-5 py-2 text-sm font-semibold text-white" style={{ background: c.accent }}>
-      Done
-    </button>
-  </div>
-);
-
-const SubmitIdeaModal = ({ onClose }) => {
-  const [sent, setSent] = useState(false);
-  return (
-    <Modal onClose={onClose}>
-      {sent ? (
-        <Submitted onClose={onClose} />
-      ) : (
-        <div className="px-6 pb-6 pt-12 sm:px-8">
-          <h3 className="mb-5 text-xl font-bold" style={{ color: c.heading }}>
-            Share a new idea
-          </h3>
-          <textarea
-            rows={4}
-            placeholder="What would you like to be able to do, and how would it help your work?"
-            className="w-full resize-none rounded-lg px-3 py-2.5 text-sm outline-none"
-            style={{ background: c.field, color: c.text, border: `1px solid ${c.accent}` }}
-          />
-          <div className="mt-5">
-            <FeedbackForm onDone={() => setSent(true)} reasonPlaceholder="Anything else we should know? (Optional)" />
-          </div>
-        </div>
-      )}
-    </Modal>
-  );
-};
-
+// FeatureModal – without feedback, without share, without posted on date, without visitor icon, without votes
 const FeatureModal = ({ feature, onClose }) => {
-  const [sent, setSent] = useState(false);
-  const [copied, setCopied] = useState(false);
-
-  const share = async () => {
-    const link =
-      typeof window !== "undefined"
-        ? `${window.location.origin}${window.location.pathname}#${slugify(feature.title)}`
-        : `#${slugify(feature.title)}`;
-    try {
-      await navigator.clipboard.writeText(link);
-    } catch (e) {
-      const ta = document.createElement("textarea");
-      ta.value = link;
-      document.body.appendChild(ta);
-      ta.select();
-      try { document.execCommand("copy"); } catch (_) {}
-      document.body.removeChild(ta);
-    }
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1800);
-  };
-
   return (
     <Modal onClose={onClose} wide>
       <div className="max-h-[88vh] overflow-y-auto">
@@ -573,26 +422,9 @@ const FeatureModal = ({ feature, onClose }) => {
         </div>
 
         <div className="px-5 py-5 sm:px-8 sm:py-6">
-          <div className="flex items-start justify-between gap-4">
-            <h3 className="text-2xl font-bold leading-tight sm:text-3xl" style={{ color: c.heading }}>
-              {feature.title}
-            </h3>
-            <div className="flex shrink-0 items-center gap-3">
-              <div className="relative">
-                <button onClick={share} aria-label="Copy link" className="flex h-9 w-9 items-center justify-center rounded-lg" style={{ background: c.field, border: `1px solid ${c.border}`, color: copied ? "#38a169" : c.muted }}>
-                  {copied ? <Check size={17} /> : <Share2 size={16} />}
-                </button>
-                {copied && (
-                  <span className="absolute right-0 top-11 whitespace-nowrap rounded-md px-2 py-1 text-[11px] font-medium" style={{ background: c.card, border: `1px solid ${c.border}`, color: c.text }}>
-                    Link copied!
-                  </span>
-                )}
-              </div>
-              <span className="flex items-center gap-1 text-sm" style={{ color: c.faint }}>
-                <User size={15} /> {feature.votes}
-              </span>
-            </div>
-          </div>
+          <h3 className="text-2xl font-bold leading-tight sm:text-3xl" style={{ color: c.heading }}>
+            {feature.title}
+          </h3>
 
           <div className="mt-4 flex items-center gap-2.5">
             <div className="flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold text-white" style={{ background: c.accent }}>
@@ -601,66 +433,52 @@ const FeatureModal = ({ feature, onClose }) => {
             <span className="text-sm font-bold tracking-wide" style={{ color: c.heading }}>
               {feature.author}
             </span>
-            <span style={{ color: c.faint }}>|</span>
-            <span className="text-sm" style={{ color: c.text }}>
-              Posted on {feature.postedOn}
-            </span>
           </div>
 
-          {sent ? (
-            <Submitted onClose={onClose} />
-          ) : (
-            <>
-              <div className="mt-5 space-y-3 border-t pt-5 text-sm leading-relaxed sm:text-[15px]" style={{ borderColor: c.borderSoft, color: c.text }}>
-                {feature.intro.map((p, i) => (
-                  <p key={i}>
-                    <Rich parts={p} />
-                  </p>
-                ))}
-              </div>
+          <div className="mt-5 space-y-3 border-t pt-5 text-sm leading-relaxed sm:text-[15px]" style={{ borderColor: c.borderSoft, color: c.text }}>
+            {feature.intro.map((p, i) => (
+              <p key={i}>
+                <Rich parts={p} />
+              </p>
+            ))}
+          </div>
 
-              <h4 className="mt-6 mb-2 text-lg font-bold" style={{ color: c.heading }}>
-                Key Features &amp; Benefits
-              </h4>
-              <ul className="space-y-2.5 text-sm leading-relaxed" style={{ color: c.text }}>
-                {feature.features.map((f, i) => (
-                  <li key={i}>
-                    <span className="mr-1.5" style={{ color: c.accent }}>•</span>
-                    <strong className="font-semibold" style={{ color: c.heading }}>{f.lead}</strong> {f.text}
-                    {f.children && (
-                      <ul className="mt-2 space-y-2 pl-6">
-                        {f.children.map((ch, j) => (
-                          <li key={j}>
-                            <span className="mr-1.5" style={{ color: c.faint }}>◦</span>
-                            <strong className="font-semibold" style={{ color: c.heading }}>{ch.lead}</strong> {ch.text}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </li>
-                ))}
-              </ul>
+          <h4 className="mt-6 mb-2 text-lg font-bold" style={{ color: c.heading }}>
+            Key Features &amp; Benefits
+          </h4>
+          <ul className="space-y-2.5 text-sm leading-relaxed" style={{ color: c.text }}>
+            {feature.features.map((f, i) => (
+              <li key={i}>
+                <span className="mr-1.5" style={{ color: c.accent }}>•</span>
+                <strong className="font-semibold" style={{ color: c.heading }}>{f.lead}</strong> {f.text}
+                {f.children && (
+                  <ul className="mt-2 space-y-2 pl-6">
+                    {f.children.map((ch, j) => (
+                      <li key={j}>
+                        <span className="mr-1.5" style={{ color: c.faint }}>◦</span>
+                        <strong className="font-semibold" style={{ color: c.heading }}>{ch.lead}</strong> {ch.text}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
 
-              <h4 className="mt-6 mb-2 text-lg font-bold" style={{ color: c.heading }}>
-                How to Use It
-              </h4>
-              <ol className="space-y-2.5 text-sm leading-relaxed" style={{ color: c.text }}>
-                {feature.steps.map((s, i) => (
-                  <li key={i} className="flex gap-2.5">
-                    <span className="font-bold" style={{ color: c.accent }}>{i + 1}.</span>
-                    <span>
-                      {s.lead && <strong className="font-semibold" style={{ color: c.heading }}>{s.lead} </strong>}
-                      {s.text}
-                    </span>
-                  </li>
-                ))}
-              </ol>
-
-              <div className="mt-7">
-                <FeedbackForm onDone={() => setSent(true)} reasonPlaceholder="Why would this help you? (Anything you share helps us make the product better for you.)" />
-              </div>
-            </>
-          )}
+          <h4 className="mt-6 mb-2 text-lg font-bold" style={{ color: c.heading }}>
+            How to Use It
+          </h4>
+          <ol className="space-y-2.5 text-sm leading-relaxed" style={{ color: c.text }}>
+            {feature.steps.map((s, i) => (
+              <li key={i} className="flex gap-2.5">
+                <span className="font-bold" style={{ color: c.accent }}>{i + 1}.</span>
+                <span>
+                  {s.lead && <strong className="font-semibold" style={{ color: c.heading }}>{s.lead} </strong>}
+                  {s.text}
+                </span>
+              </li>
+            ))}
+          </ol>
         </div>
       </div>
     </Modal>
@@ -668,8 +486,7 @@ const FeatureModal = ({ feature, onClose }) => {
 };
 
 /* ===================================================== *
- *  FEATURE CARD — now with permanent orange border,
- *  larger width (2‑col grid), and taller image (140px).
+ *  FEATURE CARD – orange border, no votes display
  * ===================================================== */
 const FeatureCard = ({ card, onOpen }) => {
   const [hover, setHover] = useState(false);
@@ -681,16 +498,12 @@ const FeatureCard = ({ card, onOpen }) => {
       className="group flex w-full flex-col overflow-hidden rounded-xl text-left transition-colors"
       style={{
         background: hover ? c.tileHover : c.tile,
-        border: `2px solid ${c.accent}`, // permanent orange border
+        border: `2px solid ${c.accent}`,
       }}
     >
-      <div className="flex items-start justify-between gap-3 p-4 pb-2">
+      <div className="p-4 pb-2">
         <span className="text-sm font-semibold leading-snug" style={{ color: c.heading }}>{card.title}</span>
-        <span className="flex shrink-0 items-center gap-1 text-xs" style={{ color: c.faint }}>
-          <User size={13} /> {card.votes}
-        </span>
       </div>
-      {/* Image — now taller (h-40 = 160px) */}
       <div className="mx-3 mb-3 mt-auto overflow-hidden rounded-md" style={{ border: `1px solid ${c.border}`, height: 160 }}>
         <CardImage card={card} />
       </div>
@@ -706,13 +519,9 @@ const MonthDivider = ({ name }) => (
   </div>
 );
 
-
-
 const TeraStampRoadmap = () => {
-  // Default to 2020 (the earliest launch year)
   const [activeYear, setActiveYear] = useState("2020");
   const [openFeature, setOpenFeature] = useState(null);
-  const [showSubmit, setShowSubmit] = useState(false);
   const [query, setQuery] = useState("");
 
   const current = useMemo(() => roadmap.find((y) => y.id === activeYear), [activeYear]);
@@ -754,9 +563,7 @@ const TeraStampRoadmap = () => {
                   style={{ color: c.text, transition: "width .2s" }}
                 />
               </div>
-              <button onClick={() => setShowSubmit(true)} className="flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-semibold" style={{ background: c.accent, color: "#fff" }}>
-                <Plus size={16} /> Submit idea
-              </button>
+              {/* Submit idea button removed */}
             </div>
           </div>
 
@@ -781,13 +588,12 @@ const TeraStampRoadmap = () => {
             {months.length === 0 ? (
               <div className="flex flex-col items-center justify-center py-20 text-center">
                 <p className="text-sm font-medium" style={{ color: c.text }}>No features match “{query}”.</p>
-                <p className="mt-1 text-sm" style={{ color: c.faint }}>Try a different term, or add it as a new idea.</p>
+                <p className="mt-1 text-sm" style={{ color: c.faint }}>Try a different term.</p>
               </div>
             ) : (
               months.map((m) => (
                 <div key={m.name}>
                   <MonthDivider name={m.name} />
-                  {/* 2‑column grid for wider cards */}
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     {m.cards.map((card) => (
                       <FeatureCard key={card.title} card={card} onOpen={setOpenFeature} />
@@ -805,25 +611,17 @@ const TeraStampRoadmap = () => {
         </div>
       </div>
 
-      
-
-      {showSubmit && <SubmitIdeaModal onClose={() => setShowSubmit(false)} />}
       {openFeature && <FeatureModal feature={openFeature} onClose={() => setOpenFeature(null)} />}
     </section>
   );
 };
 
-
-
-
-
-
 const Roadmap = () => {
   return (
     <div>
-      <TeraStampRoadmap/>
+      <TeraStampRoadmap />
     </div>
-  )
-}
+  );
+};
 
-export default Roadmap
+export default Roadmap;

@@ -168,32 +168,31 @@ const DataPlatformSection = () => {
                 Unified Data Platform
               </span>
             </div>
-
-            <h2 className="mt-5 font-body text-3xl leading-[1.15] text-[#32353A] sm:text-4xl md:text-5xl">
-              Every project dataset.
-              <br />
-              <span className="font-bold">
-                Connected in a single workspace —{" "}
-                <span className="relative inline-block text-[#F26418]">
-                  TeraStamp
-                  <svg
-                    aria-hidden
-                    viewBox="0 0 220 12"
-                    className="absolute -bottom-1.5 left-0 w-full"
-                    preserveAspectRatio="none"
-                  >
-                    <path
-                      d="M3 9 C60 3, 160 3, 217 8"
-                      fill="none"
-                      stroke="#F26418"
-                      strokeWidth="3.5"
-                      strokeLinecap="round"
-                      opacity="0.45"
-                    />
-                  </svg>
-                </span>
-              </span>
-            </h2>
+<h2 className="mt-5 font-body text-[28px] leading-[1.15] text-[#32353A] sm:text-[38px] md:text-[46px]">
+  Every project dataset.
+  <br />
+  <span className="font-bold">
+    Connected in a single workspace —{" "}
+    <span className="relative inline-block text-[#F26418] whitespace-nowrap">
+      TeraStamp
+      <svg
+        aria-hidden
+        viewBox="0 0 220 12"
+        className="absolute -bottom-1.5 left-0 w-full"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M3 9 C60 3, 160 3, 217 8"
+          fill="none"
+          stroke="#F26418"
+          strokeWidth="3.5"
+          strokeLinecap="round"
+          opacity="0.45"
+        />
+      </svg>
+    </span>
+  </span>
+</h2>
 
             <p className="mt-6 max-w-lg border-l-[3px] border-[#F26418] pl-5 font-body text-base leading-relaxed text-[#5C636E] sm:text-lg">
               TeraStamp integrates project information, monitoring records, and
@@ -437,7 +436,7 @@ const slides = [
     title: "Geo-referenced live monitoring",
     description:
       "TeraStamp plots every sensor on a live Google Maps view — not static maps like most competitors — so teams see exactly where each instrument sits along the tunnel alignment.",
-    image: "/terastamp-geo-monitoring-map.jpg",
+    image: "/originalgeo.png",
   },
   {
     title: "Real-time time-series insights",
@@ -463,6 +462,12 @@ const slides = [
       "Built for mega projects: real-time monitoring across the LA Metro Purple Line extensions, covering 10.28 miles of tunnels and four station excavations.",
     image: "/purple-line-tunnel-route-map.jpg",
   },
+  {
+  title: "Real-Time Ground Movement Heat Map",
+  description:
+    "Visualize live ground displacement with intelligent heat maps, geotechnical sensors, and threshold-based alerts to identify movement patterns before they become critical.",
+  image: "/landslide_heatmap_professional_websit.jpeg",
+},
 ];
 
 const FeatureCarousel = () => {
@@ -1379,7 +1384,7 @@ const FeatureSection = () => {
                 playsInline
                 className="h-full w-full object-cover"
               >
-                <source src="/terastamp-dynamic-map.mp4" type="video/mp4" />
+                <source src="/terastamp-dynamic-map_fixed.mp4" type="video/mp4" />
               </video>
             </motion.div>
           </motion.div>
@@ -1388,9 +1393,6 @@ const FeatureSection = () => {
     </section>
   );
 };
-
-
-
 
 const HeatmapSection = () => {
   return (
@@ -1413,7 +1415,7 @@ const HeatmapSection = () => {
                 playsInline
                 className="h-full w-full object-cover"
               >
-                <source src="/heatmap2.mp4" type="video/mp4" />
+                <source src="/heatmap2_fixed.mp4" type="video/mp4" />
               </video>
             </div>
           </motion.div>
@@ -1478,8 +1480,6 @@ const HeatmapSection = () => {
     </section>
   );
 };
-
-
 
 const ReportingSection = () => {
   return (
@@ -1583,11 +1583,6 @@ const ReportingSection = () => {
   );
 };
 
-
-
-
-
-
 const ThreeDSection = () => {
   return (
     <section className="overflow-hidden bg-white">
@@ -1611,7 +1606,7 @@ const ThreeDSection = () => {
                 className="h-full w-full object-cover"
               >
                 <source
-                  src="/terastamp-3d-city.mp4"
+                  src="/terastamp-3d-city_fixed.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -1671,10 +1666,6 @@ const ThreeDSection = () => {
     </section>
   );
 };
-
-
-
-
 
 const DashboardSection = () => {
   return (
@@ -1755,13 +1746,6 @@ const DashboardSection = () => {
   );
 };
 
-
-
-
-
-
-
-
 const CounterSection = () => {
   return (
     <section className="bg-white">
@@ -1814,7 +1798,6 @@ const CounterSection = () => {
     </section>
   );
 };
-
 
 const CounterCard = ({ icon, target, suffix, prefix, label, description, delay }) => {
   const [count, setCount] = useState(0);
@@ -2020,7 +2003,7 @@ const GisMonitoringSection = () => {
                 playsInline
                 className="h-full w-full object-cover"
               >
-                <source src="/gisnew.mp4" type="video/mp4" />
+                <source src="/gisnew_fixed.mp4" type="video/mp4" />
               </video>
             </motion.div>
           </motion.div>
@@ -2118,7 +2101,7 @@ const DataAcquisitionSection = () => {
                 className="h-full w-full object-cover"
               >
                 <source
-                  src="/dataaquization.mp4"
+                  src="/dataaquization_fixed.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -2133,13 +2116,6 @@ const DataAcquisitionSection = () => {
 
 
 
-
-
-
-
-
-
-/* ---------- Color Palette ---------- */
 const c = {
   section: "#FFFFFF",
   card: "#FFFFFF",
@@ -2155,6 +2131,7 @@ const c = {
   accentSoft: "#F26418",
   field: "#F8FAFC",
 };
+
 
 const seedFrom = (str) => {
   let h = 2166136261;
@@ -2309,6 +2286,7 @@ const CardImage = ({ card }) => {
   );
 };
 
+
 const Rich = ({ parts }) => {
   if (typeof parts === "string") return <span>{parts}</span>;
   return (
@@ -2325,6 +2303,7 @@ const Rich = ({ parts }) => {
     </>
   );
 };
+
 
 const Modal = ({ children, onClose }) => (
   <div
@@ -2351,27 +2330,6 @@ const Modal = ({ children, onClose }) => (
 );
 
 const FeatureModal = ({ feature, onClose }) => {
-  const [copied, setCopied] = useState(false);
-
-  const share = async () => {
-    const link =
-      typeof window !== "undefined"
-        ? `${window.location.origin}${window.location.pathname}#${feature.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`
-        : `#${feature.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
-    try {
-      await navigator.clipboard.writeText(link);
-    } catch (e) {
-      const ta = document.createElement("textarea");
-      ta.value = link;
-      document.body.appendChild(ta);
-      ta.select();
-      try { document.execCommand("copy"); } catch (_) { }
-      document.body.removeChild(ta);
-    }
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1800);
-  };
-
   return (
     <Modal onClose={onClose}>
       <div className="max-h-[88vh] overflow-y-auto">
@@ -2380,26 +2338,9 @@ const FeatureModal = ({ feature, onClose }) => {
         </div>
 
         <div className="px-5 py-5 sm:px-8 sm:py-6">
-          <div className="flex items-start justify-between gap-4">
-            <h3 className="text-2xl font-bold leading-tight sm:text-3xl" style={{ color: c.heading }}>
-              {feature.title}
-            </h3>
-            <div className="flex shrink-0 items-center gap-3">
-              <div className="relative">
-                <button onClick={share} aria-label="Copy link" className="flex h-9 w-9 items-center justify-center rounded-lg" style={{ background: c.field, border: `1px solid ${c.border}`, color: copied ? "#38a169" : c.muted }}>
-                  {copied ? <Check size={17} /> : <Share2 size={16} />}
-                </button>
-                {copied && (
-                  <span className="absolute right-0 top-11 whitespace-nowrap rounded-md px-2 py-1 text-[11px] font-medium" style={{ background: c.card, border: `1px solid ${c.border}`, color: c.text }}>
-                    Link copied!
-                  </span>
-                )}
-              </div>
-              <span className="flex items-center gap-1 text-sm" style={{ color: c.faint }}>
-                <User size={15} /> {feature.votes}
-              </span>
-            </div>
-          </div>
+          <h3 className="text-2xl font-bold leading-tight sm:text-3xl" style={{ color: c.heading }}>
+            {feature.title}
+          </h3>
 
           <div className="mt-4 flex items-center gap-2.5">
             <div className="flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold text-white" style={{ background: c.accent }}>
@@ -2408,10 +2349,7 @@ const FeatureModal = ({ feature, onClose }) => {
             <span className="text-sm font-bold tracking-wide" style={{ color: c.heading }}>
               {feature.author}
             </span>
-            <span style={{ color: c.faint }}>|</span>
-            <span className="text-sm" style={{ color: c.text }}>
-              Posted on {feature.postedOn}
-            </span>
+            {/* Removed | and posted on */}
           </div>
 
           <div className="mt-5 space-y-3 border-t pt-5 text-sm leading-relaxed sm:text-[15px]" style={{ borderColor: c.borderSoft, color: c.text }}>
@@ -2591,11 +2529,11 @@ const TeraStampJourney = () => {
 
   return (
     <section className="relative overflow-hidden min-h-screen w-full bg-slate-50">
-      {/* Background Image Layer (Fixed & Properly Scaled) */}
+      {/* Background Image Layer */}
       <div
         className="absolute inset-0 z-0 pointer-events-none"
         style={{
-          backgroundImage: "url('/blogimage/digitalmonotoring.jpg')",
+          backgroundImage: "url('/bgjourney.jpeg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -2626,11 +2564,10 @@ const TeraStampJourney = () => {
           {/* Vertical Line */}
           <div className="absolute left-1/2 top-0 hidden h-full w-1 -translate-x-1/2 rounded-full bg-[#F26418] md:block" />
 
-          {/* Flex spacing structure explicitly handling mobile gap */}
+          {/* Flex spacing structure */}
           <div className="flex flex-col gap-[20px] md:gap-4">
             {projects.map((project, index) => {
               const isLeft = index % 2 === 0;
-              const isCompleted = project.status === "Completed";
 
               return (
                 <div
@@ -2650,22 +2587,12 @@ const TeraStampJourney = () => {
                       onClick={() => setSelectedProject(project)}
                       className="group relative w-full overflow-hidden rounded-3xl border border-[#F26418]/30 border-r-4 border-r-[#F26418] bg-white p-6 text-left shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#F26418] hover:shadow-2xl"
                     >
-                      {/* Clean content structure without the embedded pattern */}
                       <div className="relative z-10">
                         <div className="flex items-center justify-between">
                           <span className="text-lg font-bold text-[#F26418]">
                             {project.year}
                           </span>
-
-                          <span
-                            className={`rounded-full px-3 py-1 text-xs font-semibold ${
-                              isCompleted
-                                ? "bg-green-100 text-green-700"
-                                : "bg-yellow-100 text-yellow-700"
-                            }`}
-                          >
-                            {project.status}
-                          </span>
+                          {/* Status tag removed */}
                         </div>
 
                         <h3 className="mt-4 text-xl font-bold text-[#1A202C]">
@@ -2710,35 +2637,25 @@ const TeraStampJourney = () => {
 };
 
 
-
-
-
-
-
-
 export default function Home() {
   return (
     <div className="overflow-x-hidden">
       <HeroSection />
       <DataPlatformSection />
       <HorizontalScrollSection />
-
-
       <FeatureCarousel />
       <FeaturesGrid />
       <ProjectSlider />
       <BenefitsSection />
       <TestimonialsSection />
       <SupportSection />
-      
       <FeatureSection />
       <ThreeDSection />
       <GisMonitoringSection/>
-     
       <HeatmapSection />
       <DataAcquisitionSection/>
-       <ReportingSection />
-       <DashboardSection />
+      <ReportingSection />
+      <DashboardSection />
       <CounterSection />
       <TeraStampJourney />
       <CTASection />

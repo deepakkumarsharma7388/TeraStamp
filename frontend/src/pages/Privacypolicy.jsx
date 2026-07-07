@@ -5,7 +5,6 @@ import {
   Globe,
   Eye,
   FileText,
-  Mail,
   Database,
   UserCheck,
   Zap,
@@ -13,7 +12,6 @@ import {
   Share2,
   Smartphone,
   AlertTriangle,
-  ArrowRight,
 } from "lucide-react";
 
 /* ---------- Color Palette ---------- */
@@ -209,7 +207,7 @@ const PrivacyPolicyPage = () => {
       </section>
 
       {/* ===== Sections ===== */}
-      <section className="mx-auto mt-16 max-w-5xl px-4 sm:px-6">
+      <section className="mx-auto mt-16 max-w-5xl px-4 sm:px-6 pb-20">
         <div className="space-y-6">
           {sections.map((section, index) => (
             <motion.div
@@ -241,57 +239,6 @@ const PrivacyPolicyPage = () => {
             </motion.div>
           ))}
         </div>
-      </section>
-
-      {/* ===== Contact Section ===== */}
-      <section className="mx-auto mt-16 max-w-4xl px-4 sm:px-6 pb-20">
-        <motion.div
-          {...rise(0)}
-          className="rounded-3xl border-2 border-[#F26418] bg-white p-8 md:p-10"
-        >
-          <div className="flex items-start gap-4">
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#F26418]/10 text-[#F26418]">
-              <Mail className="h-7 w-7" />
-            </div>
-            <div>
-              <h2 className="text-2xl font-bold text-black md:text-3xl">
-                Contact Us
-              </h2>
-              <p className="mt-3 text-[#7C8595]">
-                If you have questions regarding this Privacy Policy or wish to
-                exercise your privacy rights, please contact us.
-              </p>
-              <div className="mt-4 space-y-2">
-                <a
-                  href="mailto:privacy@terastamp.com"
-                  className="group inline-flex items-center gap-2 rounded-xl bg-[#F26418] px-6 py-3 font-semibold text-white transition-all hover:bg-[#D9550F] hover:shadow-lg"
-                >
-                  <Mail className="h-5 w-5" />
-                  privacy@terastamp.com
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
-                <p className="text-sm text-[#7C8595]">
-                  Support:{" "}
-                  <a
-                    href="mailto:support@terastamp.com"
-                    className="text-[#F26418] hover:underline"
-                  >
-                    support@terastamp.com
-                  </a>
-                </p>
-                <p className="text-sm text-[#7C8595]">
-                  Website:{" "}
-                  <a
-                    href="https://www.terastamp.com"
-                    className="text-[#F26418] hover:underline"
-                  >
-                    https://www.terastamp.com
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </section>
     </main>
   );
