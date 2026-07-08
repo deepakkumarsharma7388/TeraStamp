@@ -2533,7 +2533,7 @@ const TeraStampJourney = () => {
       <div
         className="absolute inset-0 z-0 pointer-events-none"
         style={{
-          backgroundImage: "url('/bgjourney.jpeg')",
+          backgroundImage: "url('/bgnew1.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

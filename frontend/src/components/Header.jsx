@@ -29,20 +29,10 @@ export default function Header() {
       isActive ? 'text-[#F26418]' : 'text-white/80'
     }`
 
-  const openProduct = () => {
-    clearTimeout(productTimer.current)
-    setProductOpen(true)
-  }
-  const closeProduct = () => {
-    productTimer.current = setTimeout(() => setProductOpen(false), 120)
-  }
-  const openCompany = () => {
-    clearTimeout(companyTimer.current)
-    setCompanyOpen(true)
-  }
-  const closeCompany = () => {
-    companyTimer.current = setTimeout(() => setCompanyOpen(false), 120)
-  }
+  const openProduct = () => { clearTimeout(productTimer.current); setProductOpen(true) }
+  const closeProduct = () => { productTimer.current = setTimeout(() => setProductOpen(false), 120) }
+  const openCompany = () => { clearTimeout(companyTimer.current); setCompanyOpen(true) }
+  const closeCompany = () => { companyTimer.current = setTimeout(() => setCompanyOpen(false), 120) }
 
   const handleSearch = () => {
     const q = searchQuery.trim()
@@ -52,24 +42,19 @@ export default function Header() {
     setMobileOpen(false)
   }
 
-  const handleSearchKeyDown = (e) => {
-    if (e.key === 'Enter') handleSearch()
-  }
+  const handleSearchKeyDown = (e) => { if (e.key === 'Enter') handleSearch() }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#000000]">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-black">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:h-[72px] sm:px-6">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img
-            src="/logo5.png"
-            alt="TeraStamp"
-            className="h-16 w-auto sm:h-[72px] lg:h-20"
-          />
+          <img src="/logo5.png" alt="TeraStamp" className="h-16 w-auto sm:h-[72px] lg:h-20" />
         </Link>
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-6 lg:gap-9 md:flex">
+          {/* Product dropdown */}
           <div className="relative" onMouseEnter={openProduct} onMouseLeave={closeProduct}>
             <button
               className="flex items-center gap-1.5 text-[15px] font-semibold text-white/80 transition-colors hover:text-[#F26418]"
@@ -83,7 +68,7 @@ export default function Header() {
 
             {productOpen && (
               <div className="absolute left-0 top-full w-56 pt-3">
-                <div className="overflow-hidden rounded-xl bg-[#2E3036] py-2 shadow-2xl ring-1 ring-white/10">
+                <div className="overflow-hidden rounded-xl bg-[#2A2A2A] py-2 shadow-2xl ring-1 ring-white/10">
                   {PRODUCT_LINKS.map((item) => (
                     <Link
                       key={item.to}
@@ -99,6 +84,7 @@ export default function Header() {
             )}
           </div>
 
+          {/* Company dropdown */}
           <div className="relative" onMouseEnter={openCompany} onMouseLeave={closeCompany}>
             <button
               className="flex items-center gap-1.5 text-[15px] font-semibold text-white/80 transition-colors hover:text-[#F26418]"
@@ -112,7 +98,7 @@ export default function Header() {
 
             {companyOpen && (
               <div className="absolute left-0 top-full w-48 pt-3">
-                <div className="overflow-hidden rounded-xl bg-[#2E3036] py-2 shadow-2xl ring-1 ring-white/10">
+                <div className="overflow-hidden rounded-xl bg-[#2A2A2A] py-2 shadow-2xl ring-1 ring-white/10">
                   {COMPANY_LINKS.map((item) => (
                     <Link
                       key={item.to}
@@ -134,7 +120,6 @@ export default function Header() {
 
         {/* Desktop: Search + CTA */}
         <div className="hidden items-center gap-4 md:flex">
-          {/* Search */}
           <div className="relative">
             <input
               type="text"
@@ -142,7 +127,7 @@ export default function Header() {
               onChange={(e) => setSearchQuery(e.target.value)}
               onKeyDown={handleSearchKeyDown}
               placeholder="Search..."
-              className="w-40 rounded-lg border border-white/15 bg-white/5 py-2 pl-9 pr-3 text-sm text-white placeholder-white/40 outline-none transition-all focus:w-56 focus:border-[#F26418] focus:bg-white/10 lg:w-48"
+              className="w-40 rounded-lg border border-white/40 bg-white/15 py-2 pl-9 pr-3 text-sm text-white placeholder-white/60 outline-none transition-all focus:w-56 focus:border-[#F26418] focus:bg-white/20 lg:w-48"
             />
             <button
               onClick={handleSearch}
@@ -179,7 +164,7 @@ export default function Header() {
 
       {/* Mobile nav */}
       <div
-        className={`overflow-hidden border-t border-white/10 bg-[#26282C] transition-[max-height] duration-300 md:hidden ${
+        className={`overflow-hidden border-t border-white/10 bg-black transition-[max-height] duration-300 md:hidden ${
           mobileOpen ? 'max-h-[600px]' : 'max-h-0 border-t-0'
         }`}
       >
@@ -192,13 +177,9 @@ export default function Header() {
               onChange={(e) => setSearchQuery(e.target.value)}
               onKeyDown={handleSearchKeyDown}
               placeholder="Search..."
-              className="w-full rounded-lg border border-white/15 bg-white/5 py-2.5 pl-9 pr-3 text-sm text-white placeholder-white/40 outline-none focus:border-[#F26418] focus:bg-white/10"
+              className="w-full rounded-lg border border-white/40 bg-white/15 py-2.5 pl-9 pr-3 text-sm text-white placeholder-white/60 outline-none focus:border-[#F26418] focus:bg-white/20"
             />
-            <button
-              onClick={handleSearch}
-              aria-label="Search"
-              className="absolute left-2.5 top-1/2 -translate-y-1/2 text-white/50"
-            >
+            <button onClick={handleSearch} aria-label="Search" className="absolute left-2.5 top-1/2 -translate-y-1/2 text-white/50">
               <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="11" cy="11" r="8" />
                 <path d="m21 21-4.35-4.35" />
@@ -208,48 +189,31 @@ export default function Header() {
 
           <p className="px-1 pb-1 pt-2 text-xs uppercase tracking-wider text-[#7C8595]">Product</p>
           {PRODUCT_LINKS.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              onClick={() => setMobileOpen(false)}
-              className="block rounded-lg px-1 py-2 text-sm text-white/85 transition-colors hover:bg-[#F26418]/10 hover:text-[#F26418]"
-            >
+            <Link key={item.to} to={item.to} onClick={() => setMobileOpen(false)}
+              className="block rounded-lg px-1 py-2 text-sm text-white/85 transition-colors hover:bg-[#F26418]/10 hover:text-[#F26418]">
               {item.label}
             </Link>
           ))}
 
           <p className="px-1 pb-1 pt-4 text-xs uppercase tracking-wider text-[#7C8595]">Company</p>
           {COMPANY_LINKS.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              onClick={() => setMobileOpen(false)}
-              className="block rounded-lg px-1 py-2 text-sm text-white/85 transition-colors hover:bg-[#F26418]/10 hover:text-[#F26418]"
-            >
+            <Link key={item.to} to={item.to} onClick={() => setMobileOpen(false)}
+              className="block rounded-lg px-1 py-2 text-sm text-white/85 transition-colors hover:bg-[#F26418]/10 hover:text-[#F26418]">
               {item.label}
             </Link>
           ))}
 
-          <NavLink
-            to="/use-cases"
-            onClick={() => setMobileOpen(false)}
-            className="mt-4 block rounded-lg px-1 py-2 text-sm font-semibold text-white/85 transition-colors hover:bg-[#F26418]/10 hover:text-[#F26418]"
-          >
+          <NavLink to="/use-cases" onClick={() => setMobileOpen(false)}
+            className="mt-4 block rounded-lg px-1 py-2 text-sm font-semibold text-white/85 transition-colors hover:bg-[#F26418]/10 hover:text-[#F26418]">
             Use Cases
           </NavLink>
-          <NavLink
-            to="/Blog"
-            onClick={() => setMobileOpen(false)}
-            className="block rounded-lg px-1 py-2 text-sm font-semibold text-white/85 transition-colors hover:bg-[#F26418]/10 hover:text-[#F26418]"
-          >
+          <NavLink to="/Blog" onClick={() => setMobileOpen(false)}
+            className="block rounded-lg px-1 py-2 text-sm font-semibold text-white/85 transition-colors hover:bg-[#F26418]/10 hover:text-[#F26418]">
             Blog
           </NavLink>
 
-          <Link
-            to="/contact"
-            onClick={() => setMobileOpen(false)}
-            className="mt-4 block rounded-lg bg-[#F26418] px-5 py-2.5 text-center text-sm font-bold text-white transition-colors hover:bg-[#D9550F]"
-          >
+          <Link to="/contact" onClick={() => setMobileOpen(false)}
+            className="mt-4 block rounded-lg bg-[#F26418] px-5 py-2.5 text-center text-sm font-bold text-white transition-colors hover:bg-[#D9550F]">
             Claim demo
           </Link>
         </div>
