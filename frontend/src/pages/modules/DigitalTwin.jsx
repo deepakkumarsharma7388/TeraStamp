@@ -75,12 +75,7 @@ const DigitalTwin = () => {
                   See it in action
                   <ArrowRight size={18} />
                 </Link>
-                <Link
-                  to="/modules/digital-twin"
-                  className="inline-flex items-center gap-2 rounded-xl border border-[#D1D9E6] px-6 py-3.5 text-base font-semibold text-[#1A202C] transition hover:bg-[#F8F9FC]"
-                >
-                  Learn more
-                </Link>
+                
               </div>
               <div className="mt-8 flex gap-8 border-t border-[#E2E8F0] pt-8">
                 <div>

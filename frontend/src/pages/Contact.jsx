@@ -241,13 +241,10 @@ const LetsTalk = () => {
                     />
                     <span>
                       I understand and agree that my data will be used according to the{" "}
-                      <Link to="/privacy" className="text-[#F26418] hover:underline">
+                      <Link to="/privacy-policy" className="text-[#F26418] hover:underline">
                         privacy policy
-                      </Link>{" "}
-                      and{" "}
-                      <Link to="/gdpr" className="text-[#F26418] hover:underline">
-                        GDPR regulations
                       </Link>
+                      
                       .
                     </span>
                   </label>
@@ -281,15 +278,7 @@ const LetsTalk = () => {
                   )}
                 </button>
 
-                <p className="mt-4 text-center text-sm font-medium text-[#5C636E]">
-                  Or email us directly at{" "}
-                  <a
-                    href="mailto:hello@terastamp.com"
-                    className="text-[#F26418] underline hover:no-underline"
-                  >
-                    hello@terastamp.com
-                  </a>
-                </p>
+                
               </form>
             </div>
           </motion.div>
