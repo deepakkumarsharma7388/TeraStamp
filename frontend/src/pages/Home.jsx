@@ -40,9 +40,6 @@ import {
 
 } from "lucide-react";
 
-
-
-
 import {
   X,
 
@@ -733,9 +730,6 @@ const ProjectSlider = () => {
   );
 };
 
-
-
-
 const features = [
   {
     icon: Activity,
@@ -804,8 +798,6 @@ const features = [
     path: "/allinone/AlertsRiskManagement",
   },
 ];
-
-
 
 const FeaturesGrid = () => (
   <section className="relative overflow-hidden bg-[#F26418] py-[58px] md:py-20 font-body">
@@ -898,9 +890,6 @@ const FeaturesGrid = () => (
     </div>
   </section>
 );
-
-
-
 
 const benefits = [
   {
@@ -1013,128 +1002,173 @@ const BenefitsSection = () => {
 };
 
 
-const testimonials = [
+
+
+const steps = [
   {
-    name: "David Carter",
-    role: "Infrastructure Program Manager",
-    company: "Transportation Authority",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
-    quote:
-      "TeraStamp has simplified the way our teams monitor project performance. Having all critical information in one place has significantly improved decision-making.",
+    number: "01",
+    title: "Connect your data",
+    description:
+      "Bring in IoT sensors, field readings, spreadsheets, APIs, and satellite data. Everything is validated and cleaned automatically.",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-7 w-7"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M7 12l5 5-1.5 1.5a3.5 3.5 0 0 1-5-5L7 12z" />
+        <path d="M17 12l-5-5 1.5-1.5a3.5 3.5 0 0 1 5 5L17 12z" />
+        <path d="M3 21l2.5-2.5" />
+        <path d="M18.5 5.5L21 3" />
+        <path d="M10 11l-2 2" />
+        <path d="M13 14l-2 2" />
+      </svg>
+    ),
   },
   {
-    name: "Sophia Mitchell",
-    role: "Engineering Lead",
-    company: "Infrastructure Consultancy",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
-    quote:
-      "The platform provides excellent visibility into project data and monitoring activities. Reporting processes are now much faster and more efficient.",
+    number: "02",
+    title: "Monitor & analyze",
+    description:
+      "See every instrument live on a geo-referenced map, track trends with dashboards, and spot risks through interactive heatmaps.",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-7 w-7"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M9 3L4 5v16l5-2 6 2 5-2V3l-5 2-6-2z" />
+        <path d="M9 3v16" />
+        <path d="M15 5v16" />
+      </svg>
+    ),
   },
   {
-    name: "James Walker",
-    role: "Operations Manager",
-    company: "Construction Group",
-    image: "https://randomuser.me/api/portraits/men/75.jpg",
-    quote:
-      "TeraStamp gives us a clear understanding of project risks and performance trends. The analytics capabilities have become an essential part of our workflow.",
-  },
-  {
-    name: "Olivia Thompson",
-    role: "Project Consultant",
-    company: "Engineering Solutions",
-    image: "https://randomuser.me/api/portraits/women/68.jpg",
-    quote:
-      "Collaboration between project teams has improved considerably. Access to centralized information has reduced delays and increased productivity.",
+    number: "03",
+    title: "Act with confidence",
+    description:
+      "Get automatic alerts on custom thresholds, generate reports in seconds, and share findings across your team instantly.",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-7 w-7"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+      </svg>
+    ),
   },
 ];
 
-const TestimonialsSection = () => {
-  const duplicatedTestimonials = [
-    ...testimonials,
-    ...testimonials,
-  ];
-
+const HowItWorks = () => {
   return (
-    <section className="overflow-hidden bg-[#F5F6F7] py-16 md:py-20">
-      {/* Heading */}
-      <div className="text-center">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F26418]">
-          Testimonials
-        </p>
+    <section className="bg-[#F5F6F7]">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
+        {/* Heading */}
+        <div className="mx-auto mb-12 max-w-2xl text-center">
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-4 inline-flex items-center rounded-xl bg-[#FFF4EC] px-5 py-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#C2410C]"
+          >
+            How it works
+          </motion.p>
 
-        <h2 className="mt-4 text-3xl font-bold text-[#32353A] md:text-5xl">
-          Helping teams build with <span className="text-[#F26418]">confidence</span>
-        </h2>
+          <motion.h2
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            style={{ fontFamily: '"IBM Plex Sans", sans-serif' }}
+            className="mb-3 text-4xl font-bold leading-none text-[#32353A] md:text-5xl"
+          >
+            From raw data to <span className="text-[#F26418]">decisions</span>
+          </motion.h2>
 
-        <p className="mx-auto mt-4 max-w-2xl text-[#5C636E]">
-          Discover how organizations across tunneling, mining, transportation, and infrastructure projects use TeraStamp to improve visibility, reduce risk, and make data-driven decisions.
-        </p>
-      </div>
+          <p className="text-base leading-relaxed text-[#5C636E]">
+            Get up and running in three steps — no scattered spreadsheets, no
+            guesswork.
+          </p>
+        </div>
 
-      {/* Slider */}
-      <div className="relative mt-12">
-        <div className="testimonial-track flex w-max gap-5">
-          {duplicatedTestimonials.map((item, index) => (
-            <div
-              key={index}
-              className="w-[300px] shrink-0 rounded-2xl border border-[#E2E5E9] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#F26418]/50 hover:shadow-md md:w-[340px]"
+        {/* Steps */}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          {steps.map((step, index) => (
+            <motion.div
+              key={step.number}
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.12 }}
+              whileHover={{ y: -8 }}
+              className="group relative rounded-2xl border-2 border-[#F26418] bg-white p-6 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(242,100,24,0.12)] md:p-8"
             >
-              <div className="flex items-center gap-4">
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="h-14 w-14 rounded-full border-2 border-[#F26418] object-cover"
-                />
+              <span className="absolute right-6 top-5 text-4xl font-bold leading-none text-[#FCD9C4]">
+                {step.number}
+              </span>
 
-                <div className="text-left">
-                  <h4 className="font-semibold text-[#32353A]">
-                    {item.name}
-                  </h4>
-
-                  <p className="text-sm text-[#7C8595]">
-                    {item.role}
-                  </p>
-
-                  <p className="text-sm text-[#F26418]">
-                    {item.company}
-                  </p>
-                </div>
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#FEF1E9] text-[#F26418] transition-colors duration-300 group-hover:text-[#D9550F]">
+                {step.icon}
               </div>
 
-              <p className="mt-5 text-left text-sm leading-7 text-[#5C636E]">
-                {item.quote}
+              <h3 className="mb-2 text-lg font-semibold text-[#32353A] md:text-xl">
+                {step.title}
+              </h3>
+
+              <p className="text-sm leading-relaxed text-[#5C636E] md:text-base">
+                {step.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        <div className="pointer-events-none absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-[#F5F6F7] to-transparent md:w-32" />
-
-        <div className="pointer-events-none absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-[#F5F6F7] to-transparent md:w-32" />
+        {/* CTA */}
+        <div className="mt-10 text-center">
+          <a
+            href="/contact"
+            className="inline-flex items-center gap-2 rounded-lg bg-[#F26418] px-6 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#D9550F]"
+          >
+            Book a demo
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M5 12h14" />
+              <path d="M13 6l6 6-6 6" />
+            </svg>
+          </a>
+        </div>
       </div>
-
-      <style>{`
-        .testimonial-track {
-          animation: scrollTestimonials 35s linear infinite;
-        }
-
-        .testimonial-track:hover {
-          animation-play-state: paused;
-        }
-
-        @keyframes scrollTestimonials {
-          from {
-            transform: translateX(0);
-          }
-
-          to {
-            transform: translateX(-50%);
-          }
-        }
-      `}</style>
     </section>
   );
 };
+
+
+
+
+
 
 const SupportSection = () => {
   return (
@@ -2647,7 +2681,7 @@ export default function Home() {
       <FeaturesGrid />
       <ProjectSlider />
       <BenefitsSection />
-      <TestimonialsSection />
+       <HowItWorks/>
       <SupportSection />
       <FeatureSection />
       <ThreeDSection />
