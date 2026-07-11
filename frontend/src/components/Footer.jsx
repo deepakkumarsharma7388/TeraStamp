@@ -82,7 +82,7 @@ const Footer = () => {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Link to="/" className="inline-block">
                     <img
-                      src="/logo5.png"
+                      src="/favicon.png"
                       alt="TeraStamp"
                       className="h-[44px] w-auto drop-shadow-[0_0_15px_rgba(242,100,24,0.35)]"
                     />
@@ -165,7 +165,7 @@ const Footer = () => {
               <div className="absolute inset-0 grid place-items-center">
                 <Link to="/" className="flex items-center justify-center">
                   <img
-                    src="/logo5.png"
+                    src="/favicon.png"
                     alt="TeraStamp"
                     className="block h-[76px] w-auto object-contain drop-shadow-[0_0_25px_rgba(242,100,24,0.35)] sm:h-[92px] lg:h-[96px]"
                   />

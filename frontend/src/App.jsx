@@ -19,12 +19,7 @@ import HowItWorks from "./pages/HowItWorks.jsx";
 import Faq from "./pages/Faq.jsx";
 import Tunnels from './pages/applications/Tunnels.jsx'
 import Bridges from './pages/applications/Bridges.jsx'
-
-
-
-
 import BlogPostGeotechnical from './blog/terastamp-joins-aetos.jsx'
-
 import Transportation from './pages/applications/Transportation.jsx'
 import Construction from './pages/applications/Construction.jsx'
 import EnergyInfrastructure from './pages/applications/Energy.jsx'
@@ -33,7 +28,6 @@ import LandslidesAndDisasterManagement from './pages/applications/Landslides.jsx
 import Pipelines from './pages/applications/Pipelines.jsx'
 import SmartCities from './pages/applications/SmartCities.jsx'
 import StructuralHealthMonitoring from './pages/applications/StructuralHealth.jsx'
-import NewsletterSection from './pages/NewsletterSection.jsx'
 import LegalNoticePage from './pages/Legalnotice.jsx'
 import PurpleLineSection2 from './use-cases/purplelinesection2.jsx'
 import PurpleLine3Stations from './use-cases/PurpleLine3Stations.jsx'
@@ -41,8 +35,6 @@ import PurpleLine3Tunnels from './use-cases/PurpleLine3Tunnels.jsx'
 import VtaBartPhase2 from './use-cases/VtaBartPhase2.jsx'
 import TunnelMonitoringBlog from './blog/tunnel-monitoring-made-simple.jsx'
 import DigitalTransformationBlog from './blog/digital-transformation-construction.jsx'
-import HelpCenter from './pages/Helpcenter.jsx'
-import JoinUs from './pages/joinus.jsx'
 import PrivacyPolicyPage from './pages/Privacypolicy.jsx'
 import TermsOfUsePage from './pages/Termsofuses.jsx'
 import CookiePolicyPage from './pages/Cookies.jsx'
@@ -94,32 +86,27 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/roadmap" element={<Roadmap />} />
             <Route path="/blog" element={<Blog />} />
-            
             <Route path="/blog/digital-transformation-construction" element={<DigitalTransformationBlog/>} />
             <Route path="/blog/tunnel-monitoring-made-simple" element={<TunnelMonitoringBlog/>} />
             <Route path="/blog/digitalmonitoring" element={<BlogPostGeotechnical/>} />
             <Route path="/contact" element={<Contact />} />
-           
             <Route path="/modules/digital-twin" element={<DigitalTwin />} />
             <Route path="/modules/ada" element={<OurAIAssistant />} />
             <Route path="/how-it-works" element={<HowItWorks />} />
             <Route path="/faq" element={<Faq />} />
-            <Route path="/Helpcenter" element={<HelpCenter/>} />
-            <Route path="/joinus" element={<JoinUs/>} />
-             <Route path="/newsletter" element={<NewsletterSection/>} />
-             <Route path="/legal-notice" element={<LegalNoticePage/>} />
-             <Route path="/privacy-policy" element={<PrivacyPolicyPage/>} />
-             <Route path="/terms" element={<TermsOfUsePage/>} />
-              <Route path="/cookies" element={<CookiePolicyPage/>}/>
-              <Route path="/copyright" element={<CopyrightPolicyPage/>}/>
-              <Route path="/accessibility" element={<AccessibilityPage/>}/>
-              <Route path="/search" element={<SearchPage />} />
-              <Route path="/allinone/real-time-monitoring" element={<RealTimeMonitoring/>} />
-              <Route path="/allinone/GISMonitoringMap" element={<GISMonitoringMap/>} />
-              <Route path="/allinone/LightningFastQueries" element={<LightningFastQueries/>} />
-              <Route path="/allinone/AdvancedVisualization" element={<AdvancedVisualization/>} />
-              <Route path="/allinone/CustomInstrumentDisplay" element={<CustomInstrumentDisplay/>} />
-              <Route path="/allinone/AlertsRiskManagement" element={<AlertsRiskManagement/>} />
+            <Route path="/legal-notice" element={<LegalNoticePage/>} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage/>} />
+            <Route path="/terms" element={<TermsOfUsePage/>} />
+            <Route path="/cookies" element={<CookiePolicyPage/>}/>
+            <Route path="/copyright" element={<CopyrightPolicyPage/>}/>
+            <Route path="/accessibility" element={<AccessibilityPage/>}/>
+            <Route path="/search" element={<SearchPage />} />
+            <Route path="/allinone/real-time-monitoring" element={<RealTimeMonitoring/>} />
+            <Route path="/allinone/GISMonitoringMap" element={<GISMonitoringMap/>} />
+            <Route path="/allinone/LightningFastQueries" element={<LightningFastQueries/>} />
+            <Route path="/allinone/AdvancedVisualization" element={<AdvancedVisualization/>} />
+            <Route path="/allinone/CustomInstrumentDisplay" element={<CustomInstrumentDisplay/>} />
+            <Route path="/allinone/AlertsRiskManagement" element={<AlertsRiskManagement/>} />
               
           </Routes>
         </main>

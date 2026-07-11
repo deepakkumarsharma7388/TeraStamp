@@ -439,19 +439,19 @@ const slides = [
     title: "Real-time time-series insights",
     description:
       "Query millions of data points in seconds and view continuous time-series for every anchor, with action and alert levels overlaid for instant decision-making.",
-    image: "/terastamp-realtime-timeseries.jpg",
+    image: "/timeseries.png",
   },
   {
     title: "Advanced data visualization",
     description:
       "Display multiple parameters on a single graph and reference real-world locations — like the I-405 crossing or grouting zones — for richer, context-aware analytics.",
-    image: "/terastamp-shape-array-analytics.jpg",
+    image: "/shapearray.jpg",
   },
   {
     title: "Custom instrument display",
     description:
       "Show distinct instrument types — shape arrays, settlement markers, load cells, inclinometers and more — in any colors you choose, with no restrictions.",
-    image: "/terastamp-instrument-overview.jpg",
+    image: "/instrument.jpg",
   },
   {
     title: "10+ miles of tunnel coverage",
@@ -509,7 +509,7 @@ const FeatureCarousel = () => {
 
         {/* Carousel */}
         <div
-          className="relative mx-auto mt-8 flex h-[300px] items-center justify-center sm:h-[420px] md:mt-12 md:h-[530px] lg:h-[590px]"
+          className="relative mx-auto mt-8 flex h-[270px] items-center justify-center sm:h-[380px] md:mt-12 md:h-[480px] lg:h-[535px]"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
@@ -532,7 +532,7 @@ const FeatureCarousel = () => {
               >
                 {/* Image Card */}
                 <div
-                  className={`relative h-[260px] w-[300px] overflow-hidden rounded-2xl bg-[#26282C] transition-shadow duration-500 sm:h-[380px] sm:w-[520px] md:h-[490px] md:w-[800px] lg:h-[550px] lg:w-[920px] ${isActive
+                  className={`relative h-[235px] w-[270px] overflow-hidden rounded-2xl bg-[#26282C] transition-shadow duration-500 sm:h-[340px] sm:w-[470px] md:h-[440px] md:w-[720px] lg:h-[495px] lg:w-[830px] ${isActive
                     ? "shadow-2xl ring-4 ring-[#F26418]"
                     : "shadow-lg ring-1 ring-black/5"
                     }`}
@@ -1800,7 +1800,7 @@ const CounterSection = () => {
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
           <CounterCard
             icon="💰"
-            target={20}
+            target={25}
             suffix="%"
             prefix="+"
             label="Cost Reduction"
@@ -1810,7 +1810,7 @@ const CounterSection = () => {
 
           <CounterCard
             icon="⚡"
-            target={2}
+            target={2.5}
             suffix="K"
             prefix="+"
             label="Monitoring Events"
@@ -2567,7 +2567,7 @@ const TeraStampJourney = () => {
       <div
         className="absolute inset-0 z-0 pointer-events-none"
         style={{
-          backgroundImage: "url('/bg2.png')",
+          backgroundImage: "url('/bg3.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
