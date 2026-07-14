@@ -21,7 +21,7 @@ const colors = {
   cardHover: "#F1F3F5",
 };
 
-const heroImage = "/dam.jpeg"; // <-- replace with your image
+const heroImage = "/dams.jpeg"; // <-- replace with your image
 
 const benefits = [
   { icon: Clock, label: "Tailored and Scheduled Report Generation" },

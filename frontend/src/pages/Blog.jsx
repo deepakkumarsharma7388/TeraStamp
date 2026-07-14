@@ -22,7 +22,7 @@ const CATEGORIES = [
 const posts = [
   {
     id: "aetos",
-    title: "Digital Monitoring in Metro Construction: Lessons from Large Infrastructure Projects is project ",
+    title: "Digital Monitoring in Metro Construction: Lessons from Large Infrastructure Projects ",
     tags: "Infrastructure",
     date: "8 Oct 2025",
     image: "/blogimage/digitalmonitoring.jpeg",

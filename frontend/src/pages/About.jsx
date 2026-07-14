@@ -29,9 +29,7 @@ const Asterisk = ({ className = "" }) => (
   </svg>
 );
 
-/* ================================================================
-   HERO SECTION – paraphrased
-   ================================================================ */
+
 const AboutHero = () => {
   return (
     <section className="bg-white">
@@ -51,16 +49,6 @@ const AboutHero = () => {
         {/* Decorations (unchanged) */}
         <div className="pointer-events-none absolute inset-0 text-white/30">
           <Starburst className="absolute right-[16%] top-8 h-16 w-16 md:h-20 md:w-20" />
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.6"
-            strokeLinejoin="round"
-            className="absolute right-[7%] top-[34%] hidden h-7 w-7 md:block"
-          >
-            <path d="M12 1 C13 8 16 11 23 12 C16 13 13 16 12 23 C11 16 8 13 1 12 C8 11 11 8 12 1 Z" />
-          </svg>
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -121,11 +109,6 @@ const AboutHero = () => {
   );
 };
 
-/* ================================================================
-   OUR STORY – paraphrased
-   ================================================================ */
-
-
 const OurStorySection = () => {
   return (
     <section className="overflow-hidden bg-white py-12 md:py-20">
@@ -150,13 +133,13 @@ const OurStorySection = () => {
             </h2>
             <div className="mt-6 space-y-5 text-sm leading-relaxed text-[#5C636E] sm:text-base md:text-lg">
               <p>
-                Born from a vision to revolutionise infrastructure intelligence,
+                Born from a vision to revolutionize infrastructure intelligence,
                 TeraStamp combines engineering expertise, geospatial analytics,
-                and real‑time monitoring to empower organisations with smarter
+                and real‑time monitoring to empower organizations with smarter
                 decision‑making.
               </p>
               <p>
-                Our platform delivers actionable insights, advanced visualisation,
+                Our platform delivers actionable insights, advanced visualization,
                 and seamless data integration, helping infrastructure projects
                 become safer, more sustainable, and more efficient.
               </p>
@@ -232,9 +215,6 @@ const OurStorySection = () => {
   );
 };
 
-/* ================================================================
-   WHAT'S DIFFERENT – paraphrased
-   ================================================================ */
 const DifferenceSection = () => {
   const [active, setActive] = useState(0);
 
@@ -347,9 +327,6 @@ const DifferenceSection = () => {
   );
 };
 
-/* ================================================================
-   TESTIMONIAL – paraphrased
-   ================================================================ */
 const TestimonialCTASection = () => {
   return (
     <section className="relative overflow-hidden bg-white py-16 md:py-24">
@@ -385,9 +362,6 @@ const TestimonialCTASection = () => {
   );
 };
 
-/* ================================================================
-   MAIN EXPORT
-   ================================================================ */
 const About = () => {
   return (
     <div>

@@ -254,7 +254,7 @@ const FeatureShowcase = () => {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left: text + accordion */}
-          <div>
+          <div className="order-2 lg:order-1">
             <motion.div {...fadeUp()}>
               <h2 className="text-3xl font-bold text-[#1A202C] md:text-4xl">
                 Explore Powerful <span className="text-[#F26418]">Platform Capabilities</span>
@@ -325,7 +325,7 @@ const FeatureShowcase = () => {
           </div>
 
           {/* Right: synced image/video */}
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border-2 border-[#F26418] bg-white lg:aspect-auto lg:h-[460px]">
+          <div className="order-1 lg:order-2 relative aspect-[4/3] w-full overflow-hidden rounded-3xl border-2 border-[#F26418] bg-white lg:aspect-auto lg:h-[460px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={active}
@@ -416,8 +416,8 @@ const ImmersiveExperience = () => {
     >
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          {/* Media – left on desktop */}
-          <div className="order-2 lg:order-1">
+          {/* Media – left on desktop, first on mobile */}
+          <div className="order-1 lg:order-1">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border-2 border-[#F26418] bg-white lg:aspect-auto lg:h-[460px]">
               <AnimatePresence mode="wait">
                 <motion.div
@@ -453,7 +453,7 @@ const ImmersiveExperience = () => {
           </div>
 
           {/* Right: text + accordion */}
-          <div className="order-1 lg:order-2">
+          <div className="order-2 lg:order-2">
             <motion.div {...fadeUp()}>
               <h2 className="text-3xl font-bold text-[#1A202C] md:text-4xl">
                 Experience Infrastructure in <span className="text-[#F26418]">a Whole New Dimension</span>
@@ -590,7 +590,7 @@ const PlatformCapabilities = () => {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left: text + accordion */}
-          <div>
+          <div className="order-2 lg:order-1">
             <motion.div {...fadeUp()}>
               <h2 className="text-3xl font-bold text-[#1A202C] md:text-4xl">
                 Empower Every Decision with <span className="text-[#F26418]">Intelligent Data Management</span>
@@ -661,7 +661,7 @@ const PlatformCapabilities = () => {
           </div>
 
           {/* Right: synced image */}
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border-2 border-[#F26418] bg-white lg:aspect-auto lg:h-[460px]">
+          <div className="order-1 lg:order-2 relative aspect-[4/3] w-full overflow-hidden rounded-3xl border-2 border-[#F26418] bg-white lg:aspect-auto lg:h-[460px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={active}

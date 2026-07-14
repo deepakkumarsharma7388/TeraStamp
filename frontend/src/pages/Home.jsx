@@ -249,7 +249,7 @@ const applications = [
     description:
       "Enhance dam performance and safety with continuous monitoring, predictive analytics, and centralized reporting.",
     image:
-      "/dam.jpeg",
+      "/dams.jpeg",
     link: "/applications/dams",
   },
   {
@@ -743,13 +743,13 @@ const features = [
     path: "/allinone/real-time-monitoring",
   },
   {
-    icon: Map,
+  icon: Map,
     title: "GIS Monitoring Map",
     points: [
-      "Live Google Maps integration",
-      "Instrument & asset layers",
-      "Geo-referenced analytics",
-      "Tunnel alignment & zones",
+      "Real live Google basemap",
+      "Assets at true coordinates",
+      "Location-based analytics",
+      "Tunnel routes & zones",
     ],
     path: "/allinone/GISMonitoringMap",
   },
@@ -1242,11 +1242,10 @@ const SupportSection = () => {
                 {/* Header */}
                 <div className="bg-[#F26418] p-4 text-white">
                   <div className="flex items-center gap-3">
-                    <div className="rounded-full bg-white p-2">
-                      <Sparkles
-                        size={18}
-                        className="text-[#F26418]"
-                      />
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white">
+                      <span className="text-lg font-extrabold text-[#F26418]">
+                        T
+                      </span>
                     </div>
 
                     <div>
@@ -1298,6 +1297,8 @@ const SupportSection = () => {
     </section>
   );
 };
+
+
 
 
 const FeatureSection = () => {
@@ -1959,10 +1960,10 @@ const CTASection = () => (
 
 const GisMonitoringSection = () => {
   const gisFeatures = [
-    "View all monitoring devices and assets on one interactive map",
-    "Track device health with Green, Yellow & Red status indicators",
-    "Toggle layers — stations, tunnels, buildings, zones & utilities",
-    "Run spatial analysis to uncover patterns and relationships",
+    "Every sensor and asset pinned to its exact map coordinate",
+    "Instant Green, Yellow & Red health status on each device",
+    "Switch layers on or off — stations, tunnels, buildings, zones & utilities",
+    "Spot clustered movement and nearby assets through spatial analysis",
   ];
 
   return (
@@ -1978,8 +1979,8 @@ const GisMonitoringSection = () => {
             transition={{ duration: 0.8 }}
           >
             <h3 className="text-2xl font-bold leading-tight text-[#32353A] sm:text-3xl lg:text-[38px]">
-              Live Asset Tracking with{" "}
-              <span className="text-[#F26418]">GIS Intelligence</span>
+              Your Whole Site on{" "}
+              <span className="text-[#F26418]">One Live GIS Map</span>
             </h3>
 
             <motion.p
@@ -1989,11 +1990,11 @@ const GisMonitoringSection = () => {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="mt-5 text-[18px] leading-[1.6] text-[#5C636E]"
             >
-              TeraStamp brings your entire project site onto a single
-              interactive map. Every sensor and asset is plotted with precise
-              positioning and live, color-coded health status — so teams can
-              spot risks instantly, act faster, and keep critical
-              infrastructure safe.
+              TeraStamp plots every instrument at its true position on the map
+              and colors it by live health status. A single look shows where
+              readings are moving and what sits around them, so teams catch
+              risks early and reach the right location without hunting
+              through lists.
             </motion.p>
 
             <div className="mt-6 space-y-4">

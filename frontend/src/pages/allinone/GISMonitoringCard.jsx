@@ -15,51 +15,51 @@ const GISMonitoringMap = () => {
     const stats = [
         {
             value: "Live",
-            label: "Google Maps Sync",
+            label: "Google Basemap",
         },
         {
             value: "1000+",
-            label: "Assets Supported",
+            label: "Assets on One Map",
         },
         {
             value: "Multi",
-            label: "Layer System",
+            label: "Toggleable Layers",
         },
         {
             value: "24/7",
-            label: "Map Updates",
+            label: "Location Refresh",
         },
     ];
 
     const features = [
-        "Live Google Maps integration",
-        "Instrument & asset layers",
-        "Geo-referenced analytics",
-        "Tunnel alignment & zones",
-        "Interactive map filtering",
-        "Real-time location updates",
+        "Real Google basemap, not a static screenshot",
+        "Every sensor pinned to its exact coordinate",
+        "Readings analysed by location, not just by name",
+        "Tunnel routes, chainage and risk zones drawn to scale",
+        "Filter the map by instrument type, status or zone",
+        "Asset positions update as the site moves",
     ];
 
     const useCases = [
         {
             icon: <MapPinned size={28} />,
             title: "Metro Rail Projects",
-            desc: "Track instruments, stations and tunnel alignment on an interactive GIS map.",
+            desc: "Follow tunnel alignment, station boxes and every instrument along the route on one live map.",
         },
         {
             icon: <Layers3 size={28} />,
             title: "Mining Operations",
-            desc: "Visualize monitoring locations, excavation zones and equipment layers.",
+            desc: "See excavation zones, equipment and monitoring points as separate layers you can switch on and off.",
         },
         {
             icon: <MapIcon size={28} />,
             title: "Construction Sites",
-            desc: "View project assets and monitoring instruments with live location updates.",
+            desc: "Locate any asset or sensor instantly as crews, machines and readings shift across the site.",
         },
         {
             icon: <Route size={28} />,
-            title: "Infrastructure",
-            desc: "Monitor bridges, highways and utilities with geospatial intelligence.",
+            title: "Linear Infrastructure",
+            desc: "Track bridges, highways and buried utilities by their real geographic position, not a spreadsheet row.",
         },
     ];
 
@@ -89,17 +89,17 @@ const GISMonitoringMap = () => {
                             </div>
 
                             <h1 className="mt-6 text-3xl font-bold leading-[1.3] text-[#32353A] sm:text-4xl lg:text-[42px] lg:leading-[1.3]">
-                                Visualize Every Asset with an{" "}
+                                See Every Instrument and Asset on{" "}
                                 <span className="text-[#F26418]">
-                                    Intelligent GIS Monitoring Map
+                                    One Live GIS Map
                                 </span>
                             </h1>
 
                             <p className="mt-6 text-[18px] leading-8 text-[#5C636E]">
-                                TeraStamp combines live monitoring data with GIS technology,
-                                allowing engineers to visualize instruments, assets, tunnel
-                                alignments and project locations directly on an interactive
-                                Google Map for faster and smarter decision-making.
+                                TeraStamp places your monitoring data on a real Google Map,
+                                so each instrument, asset and tunnel section sits at its true
+                                location. Engineers stop guessing where a reading came from
+                                and start acting on it faster.
                             </p>
 
                             <div className="mt-8 flex flex-wrap gap-4">
@@ -133,7 +133,7 @@ const GISMonitoringMap = () => {
                             <div className="overflow-hidden rounded-2xl border border-[#E2E5E9] bg-white shadow-lg">
 
                                 <img
-                                    src="/allinone/gismonitoring.jpeg"
+                                    src="/allinone/gis.jpeg"
                                     alt="GIS Monitoring Dashboard"
                                     className="h-full w-full object-cover"
                                 />
@@ -219,17 +219,17 @@ const GISMonitoringMap = () => {
                         >
 
                             <h2 className="text-3xl font-bold leading-[1.3] text-[#32353A] sm:text-4xl lg:text-[42px] lg:leading-[1.3]">
-                                Everything You Need for{" "}
+                                Location Turns Raw Data Into{" "}
                                 <span className="text-[#F26418]">
-                                    Smart GIS Monitoring
+                                    Clear Decisions
                                 </span>
                             </h2>
 
                             <p className="mt-6 text-[18px] leading-8 text-[#5C636E]">
-                                Manage monitoring instruments, project assets and critical
-                                infrastructure using an intelligent GIS platform. Every
-                                monitoring point is linked to its exact location, giving
-                                engineers complete project visibility.
+                                When every instrument is tied to its real coordinate, a
+                                single glance at the map tells you where movement is
+                                happening and what sits nearby. No cross-referencing
+                                lists — the map is the answer.
                             </p>
 
                             <div className="mt-8 space-y-3">
@@ -282,16 +282,16 @@ const GISMonitoringMap = () => {
                     >
 
                         <h2 className="text-3xl font-bold leading-[1.3] text-[#32353A] sm:text-4xl lg:text-[42px] lg:leading-[1.3]">
-                            GIS Monitoring for{" "}
+                            One Map That Fits{" "}
                             <span className="text-[#F26418]">
-                                Every Infrastructure Project
+                                Every Kind of Site
                             </span>
                         </h2>
 
                         <p className="mx-auto mt-6 max-w-3xl text-[18px] leading-8 text-[#5C636E]">
-                            From metro rail systems to bridges, tunnels and mining
-                            operations, TeraStamp provides accurate location-based
-                            monitoring to improve project safety and decision making.
+                            Whether the work runs deep underground or stretches across
+                            kilometres of open ground, the same GIS view keeps teams
+                            looking at exactly where each reading was taken.
                         </p>
 
                     </motion.div>
@@ -346,9 +346,9 @@ const GISMonitoringMap = () => {
                         transition={{ duration: 0.6 }}
                         className="text-3xl font-bold leading-[1.3] text-[#32353A] sm:text-4xl lg:text-[42px] lg:leading-[1.3]"
                     >
-                        Ready to Visualize Your Entire Project on a{" "}
+                        Put Your Whole Project on{" "}
                         <span className="text-[#F26418]">
-                            Smart GIS Map?
+                            One Smart GIS Map
                         </span>
                     </motion.h2>
 
@@ -359,9 +359,9 @@ const GISMonitoringMap = () => {
                         transition={{ delay: 0.2, duration: 0.5 }}
                         className="mx-auto mt-6 max-w-3xl text-[18px] leading-8 text-[#5C636E]"
                     >
-                        Experience how TeraStamp transforms geospatial monitoring into a
-                        powerful decision-making platform. Track assets, monitor
-                        instruments, and respond to site conditions faster than ever.
+                        See a live demo on your own site layout and watch scattered
+                        readings become one clear, location-aware picture your team can
+                        act on in seconds.
                     </motion.p>
 
                     <motion.div

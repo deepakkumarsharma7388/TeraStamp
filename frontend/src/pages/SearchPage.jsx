@@ -4,20 +4,26 @@ import { Link, useSearchParams } from 'react-router-dom'
 /*  SEARCH INDEX — TeraStamp ke saare pages, sections, blogs, projects */
 /* ------------------------------------------------------------------ */
 const SEARCH_INDEX = [
-  /* ---------------- Main Pages ---------------- */
+  /* ============================================================
+   * 1. MAIN PAGES
+   * ========================================================== */
   {
     to: '/',
     title: 'Home',
     type: 'Page',
-    description: 'Smarter digital insights for infrastructure performance monitoring. Visualize, monitor, build with confidence.',
-    keywords: 'home terastamp infrastructure performance monitoring digital insights visualize platform data workspace',
+    description:
+      'Smarter digital insights for infrastructure performance monitoring. Visualize, monitor, build with confidence.',
+    keywords:
+      'home terastamp infrastructure performance monitoring digital insights visualize platform data workspace',
   },
   {
     to: '/applications',
     title: 'Applications',
     type: 'Page',
-    description: 'TeraStamp applications across dams, mining, tunnels, transportation, construction, bridges, energy and more.',
-    keywords: 'applications sectors industries dams mining tunnels transportation construction bridges energy environmental landslides disaster structural health monitoring tbm drill blast railways roads transit airports ports wind nuclear solar',
+    description:
+      'TeraStamp applications across dams, mining, tunnels, transportation, construction, bridges, energy and more.',
+    keywords:
+      'applications sectors industries dams mining tunnels transportation construction bridges energy environmental landslides disaster structural health monitoring tbm drill blast railways roads transit airports ports wind nuclear solar',
   },
   {
     to: '/modules',
@@ -30,15 +36,18 @@ const SEARCH_INDEX = [
     to: '/features',
     title: 'Features',
     type: 'Page',
-    description: 'Platform capabilities — instrument insights, alert management, data visualization, map filtering, heat maps, 3D, digital twin.',
-    keywords: 'features capabilities instrument insights alerts collaboration data visualization charts map filtering heat maps context layers 3d visualization digital twin reporting dashboards data integration decision making user interfaces next-gen platform',
+    description:
+      'Platform capabilities — instrument insights, alert management, data visualization, map filtering, heat maps, 3D, digital twin.',
+    keywords:
+      'features capabilities instrument insights alerts collaboration data visualization charts map filtering heat maps context layers 3d visualization digital twin reporting dashboards data integration decision making user interfaces next-gen platform',
   },
   {
     to: '/how-it-works',
     title: 'How It Works',
     type: 'Page',
     description: 'Understand how TeraStamp works — from sensor data collection to insights and reporting.',
-    keywords: 'how it works process workflow setup steps onboarding data collection sensors integration',
+    keywords:
+      'how it works process workflow setup steps onboarding data collection sensors integration',
   },
   {
     to: '/faq',
@@ -52,28 +61,32 @@ const SEARCH_INDEX = [
     title: 'About us',
     type: 'Page',
     description: 'Learn about the TeraStamp team, mission and journey in infrastructure intelligence.',
-    keywords: 'about company team mission vision journey story who we are',
+    keywords: 'about organization company team mission vision journey story who we are',
   },
   {
     to: '/roadmap',
     title: 'Roadmap',
     type: 'Page',
     description: 'Upcoming features and product roadmap including the AI-Powered Monitoring Suite.',
-    keywords: 'roadmap upcoming future plans releases ai powered monitoring suite predictive anomaly detection geo ai',
+    keywords:
+      'roadmap upcoming future plans releases ai powered monitoring suite predictive anomaly detection geo ai',
   },
   {
     to: '/contact',
     title: 'Contact / Book a Demo',
     type: 'Page',
     description: 'Get in touch with the TeraStamp team, claim a demo, or contact support.',
-    keywords: 'contact demo claim book request schedule support help email phone sales expert assistance',
+    keywords:
+      'contact demo claim book request schedule support help email phone sales expert assistance',
   },
   {
     to: '/use-cases',
     title: 'Projects & Use Cases',
     type: 'Page',
-    description: 'Success stories from LA Purple Line, VTA BART Phase II and other major infrastructure projects.',
-    keywords: 'projects use cases success stories case studies purple line vta bart la los angeles san jose metro',
+    description:
+      'Success stories from LA Purple Line, VTA BART Phase II and other major infrastructure projects.',
+    keywords:
+      'projects use cases success stories case studies purple line vta bart la los angeles san jose metro',
   },
   {
     to: '/Blog',
@@ -104,99 +117,133 @@ const SEARCH_INDEX = [
     keywords: 'newsletter subscribe updates email',
   },
 
-  /* ---------------- Home Page Sections ---------------- */
+  /* ============================================================
+   * 2. CORE FEATURE MODULES  (All-in-One)
+   *    Each maps to its dedicated /allinone/* route.
+   * ========================================================== */
+  {
+    to: '/allinone/real-time-monitoring',
+    title: 'Real-Time Monitoring',
+    type: 'Feature',
+    description:
+      'Live & manual instrument readings, continuous time-series data, action & alert levels overlaid, automatic data validation.',
+    keywords:
+      'real-time monitoring live manual instrument readings continuous time-series data action alert levels overlaid automatic data validation sensors reading',
+  },
+  {
+    to: '/allinone/GISMonitoringMap',
+    title: 'GIS Monitoring Map',
+    type: 'Feature',
+    description:
+      'Live Google Maps integration with instrument & asset layers, geo-referenced analytics, tunnel alignment and zones.',
+    keywords:
+      'gis monitoring map live google maps integration instrument asset layers geo-referenced analytics tunnel alignment zones stations buildings utilities spatial analysis device health green yellow red status interactive map tracking',
+  },
+  {
+    to: '/allinone/LightningFastQueries',
+    title: 'Lightning-Fast Queries',
+    type: 'Feature',
+    description:
+      'Query millions of data points in seconds — 3× faster than competition, instant historical lookups, smooth responsive dashboards.',
+    keywords:
+      'lightning fast queries millions data points seconds 3x faster than competition speed performance instant historical lookups smooth responsive dashboards',
+  },
+  {
+    to: '/allinone/AdvancedVisualization',
+    title: 'Advanced Visualization & 3D',
+    type: 'Feature',
+    description:
+      'Advanced 3D visualization tools, multiple parameters per graph, shape array & settlement charts, location-referenced plots.',
+    keywords:
+      '3d advanced visualization tools multiple parameters per graph shape array settlement charts location-referenced plots immersive city model interactive graphs',
+  },
+  {
+    to: '/allinone/CustomInstrumentDisplay',
+    title: 'Custom Instrument Display',
+    type: 'Feature',
+    description:
+      'Any instrument type supported — custom colors with no restrictions, seamless per-instrument notes, drawings, images & map services.',
+    keywords:
+      'custom instrument display any type supported colors no restrictions seamless per-instrument notes drawings images map services shape arrays settlement markers load cells inclinometers extensometers piezometers',
+  },
+  {
+    to: '/allinone/AlertsRiskManagement',
+    title: 'Alerts & Risk Management',
+    type: 'Feature',
+    description:
+      'Custom thresholds & triggers, action/alert/alarm levels, automatic notifications, escalation workflows.',
+    keywords:
+      'alerts risk management custom thresholds triggers action alert alarm levels automatic notifications escalation workflows warnings safety',
+  },
+
+  /* ============================================================
+   * 3. ADDITIONAL FEATURES & HIGHLIGHTS
+   * ========================================================== */
   {
     to: '/',
     title: 'Data Platform — Single Workspace',
     type: 'Feature',
-    description: 'Every project dataset connected in a single workspace: infrastructure data hub, geotechnical analysis, sensor monitoring, environmental intelligence, AI analytics, survey & LiDAR mapping.',
-    keywords: 'data platform workspace infrastructure data hub geotechnical analysis sensor monitoring environmental intelligence ai powered analytics survey lidar mapping datasets collaboration heatmaps 3d ',
-  },
-  {
-    to: '/features',
-    title: 'Real-Time Monitoring',
-    type: 'Feature',
-    description: 'Live & manual instrument readings, continuous time-series data, action & alert levels, automatic data validation.',
-    keywords: 'real-time monitoring live instrument readings time-series data action alert levels validation continuous sensors',
-  },
-  {
-    to: '/features',
-    title: 'GIS Monitoring Map',
-    type: 'Feature',
-    description: 'Live Google Maps integration with instrument & asset layers, geo-referenced analytics, tunnel alignment and zones.',
-    keywords: 'gis monitoring map google maps live asset tracking layers geo-referenced analytics tunnel alignment zones stations buildings utilities spatial analysis device health green yellow red status interactive map',
-  },
-  {
-    to: '/features',
-    title: 'Lightning-Fast Queries',
-    type: 'Feature',
-    description: 'Query millions of data points in seconds — 3× faster than competition, instant historical lookups.',
-    keywords: 'fast queries millions data points seconds speed performance historical lookups responsive dashboards',
-  },
-  {
-    to: '/features',
-    title: 'Advanced Visualization & 3D',
-    type: 'Feature',
-    description: 'Advanced 3D visualization tools, multiple parameters per graph, shape array & settlement charts, location-referenced plots.',
-    keywords: '3d visualization advanced graphs charts shape array settlement plots multiple parameters immersive city model interactive',
-  },
-  {
-    to: '/features',
-    title: 'Custom Instrument Display',
-    type: 'Feature',
-    description: 'Any instrument type supported — custom colors, per-instrument notes, drawings, images & map services.',
-    keywords: 'custom instrument display colors notes drawings images map services shape arrays settlement markers load cells inclinometers extensometers piezometers',
-  },
-  {
-    to: '/features',
-    title: 'Alerts & Risk Management',
-    type: 'Feature',
-    description: 'Custom thresholds & triggers, action/alert/alarm levels, automatic notifications, escalation workflows.',
-    keywords: 'alerts risk management thresholds triggers alarm levels notifications escalation workflows warnings safety',
+    description:
+      'Every project dataset connected in a single workspace: infrastructure data hub, geotechnical analysis, sensor monitoring, environmental intelligence, AI analytics, survey & LiDAR mapping.',
+    keywords:
+      'data platform workspace infrastructure data hub geotechnical analysis sensor monitoring environmental intelligence ai powered analytics survey lidar mapping datasets collaboration heatmaps 3d',
   },
   {
     to: '/features',
     title: 'Heatmaps',
     type: 'Feature',
-    description: 'Gain monitoring insights through interactive heatmaps — ground movement, asset behavior, structural performance.',
-    keywords: 'heatmap heatmaps ground movement asset behavior structural performance visual insights construction activity',
+    description:
+      'Gain monitoring insights through interactive heatmaps — ground movement, asset behavior, structural performance.',
+    keywords:
+      'heatmap heatmaps ground movement asset behavior structural performance visual insights construction activity',
   },
   {
     to: '/features',
     title: 'Dashboards & Live Project Visibility',
     type: 'Feature',
-    description: 'Personalized dashboards combining maps, charts, monitoring records and operational metrics in one workspace.',
-    keywords: 'dashboard dashboards live project visibility personalized maps charts metrics workspace convergence kpi',
+    description:
+      'Personalized dashboards combining maps, charts, monitoring records and operational metrics in one workspace.',
+    keywords:
+      'dashboard dashboards live project visibility personalized maps charts metrics workspace convergence kpi',
   },
   {
     to: '/features',
     title: 'Advanced Reporting',
     type: 'Feature',
-    description: 'Custom report templates for KPIs, automated scheduling & delivery, instant project insights, team sharing.',
-    keywords: 'reporting reports custom templates kpi automated scheduling delivery insights share collaborate stakeholder',
+    description:
+      'Custom report templates for KPIs, automated scheduling & delivery, instant project insights, team sharing.',
+    keywords:
+      'reporting reports custom templates kpi automated scheduling delivery insights share collaborate stakeholder',
   },
   {
     to: '/features',
     title: 'Digital Twin Platform',
     type: 'Feature',
-    description: 'Live digital twin connecting monitoring data, project assets and real-world conditions in one virtual model.',
-    keywords: 'digital twin virtual representation live model project assets real-world 3d',
+    description:
+      'Live digital twin connecting monitoring data, project assets and real-world conditions in one virtual model.',
+    keywords:
+      'digital twin virtual representation live model project assets real-world 3d',
   },
   {
     to: '/contact',
     title: 'Dedicated Expert Support',
     type: 'Feature',
-    description: 'Connect directly with the TeraStamp support team for fast, reliable guidance and troubleshooting.',
-    keywords: 'support expert assistance troubleshooting guidance chat help team specialists',
+    description:
+      'Connect directly with the TeraStamp support team for fast, reliable guidance and troubleshooting.',
+    keywords:
+      'support expert assistance troubleshooting guidance chat help team specialists',
   },
 
-  /* ---------------- Application Sectors ---------------- */
+  /* ============================================================
+   * 4. APPLICATION SECTORS
+   * ========================================================== */
   {
     to: '/applications/tunnels',
     title: 'Tunnels',
     type: 'Application',
     description: 'TBM monitoring, convergence tracking, drill & blast excavation analytics and tunnel safety.',
-    keywords: 'tunnels tbm tunnel boring machine convergence excavation drill blast ground conditions advance analytics safety underground',
+    keywords:
+      'tunnels tbm tunnel boring machine convergence excavation drill blast ground conditions advance analytics safety underground',
   },
   {
     to: '/applications/mining',
@@ -262,59 +309,74 @@ const SEARCH_INDEX = [
     keywords: 'structural health monitoring shm buildings integrity infrastructure',
   },
 
-  /* ---------------- Projects / Use Cases ---------------- */
+  /* ============================================================
+   * 5. PROJECTS / USE CASES
+   * ========================================================== */
   {
     to: '/use-cases/purplelinesection2',
     title: 'LA Purple Line Extension (Section 2)',
     type: 'Project',
-    description: 'Digital monitoring and data management for tunnel excavation and station construction in Los Angeles.',
-    keywords: 'la purple line extension section 2 los angeles metro tunnel excavation station monitoring 4 mile alignment 2020',
+    description:
+      'Digital monitoring and data management for tunnel excavation and station construction in Los Angeles.',
+    keywords:
+      'la purple line extension section 2 los angeles metro tunnel excavation station monitoring 4 mile alignment 2020',
   },
   {
     to: '/use-cases/purpleline3station',
     title: 'Purple Line 3 Stations, Los Angeles',
     type: 'Project',
     description: 'Monitoring backbone for three station boxes with diaphragm walls and shoring systems.',
-    keywords: 'purple line 3 stations los angeles station boxes diaphragm walls shoring geotechnical 2024',
+    keywords:
+      'purple line 3 stations los angeles station boxes diaphragm walls shoring geotechnical 2024',
   },
   {
     to: '/use-cases/purpleline3tunnels',
     title: 'Purple Line 3 Tunnels',
     type: 'Project',
-    description: 'Multi-site synchronized monitoring across three tunnel sections with predictive ground movement modeling.',
-    keywords: 'purple line 3 tunnels los angeles multi-site trend analysis ground movement bim 2023',
+    description:
+      'Multi-site synchronized monitoring across three tunnel sections with predictive ground movement modeling.',
+    keywords:
+      'purple line 3 tunnels los angeles multi-site trend analysis ground movement bim 2023',
   },
   {
     to: '/use-cases/vtaBartPhase2',
     title: "VTA's BART Phase II — CP2 EWP 3C",
     type: 'Project',
     description: 'TBM performance tracking, settlement monitoring and 3D model integration in San Jose.',
-    keywords: 'vta bart phase 2 ii cp2 ewp 3c san jose tbm thrust torque cutterhead settlement bim 2025',
+    keywords:
+      'vta bart phase 2 ii cp2 ewp 3c san jose tbm thrust torque cutterhead settlement bim 2025',
   },
 
-  /* ---------------- Blog Posts ---------------- */
+  /* ============================================================
+   * 6. BLOG POSTS
+   * ========================================================== */
   {
     to: '/blog/digitalmonitoring',
     title: 'Digital Monitoring in Metro Construction',
     type: 'Blog',
     description: 'Lessons from large infrastructure projects on digital monitoring in metro construction.',
-    keywords: 'blog digital monitoring metro construction lessons large infrastructure projects october 2025',
+    keywords:
+      'blog digital monitoring metro construction lessons large infrastructure projects october 2025',
   },
   {
     to: '/blog/tunnel-monitoring-made-simple',
     title: 'Simplified Tunnel Monitoring',
     type: 'Blog',
     description: 'Benefits of using TeraStamp in conventional and mechanized excavations.',
-    keywords: 'blog simplified tunnel monitoring conventional mechanized excavations benefits july 2025',
+    keywords:
+      'blog simplified tunnel monitoring conventional mechanized excavations benefits july 2025',
   },
   {
     to: '/blog/digital-transformation-construction',
     title: 'Digital Transformation in Construction',
     type: 'Blog',
     description: "TeraStamp's data intelligence revolution in the construction industry.",
-    keywords: 'blog digital transformation construction data intelligence revolution january 2024',
+    keywords:
+      'blog digital transformation construction data intelligence revolution january 2024',
   },
-]
+];
+
+
 
 /* ------------------------------------------------------------------ */
 /*  Smart search: har word alag match hota hai + scoring               */
