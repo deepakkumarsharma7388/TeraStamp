@@ -50,7 +50,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-
+import { Helmet } from "react-helmet-async";
 
 
 const APPS = [
@@ -2672,9 +2672,65 @@ const TeraStampJourney = () => {
 };
 
 
+
+
 export default function Home() {
   return (
     <div className="overflow-x-hidden">
+      <Helmet>
+        <title>
+          Digital Twin & Infrastructure Monitoring Platform | TeraStamp
+        </title>
+
+        <meta
+          name="description"
+          content="TeraStamp is an AI-powered Digital Twin and Infrastructure Monitoring Platform for dams, tunnels, bridges, mining, transportation, and construction projects with real-time GIS mapping, IoT sensors, and intelligent analytics."
+        />
+
+        <meta
+          name="keywords"
+          content="Digital Twin, Infrastructure Monitoring, Dam Monitoring, Tunnel Monitoring, Bridge Monitoring, Mining Monitoring, GIS Monitoring, IoT Sensors, Construction Monitoring, Structural Health Monitoring"
+        />
+
+          <meta name="robots" content="index, follow" />
+          <meta property="og:site_name" content="TeraStamp" />
+
+ 
+
+        <link rel="canonical" href="https://terastamp.org/" />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="Digital Twin & Infrastructure Monitoring Platform | TeraStamp"
+        />
+        <meta
+          property="og:description"
+          content="Monitor dams, tunnels, bridges, mining, transportation, and construction projects using TeraStamp's Digital Twin platform."
+        />
+        <meta property="og:url" content="https://terastamp.org/" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://terastamp.org/favicon.png"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Digital Twin & Infrastructure Monitoring Platform | TeraStamp"
+        />
+        <meta
+          name="twitter:description"
+          content="AI-powered infrastructure monitoring platform for dams, tunnels, bridges, mining, transportation, and construction."
+        />
+        <meta
+          name="twitter:image"
+          content="https://terastamp.org/favicon.png"
+        />
+      </Helmet>
+
       <HeroSection />
       <DataPlatformSection />
       <HorizontalScrollSection />
@@ -2682,13 +2738,13 @@ export default function Home() {
       <FeaturesGrid />
       <ProjectSlider />
       <BenefitsSection />
-       <HowItWorks/>
+      <HowItWorks />
       <SupportSection />
       <FeatureSection />
       <ThreeDSection />
-      <GisMonitoringSection/>
+      <GisMonitoringSection />
       <HeatmapSection />
-      <DataAcquisitionSection/>
+      <DataAcquisitionSection />
       <ReportingSection />
       <DashboardSection />
       <CounterSection />

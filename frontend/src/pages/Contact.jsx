@@ -133,7 +133,7 @@ const LetsTalk = () => {
                       type="text"
                       value={form.name}
                       onChange={update("name")}
-                      placeholder="Jane Smith"
+                      placeholder="James Miller"
                       className={`${inputClass} pl-10`}
                     />
                   </div>
@@ -152,7 +152,7 @@ const LetsTalk = () => {
                       required
                       value={form.email}
                       onChange={update("email")}
-                      placeholder="jane@company.com"
+                      placeholder="james@company.com"
                       className={`${inputClass} pl-10`}
                     />
                   </div>
