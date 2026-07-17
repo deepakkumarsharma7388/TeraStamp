@@ -2,6 +2,7 @@
 
 
 import React from "react";
+import SEO from "../../components/SEO.jsx";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -66,6 +67,12 @@ const AlertsRiskManagement = () => {
   ];
 
   return (
+    <>
+     <SEO
+        title="Alerts & Risk Management Software | TeraStamp"
+        description="Stay ahead of infrastructure risks with TeraStamp's Alerts & Risk Management software. Configure custom thresholds, multi-level alerts, automatic notifications, escalation workflows, and real-time monitoring to improve project safety and decision-making."
+        keywords="Alerts and Risk Management, Infrastructure Monitoring Alerts, Risk Management Software, Custom Thresholds, Automatic Notifications, Escalation Workflows, Real-Time Monitoring, Early Warning System, Digital Twin Platform, Infrastructure Monitoring Software, Construction Monitoring, Tunnel Monitoring, Bridge Monitoring, Dam Monitoring, TeraStamp"
+      />
     <main className="overflow-hidden bg-white">
 
       {/* ================= HERO ================= */}
@@ -397,6 +404,7 @@ const AlertsRiskManagement = () => {
       </section>
 
     </main>
+    </>
   );
 };
 

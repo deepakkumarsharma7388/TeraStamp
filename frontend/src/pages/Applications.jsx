@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO.jsx";
 import { motion } from "framer-motion";
 import {
   Landmark,
@@ -316,6 +317,11 @@ const CTAsection = () => {
 const Applications = () => {
   return (
     <div>
+       <SEO
+        title="Infrastructure Monitoring Applications | TeraStamp"
+        description="Explore TeraStamp's infrastructure monitoring applications for tunnels, dams, bridges, mining, transportation, construction, energy infrastructure, environmental monitoring, landslide detection, and structural health monitoring using Digital Twin, GIS, IoT sensors, and AI-powered analytics."
+        keywords="Infrastructure Monitoring Applications, Tunnel Monitoring, Dam Monitoring, Bridge Monitoring, Mining Monitoring, Transportation Monitoring, Construction Monitoring, Energy Infrastructure Monitoring, Environmental Monitoring, Landslide Monitoring, Structural Health Monitoring, Digital Twin Platform, GIS Monitoring, IoT Monitoring, AI Infrastructure Monitoring, TeraStamp"
+      />
       < Applicards />
       <CTAsection />
     </div>

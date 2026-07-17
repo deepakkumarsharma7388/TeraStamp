@@ -50,7 +50,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO.jsx";
 
 
 const APPS = [
@@ -2677,21 +2677,11 @@ const TeraStampJourney = () => {
 export default function Home() {
   return (
     <div className="overflow-x-hidden">
-     <Helmet>
-  <title>
-    Digital Twin & Infrastructure Monitoring Platform | TeraStamp
-  </title>
-
-  <meta
-    name="description"
-    content="TeraStamp is an AI-powered Digital Twin and Infrastructure Monitoring Platform for dams, tunnels, bridges, mining, transportation, and construction projects with real-time GIS mapping, IoT sensors, and intelligent analytics."
-  />
-
-  <meta
-    name="keywords"
-    content="Digital Twin, Infrastructure Monitoring, Dam Monitoring, Tunnel Monitoring, Bridge Monitoring, Mining Monitoring, GIS Monitoring, IoT Sensors, Construction Monitoring, Structural Health Monitoring"
-  />
-</Helmet>
+        <SEO
+        title="Digital Twin & Infrastructure Monitoring Platform | TeraStamp"
+        description="TeraStamp is an AI-powered Digital Twin and Infrastructure Monitoring Platform for dams, tunnels, bridges, mining, transportation, and construction projects with real-time GIS mapping, IoT sensors, and intelligent analytics."
+        keywords="Digital Twin, Infrastructure Monitoring, Dam Monitoring, Tunnel Monitoring, Bridge Monitoring, Mining Monitoring, GIS Monitoring, IoT Sensors, Construction Monitoring, Structural Health Monitoring"
+      />
 
       <HeroSection />
       <DataPlatformSection />

@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+import SEO from "../components/SEO.jsx";
 import {
   Search,
   X,
@@ -619,6 +620,11 @@ const TeraStampRoadmap = () => {
 const Roadmap = () => {
   return (
     <div>
+       <SEO
+        title="Product Roadmap | TeraStamp"
+        description="Explore the TeraStamp product roadmap, upcoming AI-powered monitoring features, Digital Twin innovations, GIS enhancements, infrastructure monitoring capabilities, and future platform updates."
+        keywords="TeraStamp Roadmap, Product Roadmap, Infrastructure Monitoring Software, Digital Twin Platform, AI Monitoring, GIS Monitoring, Product Updates, Future Features, Platform Development, Roadmap, Construction Monitoring, Tunnel Monitoring, Bridge Monitoring, Dam Monitoring"
+      />
       <TeraStampRoadmap />
     </div>
   );

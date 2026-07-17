@@ -2,6 +2,7 @@
 
 
 import React from "react";
+import SEO from "../../components/SEO.jsx";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -66,6 +67,13 @@ const AdvancedVisualization = () => {
   ];
 
   return (
+    <>
+    <SEO
+        title="Advanced Visualization Software | TeraStamp"
+        description="Visualize infrastructure monitoring data with TeraStamp's Advanced Visualization tools. Explore interactive 3D models, multi-parameter graphs, settlement charts, location-referenced plots, Digital Twin technology, and real-time engineering insights."
+        keywords="Advanced Visualization, Infrastructure Visualization, 3D Visualization, Digital Twin Visualization, Multi Parameter Graphs, Settlement Charts, Shape Array Charts, Location Referenced Plots, Infrastructure Monitoring Software, Engineering Visualization, Construction Monitoring, GIS Visualization, Real-Time Data Visualization, TeraStamp"
+      />
+
     <main className="overflow-hidden bg-white">
 
       {/* ================= HERO ================= */}
@@ -396,6 +404,7 @@ const AdvancedVisualization = () => {
       </section>
 
     </main>
+    </>
   );
 };
 

@@ -91,7 +91,7 @@ export default function App() {
             <Route path="/blog/digitalmonitoring" element={<BlogPostGeotechnical/>} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/modules/digital-twin" element={<DigitalTwin />} />
-            <Route path="/modules/ada" element={<OurAIAssistant />} />
+            <Route path="/modules/geo-ai-assistant" element={<OurAIAssistant />} />
             <Route path="/how-it-works" element={<HowItWorks />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/legal-notice" element={<LegalNoticePage/>} />

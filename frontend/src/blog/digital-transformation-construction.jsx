@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowLeft } from "lucide-react";
+import SEO from "../components/SEO.jsx";
 
 /* ---------- Color Palette ---------- */
 const colors = {
@@ -244,6 +245,13 @@ const DigitalTransformationBlog = () => {
   const heroRest = heroWords.join(" ");
 
   return (
+
+    <>
+     <SEO
+        title="Digital Transformation in Construction | TeraStamp Blog"
+        description="Discover how TeraStamp's Digital Twin platform transforms construction through real-time infrastructure monitoring, data intelligence, automated reporting, GIS integration, predictive analytics, and smarter project management."
+        keywords="Digital Transformation in Construction, Construction Technology, Data Intelligence, Infrastructure Monitoring, Digital Twin, Construction Analytics, Real-Time Monitoring, GIS Monitoring, Construction Software, Predictive Analytics, Smart Construction, Engineering Technology, Automated Reporting, TeraStamp Blog"
+      />
     <main className="bg-white">
       {/* ===== Hero ===== */}
       <section className="mx-auto max-w-5xl px-4 pt-16 sm:px-6 md:pt-20">
@@ -468,6 +476,7 @@ const DigitalTransformationBlog = () => {
         </Link>
       </section>
     </main>
+    </>
   );
 };
 

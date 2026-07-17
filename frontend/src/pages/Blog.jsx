@@ -2,7 +2,7 @@ import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Search, ArrowRight } from "lucide-react";
-
+import SEO from "../components/SEO.jsx";
 /* ------------------------------------------------------------------ */
 /*  Filter categories (order matters — matches the tab row)            */
 /* ------------------------------------------------------------------ */
@@ -151,6 +151,13 @@ const BlogResources = () => {
   }, [active, query]);
 
   return (
+
+<>
+      <SEO
+        title="Infrastructure Monitoring Blog | TeraStamp"
+        description="Explore the TeraStamp Blog for expert insights on Digital Twin technology, infrastructure monitoring, tunnel monitoring, construction innovation, mining, data intelligence, GIS, and real-world engineering projects."
+        keywords="TeraStamp Blog, Infrastructure Monitoring Blog, Digital Twin Blog, Construction Technology, Tunnel Monitoring, Bridge Monitoring, Dam Monitoring, Mining Technology, GIS Monitoring, Infrastructure Analytics, Engineering Insights, Construction Innovation, Structural Health Monitoring"
+      />
     <section className="bg-white">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
         {/* Hero */}
@@ -229,6 +236,7 @@ const BlogResources = () => {
         )}
       </div>
     </section>
+    </>
   );
 };
 

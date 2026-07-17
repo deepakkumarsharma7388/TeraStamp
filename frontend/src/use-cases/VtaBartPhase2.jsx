@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEO from "../components/SEO.jsx";
 import { Link } from "react-router-dom";
 import {
   Share2,
@@ -290,6 +291,13 @@ const VtaBartPhase2 = () => {
   const suggestions = successStories.filter((s) => s.link !== CURRENT_LINK);
 
   return (
+
+    <>
+    <SEO
+        title="VTA BART Phase II – CP2 EWP 3C Case Study | TeraStamp"
+        description="Explore how TeraStamp supported the VTA BART Phase II – CP2 EWP 3C project with Digital Twin technology, infrastructure monitoring, real-time project intelligence, automated reporting, construction analytics, and centralized data management."
+        keywords="VTA BART Phase II, CP2 EWP 3C, BART Silicon Valley, San Jose Infrastructure, Transportation Infrastructure, Infrastructure Monitoring, Digital Twin Case Study, Construction Monitoring, Project Intelligence, Infrastructure Analytics, Automated Reporting, GIS Monitoring, Real-Time Monitoring, Project Data Management, TeraStamp"
+      />
     <main className="bg-white">
       {/* ===== Hero ===== */}
       <section className="mx-auto max-w-5xl px-4 pt-16 sm:px-6 md:pt-20">
@@ -535,6 +543,7 @@ const VtaBartPhase2 = () => {
         </Link>
       </section>
     </main>
+    </>
   );
 };
 

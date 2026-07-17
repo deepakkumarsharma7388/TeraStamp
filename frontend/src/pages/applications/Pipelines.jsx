@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEO from "../../components/SEO.jsx";
 import {
   Clock,
   Bell,
@@ -82,6 +83,12 @@ const rise = (i = 0) => ({
 
 const Pipelines = () => {
   return (
+<>
+    <SEO
+        title="Pipeline Monitoring Software | Oil, Gas & Water Pipeline Monitoring | TeraStamp"
+        description="Monitor oil, gas, and water pipelines with TeraStamp's AI-powered Pipeline Monitoring Software. Integrate Digital Twin technology, GIS, IoT sensors, fiber optic sensing, leak detection, satellite monitoring, UAV surveys, LiDAR, and predictive analytics for real-time pipeline integrity and asset management."
+        keywords="Pipeline Monitoring Software, Oil Pipeline Monitoring, Gas Pipeline Monitoring, Water Pipeline Monitoring, Pipeline Integrity Monitoring, Leak Detection System, Fiber Optic Pipeline Monitoring, Digital Twin Pipeline, GIS Pipeline Monitoring, IoT Pipeline Monitoring, Pipeline Asset Management, Satellite Pipeline Monitoring, LiDAR Pipeline Survey, UAV Pipeline Inspection, Predictive Maintenance, Structural Health Monitoring, Infrastructure Monitoring, TeraStamp"
+      />
     <main className="bg-white py-16 md:py-20">
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6">
@@ -230,6 +237,7 @@ const Pipelines = () => {
         </motion.div>
       </section>
     </main>
+    </>
   );
 };
 

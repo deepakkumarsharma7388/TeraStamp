@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEO from "../../components/SEO.jsx";
 import {
   Clock,
   Bell,
@@ -76,6 +77,12 @@ const rise = (i = 0) => ({
 
 const StructuralHealthMonitoring = () => {
   return (
+<>
+     <SEO
+        title="Structural Health Monitoring Software | SHM Platform | TeraStamp"
+        description="Monitor bridges, buildings, tunnels, dams, and critical infrastructure with TeraStamp's AI-powered Structural Health Monitoring Software. Integrate Digital Twin technology, BIM, GIS, IoT sensors, LiDAR, UAV surveys, fiber optic sensing, and predictive analytics for real-time structural monitoring."
+        keywords="Structural Health Monitoring Software, SHM Software, Structural Health Monitoring, Building Monitoring, Bridge Monitoring, Infrastructure Monitoring, Structural Monitoring System, Digital Twin, BIM Monitoring, GIS Monitoring, IoT Sensors, Fiber Optic Monitoring, LiDAR Survey, UAV Inspection, Geotechnical Monitoring, Predictive Maintenance, Structural Integrity Monitoring, Asset Management, AI Infrastructure Monitoring, TeraStamp"
+      />
     <main className="bg-white py-16 md:py-20">
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6">
@@ -203,6 +210,7 @@ const StructuralHealthMonitoring = () => {
         </motion.div>
       </section>
     </main>
+    </>
   );
 };
 

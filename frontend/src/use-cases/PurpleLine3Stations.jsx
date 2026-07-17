@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEO from "../components/SEO.jsx";
 import { Link } from "react-router-dom";
 import {
   Share2,
@@ -290,6 +291,12 @@ const PurpleLine3Stations = () => {
   const suggestions = successStories.filter((s) => s.link !== CURRENT_LINK);
 
   return (
+<>
+     <SEO
+        title="LA Purple Line 3 Stations Case Study | TeraStamp"
+        description="Discover how TeraStamp supported the LA Metro Purple Line 3 Stations project with Digital Twin technology, real-time infrastructure monitoring, centralized data management, automated reporting, and intelligent project analytics."
+        keywords="LA Purple Line 3 Stations, Purple Line Case Study, Metro Infrastructure Monitoring, Tunnel Monitoring, Transportation Infrastructure, Digital Twin Case Study, Construction Monitoring, Infrastructure Monitoring Software, Real-Time Monitoring, GIS Monitoring, Automated Reporting, Project Analytics, TeraStamp"
+      />
     <main className="bg-white">
       {/* ===== Hero ===== */}
       <section className="mx-auto max-w-5xl px-4 pt-16 sm:px-6 md:pt-20">
@@ -531,6 +538,8 @@ const PurpleLine3Stations = () => {
         </Link>
       </section>
     </main>
+
+    </>
   );
 };
 

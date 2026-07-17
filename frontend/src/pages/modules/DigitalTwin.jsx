@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Zap, TrendingUp, Shield, BarChart3, Layers, Eye, Clock, Globe, Cpu, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
+import SEO from "../../components/SEO.jsx";
 
 const colors = {
   accent: "#F26418",
@@ -40,6 +41,12 @@ const DigitalTwin = () => {
   ];
 
   return (
+    <>
+    <SEO
+        title="Digital Twin Platform for Infrastructure Monitoring | TeraStamp"
+        description="Visualize, monitor, and manage infrastructure with TeraStamp's Digital Twin Platform. Integrate BIM, GIS, LiDAR, IoT sensors, InSAR, UAV surveys, AI analytics, and real-time monitoring to improve asset performance, predictive maintenance, and infrastructure decision-making."
+        keywords="Digital Twin Platform, Infrastructure Digital Twin, Digital Twin Software, Infrastructure Monitoring Platform, Digital Twin Monitoring, BIM Digital Twin, GIS Digital Twin, IoT Infrastructure Monitoring, LiDAR Digital Twin, InSAR Monitoring, UAV Survey, Geotechnical Monitoring, Structural Health Monitoring, Asset Performance Monitoring, AI Infrastructure Monitoring, Predictive Maintenance, Smart Infrastructure, Infrastructure Analytics, Digital Twin Technology, TeraStamp"
+      />
     <div className="bg-white overflow-hidden">
       {/* ----- HERO SECTION ----- */}
       <section>
@@ -242,6 +249,7 @@ const DigitalTwin = () => {
 
     
     </div>
+    </>
   );
 };
 

@@ -2,6 +2,7 @@
 
 
 import React from 'react';
+import SEO from "../../components/SEO.jsx";
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
@@ -55,6 +56,12 @@ const RealTimeMonitoring = () => {
   ];
 
   return (
+    <>
+     <SEO
+        title="Real-Time Infrastructure Monitoring Software | TeraStamp"
+        description="Monitor tunnels, bridges, dams, mining sites, and construction projects in real time with TeraStamp. Collect live sensor data, validate readings automatically, visualize time-series graphs, and receive instant alerts for faster engineering decisions."
+        keywords="Real-Time Monitoring, Infrastructure Monitoring Software, Live Sensor Monitoring, Time Series Monitoring, Structural Health Monitoring, Geotechnical Monitoring, Tunnel Monitoring, Bridge Monitoring, Dam Monitoring, Mining Monitoring, Construction Monitoring, Automated Data Validation, Digital Twin Platform, Engineering Monitoring, TeraStamp"
+      />
     <main className="overflow-hidden bg-white">
       {/* ---------- Hero Section ---------- */}
       <section className="bg-[#F5F6F7]">
@@ -349,6 +356,7 @@ const RealTimeMonitoring = () => {
         </div>
       </section>
     </main>
+    </>
   );
 };
 

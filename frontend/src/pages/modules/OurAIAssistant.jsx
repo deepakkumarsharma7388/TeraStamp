@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import SEO from "../../components/SEO.jsx";
 import { motion } from "framer-motion";
 import {
   Sparkles,
@@ -160,6 +161,12 @@ const adaSteps = [
 
 const AdaUnderstanding = () => {
   return (
+    <>
+     <SEO
+        title="GEO AI Assistant | AI for Infrastructure Monitoring & Data Intelligence | TeraStamp"
+        description="Meet GEO, TeraStamp's AI Assistant for infrastructure monitoring. Ask questions in natural language, analyze live project data, detect anomalies, generate reports, and gain predictive insights across Digital Twins, BIM, GIS, sensors, and infrastructure assets."
+        keywords="AI Infrastructure Monitoring, GEO AI Assistant, Infrastructure AI, AI for Construction, Infrastructure Intelligence, AI Digital Twin, AI Asset Monitoring, Predictive Infrastructure Analytics, Natural Language Infrastructure Search, Infrastructure Chatbot, AI Monitoring Platform, BIM AI, GIS AI, Geotechnical AI, Structural Health Monitoring AI, Infrastructure Analytics, Smart Infrastructure AI, Asset Intelligence Platform, Infrastructure Data Platform, TeraStamp GEO"
+      />
     <section className="bg-white">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
         <motion.div {...fadeUp()} className="text-center">
@@ -206,6 +213,7 @@ const AdaUnderstanding = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

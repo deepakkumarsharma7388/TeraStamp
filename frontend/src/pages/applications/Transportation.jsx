@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEO from "../../components/SEO";
 import {
   Clock,
   Bell,
@@ -84,6 +85,12 @@ const rise = (i = 0) => ({
 
 const Transportation = () => {
   return (
+<>
+    <SEO
+        title="Transportation Infrastructure Monitoring Software | Roads, Rail & Metro Monitoring | TeraStamp"
+        description="Monitor roads, highways, railways, metro systems, and transportation infrastructure with TeraStamp's AI-powered Transportation Infrastructure Monitoring Software. Integrate Digital Twin technology, GIS, BIM, IoT sensors, LiDAR, UAV surveys, fiber optic sensing, predictive analytics, and real-time infrastructure monitoring."
+        keywords="Transportation Infrastructure Monitoring Software, Transportation Monitoring Software, Road Monitoring Software, Highway Monitoring, Railway Monitoring, Metro Monitoring, Transit Infrastructure Monitoring, Digital Twin Transportation, GIS Transportation, BIM Infrastructure Monitoring, IoT Infrastructure Monitoring, LiDAR Survey, UAV Inspection, Fiber Optic Monitoring, Asset Management, Predictive Maintenance, Structural Health Monitoring, Smart Transportation, Infrastructure Monitoring, TeraStamp"
+      />
     <main className="bg-white py-16 md:py-20">
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6">
@@ -232,6 +239,7 @@ const Transportation = () => {
         </motion.div>
       </section>
     </main>
+    </>
   );
 };
 

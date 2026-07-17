@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import SEO from "../components/SEO.jsx";
 import {
   ArrowRight,
   ChevronLeft,
@@ -719,6 +720,12 @@ const CtaBanner = () => {
 
 const Features = () => {
   return (
+<>
+    <SEO
+        title="Infrastructure Monitoring Features | TeraStamp"
+        description="Explore TeraStamp's infrastructure monitoring features, including Digital Twin technology, GIS mapping, real-time sensor monitoring, AI-powered insights, intelligent dashboards, automated reporting, data visualization, and collaborative alert management."
+        keywords="Infrastructure Monitoring Features, Digital Twin Platform, GIS Monitoring, AI Infrastructure Monitoring, Real-Time Monitoring, Structural Health Monitoring, Data Visualization, Engineering Dashboards, Automated Reporting, Collaborative Alerts, Tunnel Monitoring, Bridge Monitoring, Dam Monitoring, Mining Monitoring, Construction Monitoring, TeraStamp"
+      />
     <div className="bg-white overflow-hidden">
       <Hero />
       <PlatformCapabilities />
@@ -727,6 +734,8 @@ const Features = () => {
       <CtaBanner />
 
     </div>
+
+    </>
   );
 };
 

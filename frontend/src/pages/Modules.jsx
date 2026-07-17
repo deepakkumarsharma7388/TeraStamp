@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import SEO from "../components/SEO.jsx";
 
 const MotionLink = motion(Link);
 
-/* Color palette */
+
 const colors = {
   accent: "#F26418",
   white: "#FFFFFF",
@@ -29,7 +30,7 @@ const AdvancedModules = () => {
     },
     {
   title: "GEO: AI-Powered Assistant",
-  link: "/modules/ada",
+  link: "/modules/geo-ai-assistant",
   video: "/terastamp-tsf-ai-assistant.mp4",
   poster: "/images/modules/geo.png",
   placeholder: "from-[#d0d8c0] to-[#b0b8a0]",
@@ -206,6 +207,11 @@ const CTAsection = () => {
 const Modulesection = () => {
   return (
     <div>
+        <SEO
+        title="Advanced Infrastructure Monitoring Modules | TeraStamp"
+        description="Discover TeraStamp's advanced infrastructure monitoring modules, including the Spatial Digital Twin and GEO AI Assistant. Explore intelligent 3D visualization, GIS integration, AI-powered insights, real-time monitoring, and data-driven engineering solutions."
+        keywords="TeraStamp Modules, Digital Twin, Spatial Digital Twin, GEO AI Assistant, AI Infrastructure Monitoring, Infrastructure Monitoring Software, GIS Monitoring, 3D Infrastructure Monitoring, Engineering Analytics, Smart Infrastructure, Tunnel Monitoring, Bridge Monitoring, Dam Monitoring, Mining Monitoring, Construction Monitoring"
+      />
       <AdvancedModules />
       <CTAsection />
     </div>

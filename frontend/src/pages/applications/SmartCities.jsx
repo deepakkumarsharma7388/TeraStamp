@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEO from "../../components/SEO.jsx";
 import {
   Clock,
   Bell,
@@ -76,6 +77,12 @@ const rise = (i = 0) => ({
 
 const SmartCities = () => {
   return (
+<>
+     <SEO
+        title="Smart City Monitoring Software | Digital Twin Smart Cities | TeraStamp"
+        description="Monitor smart city infrastructure with TeraStamp's AI-powered Smart City Monitoring Software. Integrate Digital Twin technology, GIS, IoT sensors, BIM, utility monitoring, transportation systems, environmental monitoring, and real-time analytics for smarter urban management."
+        keywords="Smart City Monitoring Software, Smart City Platform, Digital Twin Smart City, Smart Cities, GIS Smart City, IoT Smart City, Urban Infrastructure Monitoring, Smart Infrastructure, Utility Monitoring, Water Utility Monitoring, Energy Monitoring, Transportation Monitoring, Environmental Monitoring, BIM Smart City, Digital Twin Platform, Predictive Analytics, Urban Planning Software, Infrastructure Monitoring, TeraStamp"
+      />
     <main className="bg-white py-16 md:py-20">
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6">
@@ -206,6 +213,7 @@ const SmartCities = () => {
         </motion.div>
       </section>
     </main>
+    </>
   );
 };
 

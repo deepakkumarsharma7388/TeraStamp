@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEO from "../components/SEO.jsx";
 import {
   FileText,
   Shield,
@@ -157,6 +158,13 @@ const TermsOfUsePage = () => {
   ];
 
   return (
+
+    <>
+    <SEO
+        title="Terms of Use | TeraStamp"
+        description="Read TeraStamp's Terms of Use governing access to our Digital Twin and Infrastructure Monitoring Platform, including user responsibilities, acceptable use, intellectual property, service availability, and legal terms."
+        keywords="TeraStamp Terms of Use, Terms and Conditions, Infrastructure Monitoring Platform Terms, Digital Twin Software Terms, Acceptable Use Policy, Legal Terms, Platform Agreement, User Agreement, TeraStamp Legal"
+      />
     <main className="bg-white">
       {/* ===== Hero ===== */}
       <section className="mx-auto max-w-5xl px-4 pt-16 sm:px-6 md:pt-20">
@@ -228,6 +236,7 @@ const TermsOfUsePage = () => {
         </div>
       </section>
     </main>
+    </>
   );
 };
 

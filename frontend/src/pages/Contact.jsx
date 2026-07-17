@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Check, Mail, User, Building, MessageSquare, Factory } from "lucide-react";
 import toast from "react-hot-toast";
-
+import SEO from "../components/SEO";
 const videoSrc = "/terastamp-promo.mp4";
 const poster = "/images/demo-preview-poster.png";
 
@@ -101,6 +101,12 @@ const LetsTalk = () => {
     "w-full rounded-lg border border-[#E2E5E9] bg-white px-4 py-3 text-sm text-[#32353A] placeholder-[#7C8595] transition-all duration-200 focus:border-[#F26418] focus:outline-none focus:ring-2 focus:ring-[#F26418]/30";
 
   return (
+      <>
+     <SEO
+      title="Book a Demo | TeraStamp"
+      description="Schedule a personalized demo of TeraStamp's Digital Twin and Infrastructure Monitoring Platform. Discover how AI, GIS mapping, IoT sensors, and real-time dashboards can improve infrastructure monitoring for dams, tunnels, bridges, mining, transportation, and construction projects."
+      keywords="Book Demo, Contact TeraStamp, Infrastructure Monitoring Demo, Digital Twin Demo, GIS Monitoring, IoT Monitoring, Dam Monitoring, Tunnel Monitoring, Bridge Monitoring, Construction Monitoring"
+    />
     <section className="bg-white py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-5">
         {/* Header */}
@@ -329,6 +335,8 @@ const LetsTalk = () => {
         </div>
       </div>
     </section>
+
+    </>
   );
 };
 

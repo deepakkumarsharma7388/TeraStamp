@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEO from "../../components/SEO.jsx";
 import {
   Clock,
   Bell,
@@ -85,6 +86,13 @@ const rise = (i = 0) => ({
 
 const EnergyInfrastructure = () => {
   return (
+
+    <>
+     <SEO
+        title="Energy Infrastructure Monitoring Software | TeraStamp"
+        description="Monitor power plants, wind farms, solar farms, hydroelectric facilities, and energy infrastructure with TeraStamp's AI-powered Digital Twin platform. Integrate IoT sensors, GIS, BIM, LiDAR, UAV surveys, and predictive analytics for real-time monitoring, asset management, and operational reliability."
+        keywords="Energy Infrastructure Monitoring, Energy Monitoring Software, Power Plant Monitoring, Wind Farm Monitoring, Solar Farm Monitoring, Hydroelectric Plant Monitoring, Nuclear Power Plant Monitoring, Digital Twin Energy, Energy Asset Management, Infrastructure Monitoring, IoT Monitoring, GIS Monitoring, LiDAR Survey, BIM Integration, Predictive Maintenance, Real-Time Monitoring, AI Infrastructure Monitoring, TeraStamp"
+      />
     <main className="bg-white py-16 md:py-20">
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6">
@@ -237,6 +245,7 @@ const EnergyInfrastructure = () => {
         </motion.div>
       </section>
     </main>
+    </>
   );
 };
 

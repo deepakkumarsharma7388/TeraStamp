@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEO from "../../components/SEO.jsx";
 import {
   Clock,
   Bell,
@@ -58,6 +59,12 @@ const rise = (i = 0) => ({
 
 const Dams = () => {
   return (
+    <>
+     <SEO
+        title="Dam Monitoring Software | TeraStamp"
+        description="Monitor dam safety with TeraStamp's AI-powered Dam Monitoring Software. Integrate Digital Twin technology, IoT sensors, InSAR, DInSAR, GNSS, LiDAR, UAV surveys, geotechnical instrumentation, GIS mapping, and predictive analytics for real-time monitoring and proactive risk management."
+        keywords="Dam Monitoring Software, Dam Monitoring, Dam Safety Monitoring, Digital Twin, Dam Digital Twin, Geotechnical Monitoring, InSAR, DInSAR, GNSS Monitoring, IoT Dam Monitoring, LiDAR Survey, UAV Survey, GIS Monitoring, Structural Health Monitoring, Infrastructure Monitoring, Predictive Analytics, Real-Time Monitoring, Dam Asset Management, TeraStamp"
+      />
     <main className="bg-white py-16 md:py-20">
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6">
@@ -198,6 +205,7 @@ const Dams = () => {
         </motion.div>
       </section>
     </main>
+    </>
   );
 };
 

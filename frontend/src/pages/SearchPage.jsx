@@ -1,12 +1,8 @@
 import { Link, useSearchParams } from 'react-router-dom'
 
-/* ------------------------------------------------------------------ */
-/*  SEARCH INDEX — TeraStamp ke saare pages, sections, blogs, projects */
-/* ------------------------------------------------------------------ */
+
 const SEARCH_INDEX = [
-  /* ============================================================
-   * 1. MAIN PAGES
-   * ========================================================== */
+
   {
     to: '/',
     title: 'Home',
@@ -377,11 +373,6 @@ const SEARCH_INDEX = [
 ];
 
 
-
-/* ------------------------------------------------------------------ */
-/*  Smart search: har word alag match hota hai + scoring               */
-/*  Title match = 3 points, description = 2, keywords = 1              */
-/* ------------------------------------------------------------------ */
 const searchIndex = (query) => {
   const words = query.toLowerCase().split(/\s+/).filter(Boolean)
   if (!words.length) return []
@@ -429,6 +420,8 @@ export default function SearchPage() {
   const results = searchIndex(query)
 
   return (
+       <>
+     
     <div className="min-h-[60vh] bg-[#F5F6F7]">
       <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
         <h1 className="text-2xl font-bold text-[#32353A] sm:text-3xl">
@@ -478,5 +471,7 @@ export default function SearchPage() {
         </div>
       </div>
     </div>
+
+    </>
   )
 }

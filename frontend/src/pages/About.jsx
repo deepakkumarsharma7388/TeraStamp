@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { ArrowRight } from "lucide-react";
-
+import SEO from "../components/SEO";
 /* ---------- Helper Decorations (unchanged) ---------- */
 const Starburst = ({ className = "" }) => (
   <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className={className}>
@@ -365,6 +365,11 @@ const TestimonialCTASection = () => {
 const About = () => {
   return (
     <div>
+        <SEO
+        title="About TeraStamp | Infrastructure Monitoring Platform"
+        description="Learn about TeraStamp, an AI-powered Digital Twin and Infrastructure Monitoring Platform."
+        keywords="About TeraStamp, Infrastructure Monitoring, Digital Twin"
+      />
       <AboutHero />
       <OurStorySection />
       <DifferenceSection />

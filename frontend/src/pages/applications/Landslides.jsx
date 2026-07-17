@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEO from "../../components/SEO.jsx";
 import {
   Clock,
   Bell,
@@ -76,6 +77,12 @@ const rise = (i = 0) => ({
 
 const LandslidesAndDisasterManagement = () => {
   return (
+<>
+    <SEO
+        title="Landslide Monitoring & Disaster Management Software | TeraStamp"
+        description="Monitor landslides and natural hazards with TeraStamp's AI-powered Landslide Monitoring & Disaster Management Software. Integrate Digital Twin technology, GIS, InSAR, LiDAR, UAV surveys, IoT sensors, geotechnical monitoring, slope stability analysis, and real-time early warning systems."
+        keywords="Landslide Monitoring Software, Disaster Management Software, Landslide Monitoring, Slope Stability Monitoring, Early Warning System, InSAR Monitoring, LiDAR Survey, UAV Survey, GIS Disaster Management, Digital Twin Landslide Monitoring, Geotechnical Monitoring, Remote Sensing, IoT Monitoring, Hazard Monitoring, Risk Assessment, Environmental Monitoring, Predictive Analytics, Infrastructure Safety, TeraStamp"
+      />
     <main className="bg-white py-16 md:py-20">
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6">
@@ -215,6 +222,7 @@ const LandslidesAndDisasterManagement = () => {
         </motion.div>
       </section>
     </main>
+    </>
   );
 };
 

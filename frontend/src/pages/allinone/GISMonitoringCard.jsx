@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import SEO from "../../components/SEO.jsx";
 import { Link } from "react-router-dom";
 import {
     ArrowLeft,
@@ -64,6 +65,13 @@ const GISMonitoringMap = () => {
     ];
 
     return (
+
+        <>
+        <SEO
+        title="GIS Monitoring Map Software | TeraStamp"
+        description="Visualize infrastructure monitoring data on a live GIS Monitoring Map with TeraStamp. Track sensors, assets, tunnels, bridges, mining operations, and construction projects using Google Maps, Digital Twin technology, interactive layers, and real-time location intelligence."
+        keywords="GIS Monitoring Map, GIS Monitoring Software, Google Maps Infrastructure Monitoring, Asset Tracking, Sensor Mapping, GIS Infrastructure Monitoring, Digital Twin GIS, Construction GIS, Tunnel Monitoring Map, Bridge Monitoring Map, Mining GIS, Transportation Infrastructure Monitoring, Real-Time GIS, Interactive Maps, Infrastructure Monitoring Platform, TeraStamp"
+      />
         <main className="overflow-hidden bg-white">
 
             {/* ================= HERO ================= */}
@@ -390,6 +398,7 @@ const GISMonitoringMap = () => {
             </section>
 
         </main>
+        </>
     );
 };
 

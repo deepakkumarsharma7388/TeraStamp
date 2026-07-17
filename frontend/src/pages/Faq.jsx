@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from "react";
 import { Plus } from "lucide-react";
-
+import SEO from "../components/SEO.jsx";
 /* Color palette */
 const colors = {
   accent: "#F26418",
@@ -131,9 +131,16 @@ const FaqSection = () => {
 
 const Faq = () => {
   return (
+<>
+      <SEO
+        title="Frequently Asked Questions | TeraStamp"
+        description="Find answers to frequently asked questions about TeraStamp's Digital Twin and Infrastructure Monitoring Platform, including sensor integration, automated reporting, pricing, scalability, AI-powered monitoring, and project customization."
+        keywords="TeraStamp FAQ, Frequently Asked Questions, Infrastructure Monitoring Software, Digital Twin Platform, Sensor Integration, Automated Reporting, AI Infrastructure Monitoring, GIS Monitoring, Dam Monitoring, Tunnel Monitoring, Bridge Monitoring, Mining Monitoring, Construction Monitoring, Platform Pricing, Project Scalability"
+      />
     <div>
       <FaqSection />
     </div>
+    </>
   );
 };
 

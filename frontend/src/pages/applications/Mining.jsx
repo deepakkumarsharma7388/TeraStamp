@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEO from "../../components/SEO.jsx";
 import {
   Clock,
   Bell,
@@ -88,6 +89,12 @@ const rise = (i = 0) => ({
 
 const Mining = () => {
   return (
+    <>
+    <SEO
+        title="Mining Monitoring & Tailings Dam Monitoring Software | TeraStamp"
+        description="Monitor mines, open-pit operations, and tailings dams with TeraStamp's AI-powered Mining Monitoring Software. Integrate Digital Twin technology, GIS, InSAR, LiDAR, IoT sensors, geotechnical monitoring, slope stability analysis, deformation monitoring, and real-time early warning systems."
+        keywords="Mining Monitoring Software, Tailings Dam Monitoring, Open Pit Mine Monitoring, Mine Monitoring, Digital Twin Mining, Geotechnical Monitoring, Slope Stability Monitoring, Deformation Monitoring, InSAR Monitoring, LiDAR Survey, UAV Survey, GIS Mining, IoT Mining Sensors, Tailings Dam Safety, Structural Health Monitoring, Predictive Analytics, Early Warning System, Mining Data Platform, Infrastructure Monitoring, TeraStamp"
+      />
     <main className="bg-white py-16 md:py-20">
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6">
@@ -247,6 +254,7 @@ const Mining = () => {
         </motion.div>
       </section>
     </main>
+    </>
   );
 };
 

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEO from "../../components/SEO.jsx";
 import {
   Clock,
   Bell,
@@ -74,6 +75,12 @@ const rise = (i = 0) => ({
 
 const Tunnels = () => {
   return (
+    <>
+    <SEO
+        title="Tunnel Monitoring Software | TBM & Conventional Tunnel Monitoring | TeraStamp"
+        description="Monitor TBM and conventional tunnel projects with TeraStamp's AI-powered Tunnel Monitoring Software. Integrate Digital Twins, BIM, GIS, TBM performance, geotechnical sensors, LiDAR, UAV surveys, IoT instrumentation, predictive analytics, and real-time tunnel monitoring for safer and more efficient infrastructure projects."
+        keywords="Tunnel Monitoring Software, TBM Monitoring Software, Tunnel Boring Machine Monitoring, Conventional Tunnel Monitoring, Tunnel Infrastructure Monitoring, Geotechnical Monitoring, Tunnel Digital Twin, BIM Tunnel Monitoring, GIS Tunnel Monitoring, Tunnel Settlement Monitoring, Tunnel Convergence Monitoring, Tunnel Instrumentation, LiDAR Tunnel Survey, UAV Tunnel Inspection, Tunnel Safety Monitoring, Tunnel Asset Management, Predictive Tunnel Analytics, Infrastructure Monitoring Software, TeraStamp"
+      />
     <main className="bg-white">
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-4 pt-16 pb-8 sm:px-6">
@@ -208,6 +215,7 @@ const Tunnels = () => {
         </motion.div>
       </section>
     </main>
+    </>
   );
 };
 

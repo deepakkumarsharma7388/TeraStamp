@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEO from "../../components/SEO.jsx";
 import {
   Clock,
   Bell,
@@ -85,6 +86,13 @@ const rise = (i = 0) => ({
 
 const Construction = () => {
   return (
+
+    <>
+    <SEO
+        title="Construction & Civil Infrastructure Monitoring Software | TeraStamp"
+        description="Monitor construction and civil infrastructure projects with TeraStamp's AI-powered Digital Twin platform. Integrate BIM, GIS, IoT sensors, drone surveys, geotechnical monitoring, and real-time project analytics to improve safety, efficiency, and decision-making."
+        keywords="Construction Monitoring Software, Civil Infrastructure Monitoring, Digital Twin Construction, BIM Monitoring, Construction Analytics, Infrastructure Monitoring, Construction Project Monitoring, Geotechnical Monitoring, IoT Construction Monitoring, GIS Infrastructure Monitoring, Drone Surveying, Asset Management, Predictive Analytics, Smart Construction, Engineering Monitoring, TeraStamp"
+      />
     <main className="bg-white py-16 md:py-20">
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6">
@@ -234,6 +242,7 @@ const Construction = () => {
         </motion.div>
       </section>
     </main>
+    </>
   );
 };
 

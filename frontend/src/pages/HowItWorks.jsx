@@ -8,7 +8,7 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
-
+import SEO from "../components/SEO.jsx";
 /* Color palette */
 const colors = {
   accent: "#F26418",
@@ -349,6 +349,11 @@ const CTAsection = () => {
 const HowItWorks = () => {
   return (
     <div>
+        <SEO
+        title="How TeraStamp Works | Digital Twin & Infrastructure Monitoring Platform"
+        description="Learn how TeraStamp works to collect, visualize, analyze, and monitor infrastructure data using Digital Twin technology, GIS mapping, IoT sensors, AI-powered insights, customizable dashboards, alerts, and intelligent reporting."
+        keywords="How TeraStamp Works, Infrastructure Monitoring Platform, Digital Twin Platform, GIS Monitoring, IoT Monitoring, AI Infrastructure Monitoring, Infrastructure Analytics, Engineering Dashboards, Structural Health Monitoring, Tunnel Monitoring, Bridge Monitoring, Dam Monitoring, Mining Monitoring, Construction Monitoring"
+      />
       <InfrastructureHero />
       <HowItWorksslider />
       <CTAsection />

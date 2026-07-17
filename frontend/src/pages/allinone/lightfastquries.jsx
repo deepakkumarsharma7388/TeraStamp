@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import SEO from "../../components/SEO.jsx";
 import { Link } from "react-router-dom";
 import {
   Zap,
@@ -63,6 +64,13 @@ const LightningFastQueries = () => {
   ];
 
   return (
+
+    <>
+    <SEO
+        title="Lightning-Fast Data Query Engine | TeraStamp"
+        description="Access millions of infrastructure monitoring data points in seconds with TeraStamp's Lightning-Fast Query Engine. Analyze historical data, power real-time dashboards, accelerate time-series queries, and make faster engineering decisions."
+        keywords="Lightning Fast Queries, High Performance Query Engine, Infrastructure Monitoring Software, Time Series Database, Real-Time Monitoring, Historical Data Analysis, Engineering Dashboards, Sensor Data Processing, Digital Twin Platform, Infrastructure Analytics, Data Visualization, Construction Monitoring, GIS Monitoring, TeraStamp"
+      />
     <main className="overflow-hidden bg-white">
 
       {/* ================= HERO ================= */}
@@ -394,6 +402,7 @@ const LightningFastQueries = () => {
       </section>
 
     </main>
+    </>
   );
 };
 

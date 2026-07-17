@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEO from "../components/SEO.jsx";
 import {
   Shield,
   Lock,
@@ -162,6 +163,12 @@ const PrivacyPolicyPage = () => {
   ];
 
   return (
+     <>
+     <SEO
+        title="Privacy Policy | TeraStamp"
+        description="Read TeraStamp's Privacy Policy to learn how we collect, use, protect, and manage personal information, infrastructure monitoring data, Digital Twin data, AI-powered insights, cookies, and platform security."
+        keywords="Privacy Policy, TeraStamp Privacy Policy, Data Protection, Infrastructure Monitoring Platform, Digital Twin Privacy, AI Data Privacy, GIS Monitoring, Data Security, Cookies Policy, Personal Information, Infrastructure Monitoring Software"
+      />
     <main className="bg-white">
       {/* ===== Hero ===== */}
       <section className="mx-auto max-w-5xl px-4 pt-16 sm:px-6 md:pt-20">
@@ -241,6 +248,7 @@ const PrivacyPolicyPage = () => {
         </div>
       </section>
     </main>
+    </>
   );
 };
 

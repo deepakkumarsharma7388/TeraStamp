@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowLeft } from "lucide-react";
+import SEO from "../components/SEO.jsx";
 
 /* ---------- Color Palette ---------- */
 const colors = {
@@ -237,6 +238,12 @@ const MetroMonitoringBlog = () => {
   const heroRest = heroWords.join(" ");
 
   return (
+<>
+     <SEO
+        title="Digital Monitoring in Metro Construction | TeraStamp Blog"
+        description="Learn how digital monitoring improves metro construction through real-time project visibility, centralized reporting, infrastructure monitoring, Digital Twin technology, and smarter collaboration for large infrastructure projects."
+        keywords="Digital Monitoring, Metro Construction, Infrastructure Monitoring, Digital Twin, Construction Monitoring, Metro Infrastructure, Infrastructure Projects, Project Monitoring, Construction Reporting, GIS Monitoring, Project Analytics, Engineering Projects, Smart Infrastructure, TeraStamp Blog"
+      />
     <main className="bg-white">
       {/* ===== Hero ===== */}
       <section className="mx-auto max-w-5xl px-4 pt-16 sm:px-6 md:pt-20">
@@ -458,6 +465,7 @@ const MetroMonitoringBlog = () => {
         </Link>
       </section>
     </main>
+    </>
   );
 };
 

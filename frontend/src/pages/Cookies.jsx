@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEO from "../components/SEO.jsx";
 import {
   Cookie,
   Shield,
@@ -125,6 +126,13 @@ const CookiePolicyPage = () => {
   ];
 
   return (
+
+<>
+    <SEO
+        title="Cookie Policy | TeraStamp"
+        description="Read TeraStamp's Cookie Policy to understand how we use cookies, analytics, website preferences, security technologies, and similar tools to improve your experience while protecting your privacy."
+        keywords="Cookie Policy, TeraStamp Cookie Policy, Website Cookies, Cookies Policy, Data Privacy, Analytics Cookies, Essential Cookies, Browser Cookies, Infrastructure Monitoring Platform, Digital Twin Platform, Website Security, Privacy Policy, TeraStamp"
+      />
     <main className="bg-white">
       {/* ===== Hero ===== */}
       <section className="mx-auto max-w-5xl px-4 pt-16 sm:px-6 md:pt-20">
@@ -204,6 +212,8 @@ const CookiePolicyPage = () => {
         </div>
       </section>
     </main>
+
+    </>
   );
 };
 

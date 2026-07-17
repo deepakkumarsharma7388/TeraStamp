@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEO from "../components/SEO.jsx";
 import {
   Accessibility,
   Eye,
@@ -107,6 +108,12 @@ const AccessibilityPage = () => {
   ];
 
   return (
+<>
+     <SEO
+        title="Accessibility Statement | TeraStamp"
+        description="Read TeraStamp's Accessibility Statement to learn about our commitment to creating an inclusive, accessible Digital Twin and Infrastructure Monitoring Platform with improved usability, keyboard navigation, screen reader compatibility, and continuous accessibility enhancements."
+        keywords="Accessibility Statement, TeraStamp Accessibility, Website Accessibility, Digital Accessibility, Inclusive Design, WCAG, Accessibility Standards, Screen Reader Support, Keyboard Navigation, Infrastructure Monitoring Platform, Digital Twin Platform, TeraStamp"
+      />
     <main className="bg-white">
       {/* ===== Hero ===== */}
       <section className="mx-auto max-w-5xl px-4 pt-16 sm:px-6 md:pt-20">
@@ -181,6 +188,7 @@ const AccessibilityPage = () => {
 
       {/* ===== Contact Section – Removed ===== */}
     </main>
+    </>
   );
 };
 

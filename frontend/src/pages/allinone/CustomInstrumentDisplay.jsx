@@ -2,6 +2,7 @@
 
 
 import React from "react";
+import SEO from "../../components/SEO.jsx";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -66,6 +67,13 @@ const CustomInstrumentDisplay = () => {
   ];
 
   return (
+
+    <>
+    <SEO
+        title="Custom Instrument Display Software | TeraStamp"
+        description="Customize how every monitoring instrument is displayed with TeraStamp. Support any sensor type, configure custom colors, add instrument notes, and visualize monitoring data over CAD drawings, images, GIS maps, and Digital Twin environments."
+        keywords="Custom Instrument Display, Instrument Display Software, Geotechnical Monitoring, Monitoring Instruments, Piezometer Monitoring, Inclinometer Monitoring, Tiltmeter Monitoring, Extensometer Monitoring, Sensor Visualization, CAD Drawings, GIS Maps, Digital Twin, Infrastructure Monitoring, Construction Monitoring, TeraStamp"
+      />
     <main className="overflow-hidden bg-white">
 
       {/* ================= HERO ================= */}
@@ -397,6 +405,7 @@ const CustomInstrumentDisplay = () => {
       </section>
 
     </main>
+    </>
   );
 };
 

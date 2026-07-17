@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEO from "../../components/SEO.jsx";
 import {
   Clock,
   Bell,
@@ -76,6 +77,12 @@ const rise = (i = 0) => ({
 
 const EnvironmentalMonitoring = () => {
   return (
+    <>
+    <SEO
+        title="Environmental Monitoring Software | TeraStamp"
+        description="Monitor environmental conditions with TeraStamp's AI-powered Environmental Monitoring Software. Integrate Digital Twin technology, GIS, satellite imagery, LiDAR, UAV surveys, IoT sensors, hydrological monitoring, biodiversity data, and predictive analytics for sustainable environmental management."
+        keywords="Environmental Monitoring Software, Environmental Monitoring, Sustainability Monitoring, Groundwater Monitoring, Hydrological Monitoring, Climate Monitoring, Remote Sensing, Satellite Monitoring, GIS Environmental Monitoring, Digital Twin Environment, LiDAR Survey, UAV Survey, IoT Environmental Monitoring, Environmental Analytics, Predictive Environmental Monitoring, Biodiversity Monitoring, Smart Environmental Monitoring, TeraStamp"
+      />
     <main className="bg-white py-16 md:py-20">
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6">
@@ -203,6 +210,7 @@ const EnvironmentalMonitoring = () => {
         </motion.div>
       </section>
     </main>
+    </>
   );
 };
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-
+import SEO from "../components/SEO";
 /* Color palette */
 const colors = {
   accent: "#F26418",
@@ -203,6 +203,11 @@ const CTAsection = () => {
 const UseCases = () => {
   return (
     <div>
+       <SEO
+      title="Infrastructure Monitoring Success Stories & Use Cases | TeraStamp"
+      description="Explore real-world infrastructure monitoring success stories from metro, tunnel, bridge, mining, and transportation projects. Discover how TeraStamp's Digital Twin platform improves project visibility, monitoring, reporting, and decision-making."
+      keywords="Infrastructure Monitoring Case Studies, Digital Twin Use Cases, Success Stories, Metro Monitoring, Tunnel Monitoring, Bridge Monitoring, Mining Monitoring, Transportation Monitoring, Construction Monitoring, Structural Health Monitoring, GIS Monitoring, IoT Monitoring, TeraStamp"
+    />
       <SuccessStories />
       <CTAsection />
     </div>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEO from "../components/SEO.jsx";
 import { Link } from "react-router-dom";
 import {
   Share2,
@@ -290,6 +291,14 @@ const PurpleLineSection2 = () => {
   const suggestions = successStories.filter((s) => s.link !== CURRENT_LINK);
 
   return (
+
+    <>
+
+    <SEO
+        title="LA Purple Line Extension (Section 2) Case Study | TeraStamp"
+        description="Discover how TeraStamp supported the LA Metro Purple Line Extension (Section 2) with Digital Twin technology, real-time infrastructure monitoring, geotechnical monitoring, centralized project data management, automated reporting, and construction analytics."
+        keywords="LA Purple Line Extension, Purple Line Section 2, Los Angeles Metro, Metro Construction Case Study, Infrastructure Monitoring, Digital Twin Case Study, Tunnel Monitoring, Geotechnical Monitoring, Construction Monitoring, Transportation Infrastructure, GIS Monitoring, Infrastructure Analytics, Automated Reporting, Project Data Management, TeraStamp"
+      />
     <main className="bg-white">
       {/* ===== Hero ===== */}
       <section className="mx-auto max-w-5xl px-4 pt-16 sm:px-6 md:pt-20">
@@ -531,6 +540,7 @@ const PurpleLineSection2 = () => {
         </Link>
       </section>
     </main>
+    </>
   );
 };
 

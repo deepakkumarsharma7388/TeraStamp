@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEO from "../../components/SEO.jsx";
 import {
   Clock,
   Bell,
@@ -72,6 +73,13 @@ const rise = (i = 0) => ({
 
 const Bridges = () => {
   return (
+
+    <>
+    <SEO
+        title="Bridge Monitoring Software | TeraStamp"
+        description="Monitor bridge health with TeraStamp's AI-powered Bridge Monitoring Software. Integrate GNSS, fiber optic, geotechnical, environmental, seismic, LiDAR, UAV, BIM, and IoT sensor data into a Digital Twin platform for real-time monitoring, predictive analytics, and proactive bridge maintenance."
+        keywords="Bridge Monitoring Software, Bridge Monitoring, Structural Health Monitoring, Bridge Asset Management, Digital Twin, Bridge Digital Twin, GNSS Monitoring, Fiber Optic Monitoring, Bridge Sensors, Geotechnical Monitoring, Seismic Monitoring, LiDAR, BIM, UAV Monitoring, IoT Bridge Monitoring, Infrastructure Monitoring, Predictive Maintenance, AI Infrastructure Monitoring, TeraStamp"
+      />
     <main className="bg-white">
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-4 pt-16 pb-8 sm:px-6">
@@ -189,6 +197,7 @@ const Bridges = () => {
         </motion.div>
       </section>
     </main>
+    </>
   );
 };
 

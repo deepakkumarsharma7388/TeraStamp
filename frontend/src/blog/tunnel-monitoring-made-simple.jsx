@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO.jsx";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 
 /* ---------- Color Palette ---------- */
@@ -244,6 +245,12 @@ const TunnelMonitoringBlog = () => {
   const heroRest = heroWords.join(" ");
 
   return (
+    <>
+        <SEO
+        title="Tunnel Monitoring Made Simple | TeraStamp Blog"
+        description="Learn how TeraStamp simplifies tunnel monitoring for conventional and mechanized excavations with real-time instrumentation data, automated alerts, digital reporting, TBM monitoring, and infrastructure monitoring solutions."
+        keywords="Tunnel Monitoring, Tunnel Instrumentation, TBM Monitoring, Conventional Excavation, Mechanized Excavation, Tunnel Construction, Infrastructure Monitoring, Digital Twin, Structural Monitoring, Geotechnical Monitoring, Settlement Monitoring, Construction Monitoring, Automated Reporting, TeraStamp Blog"
+      />
     <main className="bg-white">
       {/* ===== Hero ===== */}
       <section className="mx-auto max-w-5xl px-4 pt-16 sm:px-6 md:pt-20">
@@ -469,6 +476,7 @@ const TunnelMonitoringBlog = () => {
         </Link>
       </section>
     </main>
+    </>
   );
 };
 
