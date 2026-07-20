@@ -51,6 +51,8 @@ import {
 } from "lucide-react";
 
 import SEO from "../components/SEO.jsx";
+import WebsiteSchema from "../components/WebsiteSchema.jsx";
+import OrganizationSchema from "../components/OrganizationSchema.jsx";
 
 
 const APPS = [
@@ -165,31 +167,31 @@ const DataPlatformSection = () => {
                 Unified Data Platform
               </span>
             </div>
-<h2 className="mt-5 font-body text-[28px] leading-[1.15] text-[#32353A] sm:text-[38px] md:text-[46px]">
-  Every project dataset.
-  <br />
-  <span className="font-bold">
-    Connected in a single workspace —{" "}
-    <span className="relative inline-block text-[#F26418] whitespace-nowrap">
-      TeraStamp
-      <svg
-        aria-hidden
-        viewBox="0 0 220 12"
-        className="absolute -bottom-1.5 left-0 w-full"
-        preserveAspectRatio="none"
-      >
-        <path
-          d="M3 9 C60 3, 160 3, 217 8"
-          fill="none"
-          stroke="#F26418"
-          strokeWidth="3.5"
-          strokeLinecap="round"
-          opacity="0.45"
-        />
-      </svg>
-    </span>
-  </span>
-</h2>
+            <h2 className="mt-5 font-body text-[28px] leading-[1.15] text-[#32353A] sm:text-[38px] md:text-[46px]">
+              Every project dataset.
+              <br />
+              <span className="font-bold">
+                Connected in a single workspace —{" "}
+                <span className="relative inline-block text-[#F26418] whitespace-nowrap">
+                  TeraStamp
+                  <svg
+                    aria-hidden
+                    viewBox="0 0 220 12"
+                    className="absolute -bottom-1.5 left-0 w-full"
+                    preserveAspectRatio="none"
+                  >
+                    <path
+                      d="M3 9 C60 3, 160 3, 217 8"
+                      fill="none"
+                      stroke="#F26418"
+                      strokeWidth="3.5"
+                      strokeLinecap="round"
+                      opacity="0.45"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </h2>
 
             <p className="mt-6 max-w-lg border-l-[3px] border-[#F26418] pl-5 font-body text-base leading-relaxed text-[#5C636E] sm:text-lg">
               TeraStamp integrates project information, monitoring records, and
@@ -366,6 +368,8 @@ const HorizontalScrollSection = () => {
                 <img
                   src={app.image}
                   alt={app.title}
+                  loading="lazy"
+                  decoding="async"
                   className="absolute inset-0 h-full w-full object-cover"
                 />
 
@@ -460,11 +464,11 @@ const slides = [
     image: "/purple-line-tunnel-route-map.jpg",
   },
   {
-  title: "Real-Time Ground Movement Heat Map",
-  description:
-    "Visualize live ground displacement with intelligent heat maps, geotechnical sensors, and threshold-based alerts to identify movement patterns before they become critical.",
-  image: "/landslide_heatmap_professional_websit.jpeg",
-},
+    title: "Real-Time Ground Movement Heat Map",
+    description:
+      "Visualize live ground displacement with intelligent heat maps, geotechnical sensors, and threshold-based alerts to identify movement patterns before they become critical.",
+    image: "/landslide_heatmap_professional_websit.jpeg",
+  },
 ];
 
 const FeatureCarousel = () => {
@@ -540,6 +544,8 @@ const FeatureCarousel = () => {
                   <img
                     src={slide.image}
                     alt={slide.title}
+                    loading="lazy"
+                    decoding="async"
                     className="block h-full w-full object-fill"
                   />
 
@@ -650,8 +656,9 @@ const ProjectSlider = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover"
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
@@ -743,7 +750,7 @@ const features = [
     path: "/allinone/real-time-monitoring",
   },
   {
-  icon: Map,
+    icon: Map,
     title: "GIS Monitoring Map",
     points: [
       "Real live Google basemap",
@@ -1608,9 +1615,11 @@ const ReportingSection = () => {
               <img
                 src="/terastamp-report-mocku.jpeg"
                 alt="Advanced reporting dashboard showing project insights and KPIs"
+                loading="lazy"
+                decoding="async"
                 className="h-full w-full object-cover"
               />
-             </motion.div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
@@ -1720,6 +1729,8 @@ const DashboardSection = () => {
               <img
                 src="/terastamp-convergence-dashboard.png"
                 alt="Interactive dashboard showing project visibility and metrics"
+                loading="lazy"
+                decoding="async"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -1741,7 +1752,7 @@ const DashboardSection = () => {
               className="text-2xl font-bold leading-tight text-[#32353A] sm:text-3xl lg:text-[38px]"
             >
               Project Intelligence Through Live
-               {" "}
+              {" "}
               <span className="text-[#F26418]">
                 Project Visibility
               </span>
@@ -2565,18 +2576,15 @@ const TeraStampJourney = () => {
   return (
     <section className="relative overflow-hidden min-h-screen w-full bg-slate-50">
       {/* Background Image Layer */}
-      <div
-        className="absolute inset-0 z-0 pointer-events-none"
-        style={{
-          backgroundImage: "url('/bg3.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundAttachment: "scroll",
-          filter: "blur(0px)",
-          opacity: 1,
-        }}
-      />
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        <img
+          src="/bg3.png"
+          alt=""
+          loading="lazy"
+          decoding="async"
+          className="h-full w-full object-cover"
+        />
+      </div>
 
       {/* Main Content Container */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
@@ -2607,9 +2615,8 @@ const TeraStampJourney = () => {
               return (
                 <div
                   key={project.year}
-                  className={`relative flex flex-col items-center w-full md:gap-10 ${
-                    isLeft ? "md:flex-row" : "md:flex-row-reverse"
-                  }`}
+                  className={`relative flex flex-col items-center w-full md:gap-10 ${isLeft ? "md:flex-row" : "md:flex-row-reverse"
+                    }`}
                 >
                   {/* Timeline Dot */}
                   <div className="absolute left-1/2 top-10 z-20 hidden h-6 w-6 -translate-x-1/2 rounded-full border-4 border-white bg-[#F26418] shadow-lg md:block" />
@@ -2677,12 +2684,13 @@ const TeraStampJourney = () => {
 export default function Home() {
   return (
     <div className="overflow-x-hidden">
-        <SEO
+      <SEO
         title="Digital Twin & Infrastructure Monitoring Platform | TeraStamp"
         description="TeraStamp is an AI-powered Digital Twin and Infrastructure Monitoring Platform for dams, tunnels, bridges, mining, transportation, and construction projects with real-time GIS mapping, IoT sensors, and intelligent analytics."
         keywords="Digital Twin, Infrastructure Monitoring, Dam Monitoring, Tunnel Monitoring, Bridge Monitoring, Mining Monitoring, GIS Monitoring, IoT Sensors, Construction Monitoring, Structural Health Monitoring"
       />
-
+      <WebsiteSchema />
+      <OrganizationSchema />
       <HeroSection />
       <DataPlatformSection />
       <HorizontalScrollSection />
