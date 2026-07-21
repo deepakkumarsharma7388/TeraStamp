@@ -111,9 +111,9 @@ const AboutHero = () => {
 
 const OurStorySection = () => {
   return (
-    <section className="overflow-hidden bg-white py-12 md:py-20">
+    <section className="overflow-hidden bg-white py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-16">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -80 }}
@@ -131,7 +131,7 @@ const OurStorySection = () => {
               <br />
               <span className="text-[#F26418]">Infrastructure</span>
             </h2>
-            <div className="mt-6 space-y-5 text-sm leading-relaxed text-[#5C636E] sm:text-base md:text-lg">
+            <div className="mt-6 space-y-5 text-[16px] leading-relaxed text-[#5C636E] sm:text-base md:text-lg">
               <p>
                 Born from a vision to revolutionize infrastructure intelligence,
                 TeraStamp combines engineering expertise, geospatial analytics,

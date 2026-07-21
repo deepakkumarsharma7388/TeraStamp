@@ -1340,7 +1340,7 @@ const FeatureSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="mt-4 text-3xl font-bold text-[#32353A] sm:text-4xl md:text-5xl"
+            className="mt-4 text-2xl font-bold leading-tight text-[#32353A] sm:text-3xl lg:text-[38px]"
           >
             Platform <span className="text-[#F26418]">Capabilities</span>
           </motion.h2>
@@ -1351,7 +1351,7 @@ const FeatureSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="mx-auto mt-4 max-w-2xl text-[18px] leading-[1.6] text-[#5C636E]"
+            className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-[#5C636E] md:text-lg"
           >
             Explore the powerful tools that help infrastructure teams monitor,
             analyze, and act on project data — all from one unified platform.
@@ -1377,7 +1377,7 @@ const FeatureSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="mt-5 text-[18px] leading-[1.6] text-[#5C636E]"
+              className="mt-5 text-base leading-relaxed text-[#5C636E] md:text-lg"
             >
               TeraStamp brings project data, monitoring systems, and
               operational insights together in a single platform, helping
@@ -1392,14 +1392,18 @@ const FeatureSection = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.3 + index * 0.15, duration: 0.4 }}
+                  transition={{
+                    delay: 0.3 + index * 0.15,
+                    duration: 0.4,
+                  }}
                   className="flex items-start gap-3"
                 >
                   <Check
                     size={20}
                     className="mt-0.5 flex-shrink-0 rounded-full bg-[#F26418] p-1 text-white"
                   />
-                  <span className="text-[18px] leading-[1.5] text-[#5C636E]">
+
+                  <span className="text-base leading-relaxed text-[#5C636E] md:text-lg">
                     {item}
                   </span>
                 </motion.div>
@@ -1426,7 +1430,10 @@ const FeatureSection = () => {
                 playsInline
                 className="h-full w-full object-cover"
               >
-                <source src="/terastamp-dynamic-map_fixed.mp4" type="video/mp4" />
+                <source
+                  src="/terastamp-dynamic-map_fixed.mp4"
+                  type="video/mp4"
+                />
               </video>
             </motion.div>
           </motion.div>
@@ -1631,7 +1638,7 @@ const ThreeDSection = () => {
   return (
     <section className="overflow-hidden bg-white">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
-        <div className="grid items-center gap-[15px] lg:grid-cols-2 lg:gap-10">
+        <div className="grid items-center gap-[30px] lg:grid-cols-2 lg:gap-10">
 
           {/* Left Side - Video */}
           <motion.div
@@ -1999,7 +2006,7 @@ const GisMonitoringSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="mt-5 text-[18px] leading-[1.6] text-[#5C636E]"
+              className="mt-5 text-base leading-relaxed text-[#5C636E] md:text-lg"
             >
               TeraStamp plots every instrument at its true position on the map
               and colors it by live health status. A single look shows where
@@ -2015,14 +2022,18 @@ const GisMonitoringSection = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.3 + index * 0.15, duration: 0.4 }}
+                  transition={{
+                    delay: 0.3 + index * 0.15,
+                    duration: 0.4,
+                  }}
                   className="flex items-start gap-3"
                 >
                   <Check
                     size={20}
                     className="mt-0.5 flex-shrink-0 rounded-full bg-[#F26418] p-1 text-white"
                   />
-                  <span className="text-[18px] leading-[1.5] text-[#5C636E]">
+
+                  <span className="text-base leading-relaxed text-[#5C636E] md:text-lg">
                     {item}
                   </span>
                 </motion.div>
@@ -2092,7 +2103,7 @@ const DataAcquisitionSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="mt-5 text-[18px] leading-[1.6] text-[#5C636E]"
+              className="mt-5 text-base leading-relaxed text-[#5C636E] md:text-lg"
             >
               TeraStamp centralizes data collection from every monitoring
               source into one intelligent platform. Whether data comes from
@@ -2119,7 +2130,7 @@ const DataAcquisitionSection = () => {
                     className="mt-0.5 flex-shrink-0 rounded-full bg-[#F26418] p-1 text-white"
                   />
 
-                  <span className="text-[18px] leading-[1.5] text-[#5C636E]">
+                  <span className="text-base leading-relaxed text-[#5C636E] md:text-lg">
                     {item}
                   </span>
                 </motion.div>
@@ -2158,7 +2169,6 @@ const DataAcquisitionSection = () => {
     </section>
   );
 };
-
 
 
 
